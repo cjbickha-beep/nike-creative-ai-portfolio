@@ -2061,3 +2061,30 @@ RESPONSIVE
   }
 
 }
+
+
+/* Portfolio cohesion pass: match shared Nike campaign visual language.
+   Scoped to Emerging Technology; original Kaiber/video content unchanged. */
+.et-page {
+  --et-display: "Arial Black", Futura, "Helvetica Neue", Arial, sans-serif;
+  --et-body: Inter, "Helvetica Neue", Arial, sans-serif;
+}
+.et-page .et-hero {
+  background:linear-gradient(125deg,#f26522 0%,#e67837 23%,#4a5d4e 60%,#59646a 100%);
+  border-bottom:8px solid #111;
+}
+.et-page .et-nav { border-top:0; border-bottom:3px solid #111; background:#ebe3db; }
+.et-page .et-hero h1, .et-page h2, .et-page h3 {
+  font-family:"Arial Black",Futura,"Helvetica Neue",Arial,sans-serif;
+  letter-spacing:-.035em;
+}
+.et-page a:focus-visible, .et-page button:focus-visible {
+  outline:3px solid #f26522; outline-offset:3px;
+}
+.et-page video { object-fit:contain; max-width:100%; }
+@media (prefers-reduced-motion:reduce) {
+  .et-page *, .et-page *::before, .et-page *::after {
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+}
