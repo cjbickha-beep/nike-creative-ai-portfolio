@@ -1,0 +1,45 @@
+
+/* Hero positioning corrections, loaded last on three pages. */
+.journey-hero,.aiw-hero,.fr-hero {
+  justify-content: flex-start !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: clamp(105px, 11vw, 148px) !important;
+  padding-bottom: clamp(95px, 12vw, 150px) !important;
+  overflow: hidden;
+}
+.journey-hero > .journey-eyebrow {
+  margin-top: 12px !important;
+}
+.aiw-hero .aiw-hero-copy,.fr-hero .fr-hero-copy {
+  margin-top: 12px !important;
+}
+.journey-hero h1,.aiw-hero h1,.fr-hero h1 {
+  margin-top: 12px !important;
+}
+.journey-hero-number,.fr-ghost-number {
+  right: clamp(12px, 3vw, 48px) !important;
+  bottom: 24px !important;
+  top: auto !important;
+  font-size: clamp(150px, 24vw, 340px) !important;
+  line-height: 1 !important;
+  max-width: 95% !important;
+  transform: none !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+}
+.journey-hero-bottom,.fr-hero-bottom {
+  position: relative;
+  z-index: 4;
+}
+@media(max-width:700px) {
+  .journey-hero,.aiw-hero,.fr-hero {
+    padding-top: 104px !important;
+    padding-bottom: 85px !important;
+  }
+  .journey-hero-number,.fr-ghost-number {
+    font-size: clamp(105px, 29vw, 190px) !important;
+    bottom: 15px !important;
+    right: 12px !important;
+  }
+}

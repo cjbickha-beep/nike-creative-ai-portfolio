@@ -1,0 +1,36 @@
+/* ROOT CAUSE: seamless-sections.css changes every direct section child to
+   position:relative. That accidentally puts decorative full-screen grid/glow
+   layers into document flow, pushing all hero headings below the viewport.
+   Restore the original absolute positioning for those layers. */
+.journey-hero > .journey-hero-grid,
+.journey-hero > .journey-flash,
+.aiw-hero > .aiw-grid,
+.aiw-hero > .aiw-glow,
+.fr-hero > .fr-grid,
+.fr-hero > .fr-hero-glow {
+  position:absolute!important;
+  pointer-events:none!important;
+  z-index:0!important;
+}
+.journey-hero > .journey-hero-grid,
+.aiw-hero > .aiw-grid,
+.fr-hero > .fr-grid {inset:0!important;width:auto!important;height:auto!important;}
+/* Restore original positioning of decorative metadata, numbers, and labels. */
+.journey-hero > .journey-hero-meta,
+.aiw-hero > .aiw-hero-meta,
+.fr-hero > .fr-hero-meta,
+.journey-hero > .journey-hero-number,
+.aiw-hero > .aiw-ghost-number,
+.fr-hero > .fr-ghost-number {position:absolute!important;}
+/* Keep the actual hero copy in flow, directly beneath the sticky navigation. */
+.journey-hero > .journey-eyebrow,
+.journey-hero > h1,
+.journey-hero > h2,
+.aiw-hero > .aiw-hero-copy,
+.fr-hero > .fr-hero-copy {position:relative!important;z-index:3!important;}
+/* No intro animations on these three hero headings; rest of site replays. */
+html.nike-motion-active .journey-hero > .nike-text-reveal,
+html.nike-motion-active .aiw-hero .aiw-hero-copy .nike-text-reveal,
+html.nike-motion-active .fr-hero .fr-hero-copy .nike-text-reveal {
+  opacity:1!important;transform:none!important;transition:none!important;
+}

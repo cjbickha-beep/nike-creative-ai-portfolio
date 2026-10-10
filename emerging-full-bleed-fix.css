@@ -1,0 +1,52 @@
+/* Emerging Technology only: full-bleed layout and non-overlapping hero */
+html,body{margin:0!important;width:100%;max-width:100%;overflow-x:clip}
+body{background:#59646a}
+.et-page{width:100%!important;max-width:none!important;margin:0!important;overflow:clip}
+.et-page>section{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+.et-hero{
+  position:relative;
+  background:linear-gradient(130deg,#f26522 0%,#d8793c 22%,#8c7350 38%,#536657 58%,#59646a 100%)!important;
+}
+.et-hero-grid{
+  position:absolute!important;inset:0!important;display:block!important;
+  background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px)!important;
+  background-size:38px 38px!important;
+  pointer-events:none!important;z-index:0!important;
+}
+.et-hero-content{
+  max-width:1550px!important;
+  width:100%!important;
+  grid-template-columns:minmax(72px,105px) minmax(0,1fr)!important;
+  gap:clamp(16px,3vw,42px)!important;
+  align-items:center!important;
+  padding:clamp(70px,9vw,115px) clamp(22px,5vw,90px) 145px!important;
+}
+.et-hero-title{min-width:0;position:relative;z-index:2}
+.et-hero-title h1{
+  font-size:clamp(56px,8.3vw,136px)!important;
+  line-height:.87!important;
+  overflow:visible!important;
+  overflow-wrap:normal!important;
+}
+.et-hero-sticker{
+  grid-column:2!important;
+  justify-self:end!important;
+  align-self:start!important;
+  width:clamp(145px,15vw,185px)!important;
+  margin-top:8px!important;
+  margin-right:clamp(4px,2vw,25px)!important;
+  transform:rotate(5deg)!important;
+  position:relative!important;
+  z-index:2!important;
+}
+@media(max-width:850px){
+  .et-hero-content{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:30px!important;padding:75px 6vw 155px!important}
+  .et-hero-index{display:none!important}
+  .et-hero-title h1{font-size:clamp(50px,12vw,95px)!important;line-height:.88!important}
+  .et-hero-sticker{align-self:flex-end!important;margin:0 18px 0 0!important;width:150px!important;right:auto!important;bottom:auto!important}
+}
+@media(max-width:480px){
+  .et-hero-title h1{font-size:clamp(43px,12vw,64px)!important;letter-spacing:-.065em!important}
+  .et-hero-sticker{width:130px!important}
+}

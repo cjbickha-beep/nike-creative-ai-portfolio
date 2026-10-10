@@ -1,0 +1,24 @@
+/* Headline reflow: genuine flush-left edges, no staggered forced lines. */
+.aiw-page .aiw-case-title h3,
+.aiw-page .aiw-error-card h3,
+.aiw-page .aiw-eval h3,
+.aiw-page .aiw-lessons-heading h2,
+.aiw-page .aiw-prompts-header h2,
+.aiw-page section h2,
+.aiw-page section h3 {
+ text-align:left!important;text-align-last:left!important;
+ white-space:normal!important;word-spacing:normal!important;
+ overflow-wrap:break-word!important;word-break:normal!important;
+ max-width:100%!important;min-width:0!important;
+}
+.aiw-page .aiw-case-content {min-width:0!important;max-width:100%!important;}
+.aiw-page .aiw-case-title h3 {
+ font-size:clamp(30px,4.5vw,66px)!important;
+ line-height:.96!important;letter-spacing:-.045em!important;
+ text-wrap:wrap!important;
+}
+.aiw-page .aiw-case-title {max-width:100%!important;}
+.aiw-page .aiw-error-card h3,.aiw-page .aiw-eval h3 {line-height:1!important;}
+@media(max-width:720px){
+ .aiw-page .aiw-case-title h3{font-size:clamp(28px,8vw,49px)!important;}
+}

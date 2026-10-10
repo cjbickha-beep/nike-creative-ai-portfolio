@@ -1,0 +1,29 @@
+/* Channel Integration: keep both headline windows inside the viewport. */
+.cc-headlines{box-sizing:border-box!important;width:100%!important;max-width:100%!important;}
+.cc-headline-layout{
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  gap:clamp(18px,2.8vw,42px)!important;
+  padding-right:20px!important; /* room for the green window's offset shadow */
+  box-sizing:border-box!important;
+}
+.cc-headline-layout>.cc-headline-window{min-width:0!important;max-width:100%!important;box-sizing:border-box!important;}
+.cc-headline-window-green{width:100%!important;max-width:100%!important;min-width:0!important;}
+.cc-headline-window-body{padding:clamp(16px,2.2vw,36px)!important;box-sizing:border-box!important;min-width:0!important;}
+.cc-headline-window-green .cc-community-equation{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;gap:clamp(3px,.6vw,10px)!important;min-width:0;}
+.cc-headline-window-green .cc-community-equation span{font-size:clamp(16px,2.2vw,36px)!important;min-width:0;overflow-wrap:anywhere;}
+.cc-headline-window-green .cc-community-equation strong{font-size:clamp(40px,5vw,76px)!important;}
+.cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(30px,4.1vw,66px)!important;overflow-wrap:normal;}
+.cc-headline-window-green .cc-window-bar{min-width:0;gap:8px!important;}
+.cc-headline-window-green .cc-window-bar>span{min-width:0;overflow-wrap:anywhere;}
+@media(max-width:900px){
+ .cc-headline-layout{grid-template-columns:minmax(0,1fr)!important;padding-right:18px!important;}
+ .cc-headline-window-green{margin-top:20px!important;}
+ .cc-headline-window-green .cc-community-equation span{font-size:clamp(20px,5vw,40px)!important;}
+ .cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(35px,8vw,68px)!important;}
+}
+@media(max-width:480px){
+ .cc-headline-layout{padding-right:13px!important;}
+ .cc-headline-window-green .cc-community-equation{grid-template-columns:minmax(0,1fr)!important;}
+ .cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(27px,8vw,42px)!important;}
+ .cc-headline-window-green .cc-window-bar{font-size:clamp(7px,1.9vw,10px)!important;}
+}

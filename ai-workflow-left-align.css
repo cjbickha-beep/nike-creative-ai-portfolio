@@ -1,0 +1,42 @@
+/* AI Workflow: flush-left text inside each content box, natural spacing. */
+.aiw-page section p,
+.aiw-page section li,
+.aiw-page section blockquote,
+.aiw-page section h1,
+.aiw-page section h2,
+.aiw-page section h3,
+.aiw-page section h4,
+.aiw-page section .aiw-hero-copy,
+.aiw-page section .aiw-section-header,
+.aiw-page section .aiw-intro-copy,
+.aiw-page section .aiw-case-content,
+.aiw-page section .aiw-case-sidebar,
+.aiw-page section .aiw-error-card,
+.aiw-page section .aiw-lessons-grid > *,
+.aiw-page section .aiw-eval,
+.aiw-page section .aiw-prompt-window {
+  text-align: left !important;
+  text-align-last: left !important;
+  text-justify: none !important;
+  word-spacing: normal !important;
+  white-space: normal !important;
+}
+.aiw-page section p,
+.aiw-page section li,
+.aiw-page section blockquote {
+  letter-spacing: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+}
+/* Preserve whitespace and formatting in technical snippets. */
+.aiw-page pre,
+.aiw-page code,
+.aiw-page pre *,
+.aiw-page .aiw-windowbar,
+.aiw-page .aiw-windowbar * {
+  text-align: left !important;
+  text-align-last: auto !important;
+  white-space: pre-wrap;
+  word-spacing: normal !important;
+}

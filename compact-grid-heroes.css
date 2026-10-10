@@ -1,0 +1,52 @@
+/* Focused hero corrections for Audience Journey, AI Workflow, Final Reflection.
+   Loaded after original page CSS, sticky navigation, and seamless joins. */
+.journey-hero,.aiw-hero,.fr-hero {
+  min-height: clamp(560px, 77vh, 780px) !important;
+  justify-content: flex-start !important;
+  padding-top: clamp(115px, 12vh, 160px) !important;
+  padding-bottom: clamp(65px, 8vh, 110px) !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+/* Match the visible editorial graph-paper texture of Home and Research. */
+.journey-hero > .journey-hero-grid,
+.aiw-hero > .aiw-grid,
+.fr-hero > .fr-grid {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  display: block !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.105) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.105) 1px, transparent 1px) !important;
+  background-size: 38px 38px !important;
+  pointer-events: none !important;
+}
+/* Maintain foreground stacking without disturbing the existing typography. */
+.journey-hero > :not(.journey-hero-grid):not(.journey-flash),
+.aiw-hero > :not(.aiw-grid):not(.aiw-glow),
+.fr-hero > :not(.fr-grid):not(.fr-hero-glow) {
+  z-index: 2;
+}
+/* Prevent the large, centered hero copy from creating a blank first viewport. */
+.aiw-hero .aiw-hero-copy,
+.fr-hero .fr-hero-copy {
+  margin-top: clamp(28px, 5vh, 52px) !important;
+}
+.journey-hero > .journey-eyebrow {
+  margin-top: clamp(30px, 5vh, 56px) !important;
+}
+/* Gradients remain continuous into the next section: no added hard seam. */
+.journey-hero::after,.aiw-hero::after,.fr-hero::after {
+  pointer-events:none;
+}
+@media (max-width: 700px) {
+  .journey-hero,.aiw-hero,.fr-hero {
+    min-height: 580px !important;
+    padding-top: 108px !important;
+    padding-bottom: 75px !important;
+  }
+  .aiw-hero .aiw-hero-copy,.fr-hero .fr-hero-copy {margin-top:28px!important}
+  .journey-hero > .journey-eyebrow {margin-top:32px!important}
+}

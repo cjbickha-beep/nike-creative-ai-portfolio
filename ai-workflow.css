@@ -1,0 +1,2748 @@
+/* ============================================================
+NIKE — AI WORKFLOW
+CARGO / FULL-BLEED Y2K PROCESS ARCHIVE
+BUILT BY MOVEMENT. BOUND BY COMMUNITY.
+============================================================ */
+
+
+/* ============================================================
+01 — CARGO RESET
+============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: hidden !important;
+  background: #111111 !important;
+}
+
+
+.aiw-page {
+
+  --black: #111111;
+  --white: #FFFFFF;
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+  --cream: #EBE3DB;
+  --silver: #C9CED0;
+
+  position: relative;
+  left: 50%;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(-50%);
+
+  overflow: hidden;
+
+  color: var(--black);
+  background: var(--cream);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+  font-stretch: normal;
+
+  word-spacing: 0 !important;
+}
+
+
+.aiw-page *,
+.aiw-page *::before,
+.aiw-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+02 — GLOBAL CARGO TYPOGRAPHY RESET
+
+IMPORTANT:
+Cargo can inherit text-align, word-spacing and text-justify
+properties from its global typography settings.
+
+These rules deliberately neutralize those values.
+============================================================ */
+
+.aiw-page p,
+.aiw-page li,
+.aiw-page small,
+.aiw-page a,
+.aiw-page b,
+.aiw-page strong,
+.aiw-page span {
+
+  font-stretch: normal;
+
+  word-spacing: 0 !important;
+
+  text-align-last: auto;
+
+  text-justify: none;
+
+  white-space: normal;
+
+  word-break: normal;
+
+  overflow-wrap: break-word;
+
+  hyphens: none;
+}
+
+
+.aiw-page p {
+
+  letter-spacing: 0 !important;
+
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+
+  text-align-last: auto !important;
+
+  text-justify: none !important;
+
+  text-indent: 0 !important;
+
+  font-kerning: normal;
+
+  font-variant-ligatures: normal;
+}
+
+
+.aiw-page h1,
+.aiw-page h2,
+.aiw-page h3,
+.aiw-page p {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+03 — BACKGROUND GRID
+============================================================ */
+
+.aiw-grid {
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+
+    linear-gradient(
+      rgba(255,255,255,.065) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.065) 1px,
+      transparent 1px
+    );
+
+  background-size: 34px 34px;
+}
+
+
+/* ============================================================
+04 — SYSTEM BAR
+============================================================ */
+
+.aiw-systembar {
+
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 9px 18px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F1F2F2 13%,
+      #C9CED0 38%,
+      #878D90 49%,
+      #D5D8D9 58%,
+      #F8F8F8 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .11em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-system-left,
+.aiw-system-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.aiw-dot {
+
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  flex: 0 0 auto;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+
+.aiw-dot-orange {
+  background: var(--orange);
+}
+
+
+.aiw-dot-green {
+  background: var(--green);
+}
+
+
+.aiw-dot-slate {
+  background: var(--slate);
+}
+
+
+.aiw-home {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 26px;
+
+  padding: 5px 11px;
+
+  color: var(--white);
+
+  background: var(--black);
+
+  border: 2px solid var(--black);
+
+  box-shadow: 3px 3px 0 var(--orange);
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+  word-spacing: 0 !important;
+
+  transition:
+    transform .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+
+.aiw-home:visited {
+  color: var(--white);
+}
+
+
+.aiw-home:focus-visible {
+
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+05 — HERO
+============================================================ */
+
+.aiw-hero {
+
+  position: relative;
+
+  min-height: 870px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    110px
+    clamp(22px, 5vw, 82px)
+    75px;
+
+  color: var(--white);
+
+  background:
+
+    radial-gradient(
+      circle at 80% 14%,
+      rgba(255,255,255,.34),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      132deg,
+      var(--orange) 0%,
+      #CF6A37 20%,
+      #98704D 36%,
+      #6E705A 48%,
+      var(--green) 68%,
+      var(--slate) 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+
+.aiw-glow {
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  top: -260px;
+  right: -70px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.42),
+      transparent 68%
+    );
+}
+
+
+.aiw-rec {
+
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  margin-bottom: 28px;
+
+  padding: 8px 11px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 1px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .12em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-rec span {
+
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  margin-right: 7px;
+
+  background: var(--orange);
+
+  border-radius: 50%;
+}
+
+
+.aiw-hero-meta {
+
+  position: absolute;
+  z-index: 3;
+
+  top: 30px;
+
+  left: clamp(22px, 5vw, 82px);
+  right: clamp(22px, 5vw, 82px);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-hero-copy {
+
+  position: relative;
+  z-index: 3;
+}
+
+
+.aiw-kicker {
+
+  margin-bottom: 20px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .14em !important;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-hero h1 {
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(92px, 15vw, 220px);
+
+  font-weight: 900;
+
+  line-height: .68;
+
+  letter-spacing: -.075em;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    10px 10px 0 rgba(17,17,17,.18);
+}
+
+
+.aiw-hero h2 {
+
+  margin: 48px 0 0;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px var(--white);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(43px, 6vw, 90px);
+
+  font-weight: 900;
+
+  line-height: .78;
+
+  letter-spacing: .035em;
+}
+
+
+.aiw-hero-footer {
+
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 65px;
+}
+
+
+.aiw-hero-footer p {
+
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  line-height: 1.5;
+
+  letter-spacing: .12em !important;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-sticker {
+
+  padding: 15px 19px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(19px, 2.2vw, 31px);
+
+  font-weight: 900;
+
+  line-height: .9;
+
+  transform: rotate(-2deg);
+}
+
+
+.aiw-ghost-number {
+
+  position: absolute;
+
+  right: -3vw;
+  bottom: -7vw;
+
+  color: rgba(255,255,255,.075);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(270px, 39vw, 600px);
+
+  font-weight: 900;
+
+  line-height: .7;
+}
+
+
+/* ============================================================
+06 — LIGHT SECTIONS
+============================================================ */
+
+.aiw-intro,
+.aiw-rubric {
+
+  position: relative;
+
+  padding:
+    110px
+    clamp(22px, 6vw, 100px)
+    125px;
+
+  background-color: var(--cream);
+
+  background-image:
+
+    linear-gradient(
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+
+  border-bottom: 5px solid var(--black);
+}
+
+
+.aiw-section-header {
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 45px;
+}
+
+
+.aiw-label {
+
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .14em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-section-header h2 {
+
+  margin: 0;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(70px, 10vw, 150px);
+
+  font-weight: 900;
+
+  line-height: .7;
+
+  letter-spacing: -.065em;
+}
+
+
+.aiw-stamp {
+
+  flex: 0 0 auto;
+
+  padding: 13px 16px;
+
+  color: var(--orange);
+
+  border: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  line-height: 1.3;
+
+  letter-spacing: .1em;
+  word-spacing: 0 !important;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+
+/* ============================================================
+07 — INTRO
+============================================================ */
+
+.aiw-intro-copy {
+
+  width: min(820px, 100%);
+
+  margin:
+    55px
+    0
+    75px
+    auto;
+}
+
+
+.aiw-intro-copy p {
+
+  color: var(--slate);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: clamp(22px, 2.45vw, 35px);
+
+  font-style: italic;
+
+  line-height: 1.13;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-intro-copy p + p {
+
+  margin-top: 28px;
+}
+
+
+.aiw-process-strip {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr auto
+    1fr;
+
+  gap: 12px;
+
+  align-items: stretch;
+}
+
+
+.aiw-process-strip article {
+
+  min-height: 220px;
+
+  padding: 18px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 7px 7px 0 var(--orange);
+}
+
+
+.aiw-process-strip article:nth-of-type(even) {
+
+  background: var(--green);
+
+  box-shadow: 7px 7px 0 var(--black);
+}
+
+
+.aiw-process-strip b {
+
+  display: block;
+
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: 36px;
+}
+
+
+.aiw-process-strip span {
+
+  display: block;
+
+  margin: 45px 0 12px;
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 900;
+}
+
+
+.aiw-process-strip p {
+
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+
+.aiw-process-strip > i {
+
+  align-self: center;
+
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: 28px;
+
+  font-style: normal;
+}
+
+
+/* ============================================================
+08 — PROMPT ARCHIVE
+============================================================ */
+
+.aiw-prompts {
+
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    140px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-bottom: 5px solid var(--orange);
+
+  overflow: hidden;
+}
+
+
+.aiw-prompts > * {
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.aiw-prompts-header {
+
+  display: grid;
+
+  grid-template-columns: 1.2fr .8fr;
+
+  gap: 40px;
+
+  align-items: end;
+
+  margin-bottom: 95px;
+}
+
+
+.aiw-prompts-header > span {
+
+  grid-column: 1 / -1;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .14em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-prompts-header h2 {
+
+  margin: 0;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(76px, 11vw, 165px);
+
+  font-weight: 900;
+
+  line-height: .69;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--orange);
+}
+
+
+.aiw-prompts-header p {
+
+  margin: 0;
+
+  color: var(--cream);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: clamp(21px, 2.4vw, 34px);
+
+  font-style: italic;
+
+  line-height: 1.12;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+/* ============================================================
+09 — PROMPT CASE
+============================================================ */
+
+.aiw-prompt-case {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(175px, .26fr)
+    1fr;
+
+  margin-bottom: 105px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 4px solid var(--white);
+
+  box-shadow: 14px 14px 0 var(--green);
+}
+
+
+.aiw-case-green {
+
+  background: var(--green);
+
+  box-shadow: 14px 14px 0 var(--orange);
+}
+
+
+.aiw-case-slate {
+
+  background: var(--slate);
+
+  box-shadow: 14px 14px 0 var(--orange);
+}
+
+
+.aiw-case-sidebar {
+
+  min-height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 24px 18px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-right: 4px solid var(--white);
+}
+
+
+.aiw-case-sidebar span,
+.aiw-case-sidebar small {
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .1em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-case-sidebar strong {
+
+  margin: auto 0;
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(27px, 3.4vw, 52px);
+
+  line-height: .8;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+}
+
+
+.aiw-case-content {
+
+  min-width: 0;
+
+  padding: clamp(25px, 3.5vw, 50px);
+}
+
+
+.aiw-case-title {
+
+  position: relative;
+
+  margin-bottom: 50px;
+}
+
+
+.aiw-case-title span {
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .1em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-case-title h3 {
+
+  margin: 25px 0 0;
+
+  color: var(--white);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(43px, 6vw, 87px);
+
+  font-weight: 900;
+
+  line-height: .73;
+
+  letter-spacing: -.055em;
+
+  text-shadow: 3px 3px 0 var(--black);
+}
+
+
+/* ============================================================
+10 — RAW / POLISHED PROMPT WINDOWS
+============================================================ */
+
+.aiw-comparison {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  gap: 22px;
+
+  align-items: start;
+}
+
+
+.aiw-prompt-window {
+
+  min-width: 0;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+}
+
+
+.aiw-raw {
+
+  transform: rotate(-.65deg);
+}
+
+
+.aiw-polished {
+
+  transform: rotate(.65deg);
+
+  box-shadow: 9px 9px 0 var(--black);
+}
+
+
+.aiw-windowbar {
+
+  min-height: 37px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #D8DADB 27%,
+      #999FA2 48%,
+      #E5E7E7 63%,
+      #FFFFFF 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .06em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-windowbar > div {
+
+  display: flex;
+
+  gap: 4px;
+}
+
+
+.aiw-windowbar i {
+
+  display: block;
+
+  width: 8px;
+  height: 8px;
+
+  background: var(--orange);
+
+  border: 1px solid var(--black);
+
+  border-radius: 50%;
+}
+
+
+.aiw-windowbar i:nth-child(2) {
+
+  background: var(--green);
+}
+
+
+.aiw-windowbar i:nth-child(3) {
+
+  background: var(--slate);
+}
+
+
+.aiw-prompt-status {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 12px 17px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-prompt-status span:first-child {
+
+  color: var(--orange);
+}
+
+
+/* ============================================================
+11 — CRITICAL PROMPT TEXT SPACING FIX
+
+This is intentionally aggressive because Cargo can inherit
+justification and spacing values into embedded page content.
+============================================================ */
+
+.aiw-prompt-window > p {
+
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  padding:
+    clamp(22px, 2.5vw, 36px) !important;
+
+  color: var(--black) !important;
+
+  background: var(--cream) !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 14px !important;
+
+  font-style: normal !important;
+
+  font-weight: 400 !important;
+
+  font-stretch: normal !important;
+
+  font-kerning: normal !important;
+
+  font-variant: normal !important;
+
+  font-variant-ligatures: normal !important;
+
+  line-height: 1.62 !important;
+
+  letter-spacing: 0 !important;
+
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+
+  text-align-last: auto !important;
+
+  text-justify: none !important;
+
+  text-indent: 0 !important;
+
+  text-transform: none !important;
+
+  white-space: normal !important;
+
+  word-break: normal !important;
+
+  overflow-wrap: break-word !important;
+
+  hyphens: none !important;
+
+  columns: auto !important;
+
+  column-count: auto !important;
+
+  column-width: auto !important;
+}
+
+
+.aiw-transform {
+
+  align-self: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--white);
+}
+
+
+.aiw-transform span {
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: 38px;
+}
+
+
+.aiw-transform small {
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  word-spacing: 0 !important;
+
+  writing-mode: vertical-rl;
+}
+
+
+.aiw-change {
+
+  margin:
+    45px
+    0
+    0
+    calc(50% + 25px);
+
+  padding: 17px 20px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-left: 7px solid var(--orange);
+}
+
+
+.aiw-change span {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .1em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-change p {
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+/* ============================================================
+12 — ERROR LOG
+============================================================ */
+
+.aiw-errors {
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    130px;
+
+  color: var(--white);
+  background: var(--slate);
+
+  border-bottom: 5px solid var(--black);
+}
+
+
+.aiw-error-header {
+
+  display: grid;
+
+  grid-template-columns: 1.15fr .85fr;
+
+  gap: 45px;
+
+  align-items: end;
+
+  margin-bottom: 80px;
+}
+
+
+.aiw-error-header > span {
+
+  grid-column: 1 / -1;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .13em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-error-header h2 {
+
+  margin: 0;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(74px, 10vw, 150px);
+
+  font-weight: 900;
+
+  line-height: .69;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--orange);
+}
+
+
+.aiw-error-header p {
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: clamp(21px, 2.3vw, 32px);
+
+  font-style: italic;
+
+  line-height: 1.12;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-error-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: clamp(24px, 3vw, 42px);
+}
+
+
+.aiw-error-card {
+
+  min-height: 540px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 4px solid var(--white);
+
+  box-shadow: 11px 11px 0 var(--orange);
+}
+
+
+.aiw-error-orange {
+
+  color: var(--black);
+  background: var(--orange);
+
+  box-shadow: 11px 11px 0 var(--black);
+}
+
+
+.aiw-error-green {
+
+  color: var(--white);
+  background: var(--green);
+
+  box-shadow: 11px 11px 0 var(--orange);
+}
+
+
+.aiw-error-card-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-error-card-top b {
+
+  color: var(--orange);
+}
+
+
+.aiw-error-orange .aiw-error-card-top b {
+
+  color: var(--black);
+}
+
+
+.aiw-error-card h3 {
+
+  margin: 85px 0 27px;
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(34px, 3.8vw, 57px);
+
+  font-weight: 900;
+
+  line-height: .79;
+
+  letter-spacing: -.04em;
+}
+
+
+.aiw-error-card p {
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-fix {
+
+  margin-top: auto;
+
+  padding: 13px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border-left: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  line-height: 1.4;
+
+  letter-spacing: .06em;
+  word-spacing: 0 !important;
+}
+
+
+/* ============================================================
+13 — RUBRIC
+============================================================ */
+
+.aiw-rubric-intro {
+
+  width: min(780px, 100%);
+
+  margin:
+    55px
+    0
+    65px
+    auto;
+}
+
+
+.aiw-rubric-intro p {
+
+  margin: 0;
+
+  color: var(--slate);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: clamp(22px, 2.5vw, 36px);
+
+  font-style: italic;
+
+  line-height: 1.12;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-rubric-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: clamp(30px, 5vw, 70px);
+}
+
+
+.aiw-eval {
+
+  min-height: 580px;
+
+  padding: 28px;
+
+  color: var(--white);
+
+  border: 4px solid var(--black);
+}
+
+
+.aiw-eval-one {
+
+  background: var(--slate);
+
+  box-shadow: 12px 12px 0 var(--black);
+}
+
+
+.aiw-eval-two {
+
+  background: var(--green);
+
+  box-shadow: 12px 12px 0 var(--orange);
+}
+
+
+.aiw-eval-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .08em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-eval-top b {
+
+  color: var(--orange);
+}
+
+
+.aiw-eval h3 {
+
+  margin: 75px 0 45px;
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(37px, 4.4vw, 65px);
+
+  font-weight: 900;
+
+  line-height: .78;
+
+  letter-spacing: -.04em;
+}
+
+
+.aiw-eval-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 12px;
+
+  padding: 13px 14px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border-left: 6px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .05em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-eval-row strong {
+
+  color: var(--orange);
+
+  text-align: right;
+}
+
+
+.aiw-eval > p {
+
+  margin: 45px 0 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+/* ============================================================
+14 — LESSONS
+============================================================ */
+
+.aiw-lessons {
+
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    130px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-bottom: 5px solid var(--orange);
+
+  overflow: hidden;
+}
+
+
+.aiw-lessons > * {
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.aiw-lessons-heading {
+
+  margin-bottom: 85px;
+}
+
+
+.aiw-lessons-heading span {
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .13em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-lessons-heading h2 {
+
+  margin: 18px 0 0;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(78px, 11vw, 165px);
+
+  font-weight: 900;
+
+  line-height: .68;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--orange);
+}
+
+
+.aiw-lessons-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+.aiw-lessons-grid article {
+
+  min-height: 400px;
+
+  padding: 22px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+
+.aiw-lessons-grid article:nth-child(even) {
+
+  color: var(--white);
+  background: var(--green);
+}
+
+
+.aiw-lessons-grid b {
+
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: 40px;
+}
+
+
+.aiw-lessons-grid h3 {
+
+  margin: 95px 0 22px;
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(27px, 3vw, 42px);
+
+  font-weight: 900;
+
+  line-height: .8;
+}
+
+
+.aiw-lessons-grid p {
+
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-terminal {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 80px;
+
+  padding: 18px 20px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .07em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-terminal i {
+
+  color: var(--white);
+
+  font-style: normal;
+}
+
+
+/* ============================================================
+15 — CLOSING
+============================================================ */
+
+.aiw-closing {
+
+  position: relative;
+
+  min-height: 800px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    105px
+    clamp(22px, 6vw, 95px);
+
+  color: var(--white);
+
+  background:
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,255,255,.24),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      130deg,
+      var(--orange) 0%,
+      #A76D49 30%,
+      var(--green) 64%,
+      var(--slate) 100%
+    );
+
+  overflow: hidden;
+}
+
+
+.aiw-closing > * {
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.aiw-closing-label {
+
+  margin-bottom: 23px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: .13em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-closing h2 {
+
+  margin: 0;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(70px, 11vw, 160px);
+
+  font-weight: 900;
+
+  line-height: .69;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+
+.aiw-closing h3 {
+
+  margin: 40px 0 0;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px var(--white);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(38px, 6vw, 90px);
+
+  font-weight: 900;
+
+  line-height: .82;
+
+  letter-spacing: .025em;
+}
+
+
+.aiw-closing > p {
+
+  width: min(700px, 100%);
+
+  margin: 55px 0 0 auto;
+
+  padding: 22px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-left: 7px solid var(--orange);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+
+.aiw-closing-sticker {
+
+  width: max-content;
+
+  max-width: 100%;
+
+  margin-top: 55px;
+
+  padding: 15px 19px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(19px, 2.4vw, 34px);
+
+  font-weight: 900;
+
+  line-height: .9;
+
+  transform: rotate(-2deg);
+}
+
+
+/* ============================================================
+16 — FOOTER
+============================================================ */
+
+.aiw-footer {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 24px 30px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: .09em;
+  word-spacing: 0 !important;
+}
+
+
+.aiw-footer strong {
+
+  padding: 7px 12px;
+
+  background: var(--green);
+
+  border: 1px solid var(--white);
+}
+
+
+.aiw-footer > span:last-child {
+
+  text-align: right;
+}
+
+
+/* ============================================================
+17 — HOVER
+============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .aiw-home:hover {
+
+    color: var(--white);
+
+    background: var(--green);
+
+    transform: translate(-1px, -1px);
+
+    box-shadow: 5px 5px 0 var(--orange);
+  }
+
+
+  .aiw-prompt-window,
+  .aiw-error-card,
+  .aiw-eval,
+  .aiw-lessons-grid article {
+
+    transition:
+      transform .2s ease,
+      box-shadow .2s ease;
+  }
+
+
+  .aiw-prompt-window:hover,
+  .aiw-error-card:hover,
+  .aiw-eval:hover,
+  .aiw-lessons-grid article:hover {
+
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* ============================================================
+18 — TABLET
+============================================================ */
+
+@media (max-width: 1180px) {
+
+  .aiw-process-strip {
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 28px;
+  }
+
+
+  .aiw-process-strip > i {
+
+    display: none;
+  }
+
+
+  .aiw-prompt-case {
+
+    grid-template-columns:
+      130px
+      1fr;
+  }
+
+
+  .aiw-comparison {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .aiw-transform {
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    padding: 5px 0;
+  }
+
+
+  .aiw-transform span {
+
+    transform: rotate(90deg);
+  }
+
+
+  .aiw-transform small {
+
+    writing-mode: initial;
+  }
+
+
+  .aiw-change {
+
+    margin-left: 0;
+  }
+
+
+  .aiw-error-grid {
+
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .aiw-error-green {
+
+    grid-column: 1 / -1;
+
+    width: min(650px, 100%);
+
+    justify-self: center;
+  }
+
+
+  .aiw-lessons-grid {
+
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+}
+
+
+/* ============================================================
+19 — MOBILE
+============================================================ */
+
+@media (max-width: 760px) {
+
+  .aiw-system-left > span:last-child {
+
+    display: none;
+  }
+
+
+  .aiw-systembar {
+
+    font-size: 7px;
+  }
+
+
+  .aiw-system-right {
+
+    gap: 6px;
+  }
+
+
+  .aiw-home {
+
+    min-height: 23px;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+  }
+
+
+  .aiw-hero {
+
+    min-height: 720px;
+
+    padding:
+      90px
+      18px
+      60px;
+  }
+
+
+  .aiw-hero-meta {
+
+    left: 18px;
+    right: 18px;
+
+    font-size: 7px;
+  }
+
+
+  .aiw-hero h1 {
+
+    font-size: clamp(70px, 22vw, 116px);
+  }
+
+
+  .aiw-hero h2 {
+
+    font-size: clamp(35px, 11vw, 59px);
+  }
+
+
+  .aiw-hero-footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .aiw-intro,
+  .aiw-prompts,
+  .aiw-errors,
+  .aiw-rubric,
+  .aiw-lessons,
+  .aiw-closing {
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .aiw-section-header {
+
+    flex-direction: column;
+  }
+
+
+  .aiw-prompts-header,
+  .aiw-error-header {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .aiw-prompts-header p,
+  .aiw-error-header p {
+
+    margin-top: 20px;
+  }
+
+
+  .aiw-process-strip,
+  .aiw-error-grid,
+  .aiw-rubric-grid,
+  .aiw-lessons-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .aiw-prompt-case {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .aiw-case-sidebar {
+
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-right: 0;
+
+    border-bottom: 4px solid var(--white);
+  }
+
+
+  .aiw-case-sidebar strong {
+
+    margin: 0;
+
+    font-size: 23px;
+
+    writing-mode: initial;
+
+    transform: none;
+
+    text-align: center;
+  }
+
+
+  .aiw-case-sidebar small {
+
+    text-align: right;
+  }
+
+
+  .aiw-raw,
+  .aiw-polished {
+
+    transform: none;
+  }
+
+
+  .aiw-prompt-window > p {
+
+    font-size: 13px !important;
+
+    line-height: 1.58 !important;
+
+    letter-spacing: 0 !important;
+
+    word-spacing: 0 !important;
+
+    text-align: left !important;
+
+    text-justify: none !important;
+  }
+
+
+  .aiw-error-green {
+
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+
+  .aiw-error-card,
+  .aiw-eval {
+
+    min-height: auto;
+  }
+
+
+  .aiw-footer {
+
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+
+  .aiw-footer > span:last-child {
+
+    text-align: center;
+  }
+
+}
+
+
+/* ============================================================
+20 — SMALL MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+
+  .aiw-system-right > span {
+
+    display: none;
+  }
+
+
+  .aiw-section-header h2,
+  .aiw-prompts-header h2,
+  .aiw-error-header h2,
+  .aiw-lessons-heading h2 {
+
+    font-size: clamp(57px, 18vw, 88px);
+  }
+
+
+  .aiw-case-content {
+
+    padding:
+      20px
+      14px
+      28px;
+  }
+
+
+  .aiw-case-title h3 {
+
+    font-size: 42px;
+  }
+
+
+  .aiw-windowbar {
+
+    font-size: 6px;
+  }
+
+
+  .aiw-prompt-status {
+
+    flex-direction: column;
+  }
+
+
+  .aiw-eval-row {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .aiw-eval-row strong {
+
+    text-align: left;
+  }
+
+}
+
+
+/* ============================================================
+21 — FINAL CARGO SPACING OVERRIDE
+
+DO NOT MOVE THIS ABOVE THE OTHER RULES.
+
+This final block overrides inherited Cargo typography without
+removing the intentional letter tracking from interface labels.
+============================================================ */
+
+.aiw-page p {
+
+  word-spacing: 0px !important;
+
+  letter-spacing: 0px !important;
+
+  text-align: left !important;
+
+  text-align-last: auto !important;
+
+  text-justify: none !important;
+
+  white-space: normal !important;
+
+  word-break: normal !important;
+
+  overflow-wrap: break-word !important;
+
+  hyphens: none !important;
+}
+
+
+.aiw-prompt-window > p {
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-weight: 400 !important;
+
+  font-stretch: normal !important;
+
+  word-spacing: 0px !important;
+
+  letter-spacing: 0px !important;
+
+  text-align: left !important;
+
+  text-align-last: auto !important;
+
+  text-justify: none !important;
+
+  text-indent: 0px !important;
+
+  white-space: normal !important;
+
+  word-break: normal !important;
+
+  overflow-wrap: break-word !important;
+}
+
+
+/* ============================================================
+22 — REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .aiw-page * {
+
+    transition: none !important;
+  }
+
+
+  .aiw-home:hover,
+  .aiw-prompt-window:hover,
+  .aiw-error-card:hover,
+  .aiw-eval:hover,
+  .aiw-lessons-grid article:hover {
+
+    transform: none !important;
+  }
+
+}

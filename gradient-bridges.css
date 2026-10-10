@@ -1,0 +1,29 @@
+/* Seamless, subtle color blending between ORIGINAL portfolio sections.
+   Does not replace any section background, image, layout or animation. */
+.gradient-linked-section {
+  position: relative;
+  isolation: isolate;
+}
+.gradient-linked-section > .section-gradient-bridge {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  height: clamp(140px, 19vw, 290px);
+  background: linear-gradient(to bottom,
+    var(--bridge-from) 0%,
+    color-mix(in srgb, var(--bridge-from) 82%, transparent) 18%,
+    color-mix(in srgb, var(--bridge-from) 42%, transparent) 55%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+/* Ensure text and media sit above the soft color bridge. */
+.gradient-linked-section > :not(.section-gradient-bridge) {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 640px) {
+  .gradient-linked-section > .section-gradient-bridge {
+    height: 155px;
+  }
+}
