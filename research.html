@@ -5,22 +5,2530 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Research | Nike Creative AI Portfolio</title>
-<link href="css/research.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="02"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a href="index.html"><span class="nav-index">01</span>HOME</a><a aria-current="page" href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a href="index.html"><span class="nav-index">01</span>HOME</a><a aria-current="page" href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
+<link href="css/research.css" rel="stylesheet"/><style data-inlined-from="css/research.css">/* ============================================================
+NIKE — RESEARCH PAGE
+BUILT BY MOVEMENT. BOUND BY COMMUNITY.
+CARGO / Y2K RESEARCH ARCHIVE
+============================================================ */
+
+
+/* ============================================================
+00 — CARGO RESET
+============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: hidden !important;
+  background: #111111 !important;
+}
+
+main,
+main-content,
+.page,
+.page-content,
+.page_content,
+[data-page],
+[data-bodyview] {
+  max-width: none !important;
+}
+
+
+/* ============================================================
+01 — MASTER SYSTEM
+============================================================ */
+
+.nr-page {
+  --black: #111111;
+  --white: #FFFFFF;
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+  --cream: #EBE3DB;
+  --silver: #C9CED0;
+
+  position: relative;
+  left: 50%;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(-50%);
+
+  color: var(--black);
+  background: var(--cream);
+
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  overflow: visible;
+}
+
+.nr-page *,
+.nr-page *::before,
+.nr-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+02 — TYPOGRAPHY PROTECTION
+============================================================ */
+
+.nr-page h1,
+.nr-page h2,
+.nr-page h3,
+.nr-page h4,
+.nr-page p,
+.nr-page strong {
+  word-spacing: 0 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  white-space: normal !important;
+  text-align-last: auto !important;
+}
+
+.nr-page h1,
+.nr-page h2,
+.nr-page h3,
+.nr-page h4,
+.nr-page p {
+  text-align: left;
+}
+
+
+/* ============================================================
+03 — CHROME SYSTEM BAR
+============================================================ */
+
+.nr-system-bar {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 9px 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F1F2F2 10%,
+      #D5D8D9 39%,
+      #A8ADB0 47%,
+      #7D8386 50%,
+      #BCC0C2 54%,
+      #E6E8E9 83%,
+      #C9CDCF 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(80,85,87,.8);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.nr-system-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nr-system-right {
+  white-space: nowrap;
+}
+
+.nr-system-name {
+  margin-left: 8px;
+}
+
+.nr-dot {
+  width: 11px;
+  height: 11px;
+
+  display: inline-block;
+
+  border: 1.5px solid var(--black);
+  border-radius: 50%;
+}
+
+.nr-dot-orange {
+  background: var(--orange);
+}
+
+.nr-dot-green {
+  background: var(--green);
+}
+
+.nr-dot-slate {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+04 — HERO
+============================================================ */
+
+.nr-hero {
+  position: relative;
+
+  min-height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    90px
+    clamp(22px, 5vw, 80px)
+    70px;
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 17%,
+      rgba(255,255,255,.28),
+      transparent 24%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange) 0%,
+      #D96D33 18%,
+      #A06E46 35%,
+      #66705B 48%,
+      var(--green) 64%,
+      var(--slate) 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.nr-grid-overlay,
+.nr-direction-grid,
+.nr-pressure-grid,
+.nr-closing-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
+
+  background-size: 38px 38px;
+}
+
+.nr-flash-bloom {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -170px;
+  right: 7%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.45),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+.nr-hero-meta {
+  position: absolute;
+  z-index: 4;
+
+  top: 25px;
+  left: clamp(22px, 5vw, 80px);
+  right: clamp(22px, 5vw, 80px);
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.nr-rec-chip {
+  position: relative;
+  z-index: 4;
+
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
+
+  padding: 8px 11px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 1px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.nr-rec-dot {
+  width: 8px;
+  height: 8px;
+
+  display: block;
+
+  background: var(--orange);
+
+  border-radius: 50%;
+}
+
+.nr-hero-kicker,
+.nr-section-kicker {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 15px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .17em;
+}
+
+.nr-hero-title {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(95px, 17vw, 260px);
+  font-weight: 900;
+  line-height: .68;
+
+  letter-spacing: -.085em !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(17,17,17,.18);
+}
+
+.nr-hero-outline {
+  position: relative;
+  z-index: 3;
+
+  max-width: 1100px;
+
+  margin: 35px 0 0;
+
+  color: transparent !important;
+
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 1.5px var(--white) !important;
+
+  paint-order: stroke fill;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(42px, 6.5vw, 100px);
+  font-weight: 900;
+  line-height: .79;
+
+  letter-spacing: .035em !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.nr-hero-bottom {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 65px;
+}
+
+.nr-hero-bottom > p {
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.nr-hero-file {
+  padding: 11px 14px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+}
+
+.nr-hero-file span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 7px;
+  letter-spacing: .12em;
+}
+
+.nr-hero-file strong {
+  font-size: 17px;
+}
+
+.nr-hero-number {
+  position: absolute;
+
+  right: -1vw;
+  bottom: -7vw;
+
+  color: rgba(255,255,255,.07);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(250px, 38vw, 560px);
+  line-height: .7;
+}
+
+
+/* ============================================================
+05 — SHARED HEADINGS
+============================================================ */
+
+.nr-section-heading,
+.nr-amira-heading,
+.nr-trends-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+
+  margin-bottom: 70px;
+}
+
+.nr-technical-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.nr-outline-green,
+.nr-outline-orange {
+  margin: 0;
+
+  color: transparent !important;
+
+  -webkit-text-fill-color: transparent !important;
+
+  paint-order: stroke fill;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(58px, 9vw, 135px);
+  font-weight: 900;
+  line-height: .78;
+
+  letter-spacing: .035em !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.nr-outline-green {
+  -webkit-text-stroke: 1.5px var(--green) !important;
+}
+
+.nr-outline-orange {
+  -webkit-text-stroke: 1.5px var(--orange) !important;
+}
+
+.nr-status-stamp {
+  padding: 15px 18px;
+
+  color: var(--green);
+
+  border: 3px solid var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: .12em;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+
+/* ============================================================
+06 — MARKET POSITION
+============================================================ */
+
+.nr-market-section {
+  position: relative;
+
+  padding:
+    100px
+    clamp(22px, 5vw, 80px)
+    110px;
+
+  background: var(--cream);
+}
+
+.nr-market-section::before,
+.nr-amira-section::before,
+.nr-trends-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(17,17,17,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.035) 1px, transparent 1px);
+
+  background-size: 30px 30px;
+}
+
+.nr-market-section > *,
+.nr-amira-section > *,
+.nr-trends-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.nr-market-intro {
+  display: grid;
+
+  grid-template-columns: .7fr 1.3fr;
+
+  gap: clamp(50px, 7vw, 110px);
+
+  align-items: start;
+}
+
+.nr-market-statement {
+  max-width: 580px;
+}
+
+.nr-market-statement p {
+  margin: 0 0 28px;
+
+  font-size: clamp(21px, 2.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.12;
+
+  letter-spacing: -.02em;
+  word-spacing: 0 !important;
+}
+
+.nr-market-data {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.nr-data-card {
+  min-height: 280px;
+
+  padding: 25px;
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.nr-data-card > span {
+  display: block;
+
+  margin-bottom: 30px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(48px, 6vw, 90px);
+  line-height: .75;
+}
+
+.nr-data-card h3 {
+  margin: 0 0 13px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(21px, 2.2vw, 31px);
+  line-height: .9;
+
+  word-spacing: 0 !important;
+}
+
+.nr-data-card p {
+  margin: 0;
+
+  line-height: 1.5;
+
+  word-spacing: 0 !important;
+}
+
+.nr-data-orange {
+  background: var(--orange);
+}
+
+.nr-data-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+.nr-data-slate {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.nr-data-black {
+  color: var(--white);
+  background: var(--black);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.nr-market-strip {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 75px;
+
+  padding: 17px 20px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.nr-market-strip strong {
+  padding: 8px 12px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(11px, 1.4vw, 17px);
+
+  text-align: center;
+}
+
+.nr-market-strip > span:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+07 — COMPETITIVE PRESSURE
+============================================================ */
+
+.nr-pressure-section {
+  position: relative;
+
+  padding:
+    105px
+    clamp(22px, 5vw, 80px)
+    120px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      #252A2C,
+      var(--slate) 55%,
+      #35423A
+    );
+
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.nr-pressure-section > *:not(.nr-pressure-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+.nr-pressure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+
+  margin-bottom: 55px;
+}
+
+.nr-light-kicker {
+  color: rgba(255,255,255,.72);
+}
+
+.nr-pressure-header h2 {
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(75px, 12vw, 180px);
+  font-weight: 900;
+  line-height: .7;
+
+  letter-spacing: -.075em !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+.nr-pressure-note {
+  padding: 15px 18px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(14px, 1.7vw, 24px);
+  line-height: .9;
+
+  transform: rotate(2deg);
+}
+
+.nr-pressure-lead {
+  max-width: 950px;
+
+  margin-bottom: 65px;
+}
+
+.nr-pressure-lead p {
+  margin: 0;
+
+  color: var(--cream);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size: clamp(27px, 3.5vw, 50px);
+  font-style: italic;
+  line-height: 1.04;
+
+  word-spacing: 0 !important;
+}
+
+
+/* ============================================================
+08 — COMPETITOR IMAGES
+============================================================ */
+
+.nr-competitor-visuals {
+  display: grid;
+
+  grid-template-columns: 1.1fr .9fr;
+
+  gap: clamp(35px, 7vw, 110px);
+
+  align-items: start;
+}
+
+.nr-research-image {
+  margin: 0;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+}
+
+.nr-nb-image-one {
+  box-shadow:
+    13px 13px 0 var(--orange),
+    17px 17px 0 var(--black);
+
+  transform: rotate(-.7deg);
+}
+
+.nr-nb-image-two {
+  margin-top: 80px;
+
+  box-shadow:
+    13px 13px 0 var(--green),
+    17px 17px 0 var(--black);
+
+  transform: rotate(.7deg);
+}
+
+.nr-window-bar,
+.nr-photo-label {
+  min-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 8px 11px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF,
+      #D8DBDC 42%,
+      #878D90 49%,
+      #E7E8E8 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+.nr-window-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.nr-window-dots span {
+  width: 9px;
+  height: 9px;
+
+  display: block;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+.nr-window-dots span:first-child {
+  background: var(--orange);
+}
+
+.nr-window-dots span:nth-child(2) {
+  background: var(--green);
+}
+
+.nr-window-dots span:nth-child(3) {
+  background: var(--slate);
+}
+
+.nr-research-image img,
+.nr-amira-photo img {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  transform: none !important;
+  clip-path: none !important;
+}
+
+.nr-image-footer {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 10px 12px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+
+/* ============================================================
+09 — PRESSURE OBSERVATIONS
+============================================================ */
+
+.nr-pressure-observations {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 90px;
+}
+
+.nr-pressure-observations article {
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 18px;
+
+  padding: 23px;
+
+  background: rgba(17,17,17,.38);
+
+  border: 2px solid rgba(255,255,255,.35);
+}
+
+.nr-pressure-observations article > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.nr-pressure-observations h3 {
+  margin: 0 0 9px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(21px, 2.4vw, 34px);
+  line-height: .9;
+
+  word-spacing: 0 !important;
+}
+
+.nr-pressure-observations p {
+  margin: 0;
+
+  color: rgba(255,255,255,.78);
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+10 — COMPETITIVE SQUEEZE
+============================================================ */
+
+.nr-squeeze-title {
+  display: grid;
+
+  grid-template-columns: .35fr 1fr;
+
+  gap: 45px;
+
+  align-items: end;
+
+  margin-top: 120px;
+  margin-bottom: 45px;
+
+  padding-top: 50px;
+
+  border-top: 2px solid rgba(255,255,255,.25);
+}
+
+.nr-squeeze-title > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.nr-squeeze-title h3 {
+  margin: 0;
+
+  color: transparent !important;
+
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 1.3px var(--orange) !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(50px, 7vw, 105px);
+  font-weight: 900;
+  line-height: .77;
+
+  letter-spacing: .035em;
+  word-spacing: 0 !important;
+}
+
+.nr-squeeze-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.nr-squeeze-card {
+  min-height: 480px;
+
+  padding: 24px;
+
+  color: var(--black);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 9px 9px 0 var(--black);
+}
+
+.nr-squeeze-nb {
+  background: var(--cream);
+}
+
+.nr-squeeze-on {
+  background: var(--orange);
+}
+
+.nr-squeeze-nike {
+  color: var(--white);
+  background: var(--green);
+}
+
+.nr-squeeze-top {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 2px solid currentColor;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+.nr-squeeze-card h4 {
+  margin: 45px 0 25px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(25px, 3vw, 42px);
+  line-height: .88;
+
+  word-spacing: 0 !important;
+}
+
+.nr-squeeze-card p {
+  margin: 0 0 18px;
+
+  line-height: 1.5;
+}
+
+
+
+
+/* ============================================================
+10B — COMPETITIVE SQUEEZE CAMPAIGN VISUALS
+============================================================ */
+
+.nr-squeeze-visuals {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+
+.nr-squeeze-visuals-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nr-squeeze-visuals-single {
+  grid-template-columns: 1fr;
+}
+
+.nr-squeeze-visuals img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 3px solid var(--black);
+}
+
+
+/* ============================================================
+11 — MEET AMIRA
+============================================================ */
+
+.nr-amira-section {
+  position: relative;
+
+  padding:
+    110px
+    clamp(22px, 5vw, 80px)
+    120px;
+
+  background: var(--cream);
+}
+
+.nr-amira-id {
+  min-width: 180px;
+
+  display: grid;
+
+  gap: 7px;
+
+  padding: 14px 16px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--orange);
+
+  box-shadow: 7px 7px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: .1em;
+}
+
+.nr-amira-id strong {
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: 25px;
+}
+
+.nr-amira-intro {
+  display: grid;
+
+  grid-template-columns: 1fr .85fr;
+
+  gap: clamp(50px, 8vw, 130px);
+
+  align-items: start;
+}
+
+.nr-amira-big-copy h3 {
+  margin: 0 0 30px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(48px, 7vw, 105px);
+  line-height: .78;
+
+  letter-spacing: -.055em;
+  word-spacing: 0 !important;
+}
+
+.nr-amira-big-copy p {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-size: clamp(18px, 1.8vw, 25px);
+  line-height: 1.5;
+}
+
+.nr-amira-profile {
+  border: 3px solid var(--black);
+
+  box-shadow: 9px 9px 0 var(--orange);
+}
+
+.nr-profile-row {
+  display: grid;
+
+  grid-template-columns: .38fr 1fr;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  border-bottom: 2px solid var(--black);
+}
+
+.nr-profile-row:last-child {
+  border-bottom: 0;
+}
+
+.nr-profile-row span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.nr-profile-row strong {
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(13px, 1.5vw, 19px);
+}
+
+
+/* ============================================================
+12 — AMIRA VISUALS
+============================================================ */
+
+.nr-amira-visuals {
+  display: grid;
+
+  grid-template-columns: .9fr 1.1fr;
+
+  gap: clamp(40px, 8vw, 125px);
+
+  align-items: start;
+
+  margin-top: 90px;
+}
+
+.nr-amira-photo {
+  margin: 0;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+}
+
+.nr-amira-photo-one {
+  box-shadow:
+    13px 13px 0 var(--green),
+    17px 17px 0 var(--black);
+
+  transform: rotate(-1deg);
+}
+
+.nr-amira-photo-two {
+  margin-top: 75px;
+
+  box-shadow:
+    13px 13px 0 var(--orange),
+    17px 17px 0 var(--black);
+
+  transform: rotate(1deg);
+}
+
+
+/* ============================================================
+13 — TARGET INSIGHTS
+============================================================ */
+
+.nr-amira-insights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+
+  margin-top: 110px;
+}
+
+.nr-insight {
+  position: relative;
+
+  min-height: 370px;
+
+  padding: 28px;
+
+  border: 4px solid var(--black);
+
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.nr-insight-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+.nr-insight-orange {
+  background: var(--orange);
+}
+
+.nr-insight-slate {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.nr-insight-black {
+  color: var(--white);
+  background: var(--black);
+
+  box-shadow: 10px 10px 0 var(--orange);
+}
+
+.nr-insight-number {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: 60px;
+
+  opacity: .15;
+}
+
+.nr-insight-label {
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.nr-insight h3 {
+  margin: 75px 0 25px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: .78;
+
+  letter-spacing: -.045em;
+  word-spacing: 0 !important;
+}
+
+.nr-insight > p:last-child {
+  max-width: 600px;
+
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+14 — RESEARCH → VISUAL DIRECTION
+============================================================ */
+
+.nr-direction-section {
+  position: relative;
+
+  padding:
+    105px
+    clamp(22px, 5vw, 80px)
+    115px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      130deg,
+      var(--orange),
+      #9B704C 35%,
+      var(--green) 65%,
+      var(--slate)
+    );
+
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.nr-direction-section > *:not(.nr-direction-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+.nr-direction-heading > span {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.nr-direction-heading h2 {
+  max-width: 1300px;
+
+  margin: 25px 0 70px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(68px, 11vw, 165px);
+  font-weight: 900;
+  line-height: .7;
+
+  letter-spacing: -.07em;
+  word-spacing: 0 !important;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+.nr-direction-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.nr-direction-list article {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 18px;
+
+  padding: 23px;
+
+  background: rgba(17,17,17,.55);
+
+  border: 2px solid rgba(255,255,255,.45);
+
+  box-shadow: 7px 7px 0 rgba(17,17,17,.7);
+}
+
+.nr-direction-list article > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.nr-direction-list p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+15 — TREND RESEARCH ARTIFACTS
+============================================================ */
+
+.nr-trends-section {
+  position: relative;
+
+  padding:
+    110px
+    clamp(22px, 5vw, 80px)
+    125px;
+
+  background: var(--cream);
+}
+
+.nr-artifact-counter {
+  min-width: 150px;
+
+  padding: 14px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--orange);
+
+  box-shadow: 7px 7px 0 var(--slate);
+
+  font-family: "Courier New", monospace;
+}
+
+.nr-artifact-counter span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 8px;
+  letter-spacing: .12em;
+}
+
+.nr-artifact-counter strong {
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: 45px;
+}
+
+.nr-trend-artifact {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    minmax(0, 1fr)
+    minmax(280px, .55fr);
+
+  gap: clamp(25px, 4vw, 60px);
+
+  align-items: start;
+
+  margin-bottom: 70px;
+
+  padding: 35px;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 11px 11px 0 var(--black);
+}
+
+.nr-trend-alt-green {
+  background: rgba(74,93,78,.16);
+}
+
+.nr-trend-alt-orange {
+  background: rgba(242,101,34,.15);
+}
+
+
+/* HANDHELD ARTIFACT — NOW TEXT ONLY */
+
+.nr-trend-handheld {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(89,100,106,.12),
+      rgba(255,255,255,.94)
+    );
+
+  box-shadow:
+    11px 11px 0 var(--green),
+    15px 15px 0 var(--black);
+}
+
+.nr-trend-number {
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(50px, 6vw, 85px);
+  line-height: .8;
+}
+
+.nr-trend-label {
+  color: var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.nr-trend-content h3 {
+  margin: 28px 0 25px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: .78;
+
+  letter-spacing: -.045em;
+  word-spacing: 0 !important;
+}
+
+.nr-trend-content p {
+  margin: 0 0 16px;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nr-source-box,
+.nr-application-box {
+  padding: 16px;
+
+  border: 2px solid var(--black);
+
+  font-family: "Courier New", monospace;
+}
+
+.nr-source-box {
+  margin-top: 30px;
+
+  background: var(--cream);
+}
+
+.nr-source-box span,
+.nr-application-box > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--orange);
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.nr-source-box strong {
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.nr-application-box {
+  background: var(--black);
+
+  color: var(--white);
+
+  box-shadow: 7px 7px 0 var(--orange);
+}
+
+.nr-application-box p {
+  margin: 0 0 15px;
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.nr-application-box p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+15B — SOURCE LINKS + SOURCE DIRECTORY
+============================================================ */
+
+.nr-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.nr-source-links a,
+.nr-source-entry a {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  padding: 8px 10px;
+  color: var(--white) !important;
+  background: var(--black);
+  border: 2px solid var(--black);
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: .09em;
+  word-spacing: 0 !important;
+  text-decoration: none !important;
+}
+
+.nr-source-links a:hover,
+.nr-source-entry a:hover {
+  color: var(--black) !important;
+  background: var(--orange);
+}
+
+.nr-sources-section {
+  position: relative;
+  padding: 110px clamp(22px, 5vw, 80px) 125px;
+  background: var(--cream);
+  border-top: 5px solid var(--black);
+}
+
+.nr-sources-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(17,17,17,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.035) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.nr-sources-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.nr-sources-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 45px;
+  margin-bottom: 70px;
+}
+
+.nr-sources-stamp {
+  padding: 15px 18px;
+  color: var(--orange);
+  border: 3px solid var(--orange);
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  text-align: center;
+  transform: rotate(3deg);
+}
+
+.nr-source-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nr-source-entry {
+  min-height: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px;
+  background: var(--white);
+  border: 3px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+  font-family: "Courier New", monospace;
+}
+
+.nr-source-entry:nth-child(even) {
+  box-shadow: 8px 8px 0 var(--green);
+}
+
+.nr-source-entry > span {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--orange);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.nr-source-entry strong {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 11px;
+  line-height: 1.45;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+}
+
+.nr-source-entry a {
+  margin-top: auto;
+}
+
+@media (max-width: 980px) {
+  .nr-sources-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nr-sources-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .nr-source-directory {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-source-links {
+    display: grid;
+  }
+
+  .nr-source-links a {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1750px) {
+  .nr-sources-section > * {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ============================================================
+16 — CLOSING
+============================================================ */
+
+.nr-closing {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    80px
+    clamp(22px, 6vw, 95px);
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 20%,
+      rgba(255,255,255,.18),
+      transparent 25%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange),
+      var(--green) 58%,
+      var(--slate)
+    );
+
+  border-top: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.nr-closing-meta {
+  position: absolute;
+  z-index: 3;
+
+  top: 25px;
+  left: clamp(22px, 6vw, 95px);
+  right: clamp(22px, 6vw, 95px);
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.nr-closing > p {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 20px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.nr-closing h2 {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(82px, 13vw, 200px);
+  font-weight: 900;
+  line-height: .69;
+
+  letter-spacing: -.08em;
+  word-spacing: 0 !important;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    8px 8px 0 rgba(17,17,17,.15);
+}
+
+.nr-closing-sticker {
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  margin-top: 50px;
+
+  padding: 14px 18px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(17px, 2.3vw, 30px);
+  line-height: .9;
+
+  transform: rotate(-2deg);
+}
+
+
+/* ============================================================
+17 — FOOTER
+============================================================ */
+
+.nr-footer {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.nr-footer strong {
+  padding: 7px 12px;
+
+  color: var(--white);
+  background: var(--green);
+
+  border: 1px solid var(--white);
+
+  text-align: center;
+}
+
+.nr-footer > span:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+18 — DESKTOP MOTION
+============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .nr-research-image,
+  .nr-amira-photo,
+  .nr-data-card,
+  .nr-insight,
+  .nr-squeeze-card,
+  .nr-trend-artifact {
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease;
+  }
+
+  .nr-research-image:hover,
+  .nr-amira-photo:hover {
+    transform:
+      translateY(-6px)
+      rotate(0deg);
+  }
+
+  .nr-data-card:hover,
+  .nr-insight:hover,
+  .nr-squeeze-card:hover {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* ============================================================
+19 — TABLET
+============================================================ */
+
+@media (max-width: 980px) {
+
+  .nr-section-heading,
+  .nr-amira-heading,
+  .nr-trends-heading,
+  .nr-pressure-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nr-market-intro,
+  .nr-amira-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-market-data {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .nr-competitor-visuals,
+  .nr-amira-visuals {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 35px;
+  }
+
+  .nr-nb-image-two,
+  .nr-amira-photo-two {
+    margin-top: 45px;
+  }
+
+  .nr-squeeze-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-squeeze-card {
+    min-height: 0;
+  }
+
+  .nr-trend-artifact {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .nr-trend-artifact .nr-application-box {
+    grid-column: 2;
+  }
+
+}
+
+
+/* ============================================================
+20 — MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .nr-system-name {
+    display: none;
+  }
+
+  .nr-system-right {
+    font-size: 7px;
+  }
+
+  .nr-hero {
+    min-height: 650px;
+
+    padding:
+      85px
+      18px
+      55px;
+  }
+
+  .nr-hero-meta {
+    left: 18px;
+    right: 18px;
+
+    font-size: 7px;
+  }
+
+  .nr-hero-title {
+    font-size: clamp(82px, 25vw, 125px);
+  }
+
+  .nr-hero-outline {
+    font-size: clamp(40px, 12vw, 62px);
+  }
+
+  .nr-hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nr-market-section,
+  .nr-pressure-section,
+  .nr-amira-section,
+  .nr-direction-section,
+  .nr-trends-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .nr-outline-green,
+  .nr-outline-orange {
+    font-size: clamp(47px, 14vw, 75px);
+  }
+
+  .nr-market-data,
+  .nr-pressure-observations,
+  .nr-amira-insights,
+  .nr-direction-list {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-market-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-market-strip strong {
+    text-align: left;
+  }
+
+  .nr-market-strip > span:last-child {
+    text-align: left;
+  }
+
+  .nr-pressure-header h2 {
+    font-size: clamp(72px, 22vw, 115px);
+  }
+
+  .nr-competitor-visuals,
+  .nr-amira-visuals {
+    display: block;
+  }
+
+  .nr-research-image,
+  .nr-nb-image-two,
+  .nr-amira-photo,
+  .nr-amira-photo-two {
+    width: 100%;
+
+    margin: 0 0 65px;
+
+    transform: none;
+  }
+
+  .nr-squeeze-title {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-squeeze-title h3 {
+    font-size: 54px;
+  }
+
+
+  .nr-squeeze-visuals-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-profile-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nr-direction-heading h2 {
+    font-size: clamp(58px, 17vw, 90px);
+  }
+
+  .nr-trend-artifact {
+    display: block;
+
+    padding: 24px;
+  }
+
+  .nr-trend-number {
+    margin-bottom: 30px;
+  }
+
+  .nr-application-box {
+    margin-top: 30px;
+  }
+
+  .nr-closing {
+    min-height: 590px;
+
+    padding:
+      80px
+      18px;
+  }
+
+  .nr-closing-meta {
+    left: 18px;
+    right: 18px;
+  }
+
+  .nr-closing h2 {
+    font-size: clamp(70px, 20vw, 108px);
+  }
+
+  .nr-footer {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .nr-footer > span:last-child {
+    text-align: center;
+  }
+
+}
+
+
+/* ============================================================
+21 — LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1750px) {
+
+  .nr-market-section > *,
+  .nr-pressure-section > *,
+  .nr-amira-section > *,
+  .nr-direction-section > *,
+  .nr-trends-section > * {
+    max-width: 1600px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+/* ============================================================
+22 — REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nr-research-image,
+  .nr-amira-photo,
+  .nr-data-card,
+  .nr-insight,
+  .nr-squeeze-card,
+  .nr-trend-artifact {
+    transition: none !important;
+  }
+
+  .nr-research-image:hover,
+  .nr-amira-photo:hover,
+  .nr-data-card:hover,
+  .nr-insight:hover,
+  .nr-squeeze-card:hover {
+    transform: none !important;
+  }
+
+}
+
+/* HOME NAVIGATION — added without altering existing typography/layout */
+.nr-system-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.nr-home-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 27px;
+  padding: 4px 11px;
+  border: 2px solid var(--black);
+  background: var(--orange);
+  color: var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  font: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+  line-height: 1;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.nr-home-nav:hover,
+.nr-home-nav:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--black);
+}
+
+.nr-home-nav:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .nr-system-bar {
+    gap: 10px;
+  }
+
+  .nr-system-actions {
+    gap: 7px;
+  }
+
+  .nr-home-nav {
+    padding: 4px 8px;
+  }
+}
+
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a href="index.html">HOME</a><a aria-current="page" href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a href="index.html">HOME</a><a aria-current="page" href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
 <!-- =========================================================
 NIKE — RESEARCH
 BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 RESEARCH PAGE ONLY
 CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 ========================================================= -->
-<div class="nr-page portfolio-main" id="main-content">
+<div class="nr-page">
 <!-- SYSTEM BAR -->
-
 <!-- =====================================================
   RESEARCH HERO
   ====================================================== -->
@@ -35,11 +2543,11 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <span class="nr-rec-dot"></span>
       RESEARCH IN PROGRESS
     </div>
-<p class="nr-hero-kicker">MARKET / CULTURE / PEOPLE / MOVEMENT</p>
-<h1 class="nr-hero-title">RESEARCH</h1>
-<h2 class="nr-hero-outline">THE PEOPLE<br/>BEHIND THE<br/>MOVEMENT.</h2>
+<p class="nr-hero-kicker nike-text-reveal">MARKET / CULTURE / PEOPLE / MOVEMENT</p>
+<h1 class="nr-hero-title nike-text-reveal">RESEARCH</h1>
+<h2 class="nr-hero-outline nike-text-reveal">THE PEOPLE<br/>BEHIND THE<br/>MOVEMENT.</h2>
 <div class="nr-hero-bottom">
-<p>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
+<p class="nike-text-reveal">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
 <div class="nr-hero-file">
 <span>PRIMARY TARGET</span>
 <strong>GEN Z / 18–26</strong>
@@ -50,11 +2558,11 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   MARKET POSITION
   ====================================================== -->
-<section class="nr-market-section">
+<section class="nr-market-section seamless-section" style="--join-out:#EBE3DB">
 <div class="nr-section-heading">
 <div>
 <span class="nr-technical-label">RESEARCH_01 / MARKET POSITION</span>
-<h2 class="nr-outline-green">WHERE NIKE<br/>STANDS.</h2>
+<h2 class="nr-outline-green nike-text-reveal">WHERE NIKE<br/>STANDS.</h2>
 </div>
 <div class="nr-status-stamp">
         MARKET<br/>POSITION
@@ -62,29 +2570,29 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-market-intro">
 <div class="nr-market-statement">
-<p>Nike is placed right in the middle of the market, most of its consumers falling in the middle to upper middle class range.</p>
-<p>Some of Nike’s prime competitors such as Hoka and On fall into a more premium segment of the market, which will be used to differentiate Nike and emphasize its care for all athletes and customers.</p>
+<p class="nike-text-reveal">Nike is placed right in the middle of the market, most of its consumers falling in the middle to upper middle class range.</p>
+<p class="nike-text-reveal">Some of Nike’s prime competitors such as Hoka and On fall into a more premium segment of the market, which will be used to differentiate Nike and emphasize its care for all athletes and customers.</p>
 </div>
 <div class="nr-market-data">
 <article class="nr-data-card nr-data-orange">
 <span>66%</span>
-<h3>FOOTWEAR</h3>
-<p>The “anchor” of Nike’s sales and foundation of the company. Footwear accounts for about 66% of Nike’s sales (NIKE, Inc., 2026).</p>
+<h3 class="nike-text-reveal">FOOTWEAR</h3>
+<p class="nike-text-reveal">The “anchor” of Nike’s sales and foundation of the company. Footwear accounts for about 66% of Nike’s sales (NIKE, Inc., 2026).</p>
 </article>
 <article class="nr-data-card nr-data-green">
 <span>28%</span>
-<h3>APPAREL</h3>
-<p>Accounts for 28% of Nike’s annual revenue. The new corporate priority is women’s apparel, which has started to be taken over by New Balance and Adidas (NIKE, Inc., 2026).</p>
+<h3 class="nike-text-reveal">APPAREL</h3>
+<p class="nike-text-reveal">Accounts for 28% of Nike’s annual revenue. The new corporate priority is women’s apparel, which has started to be taken over by New Balance and Adidas (NIKE, Inc., 2026).</p>
 </article>
 <article class="nr-data-card nr-data-slate">
 <span>55.4%</span>
-<h3>GEN Z CONSIDERATION</h3>
-<p>Nike consideration jumps to 55.4% among the target market of Gen Z audiences aged 18–26 (Dsouza, 2026).</p>
+<h3 class="nike-text-reveal">GEN Z CONSIDERATION</h3>
+<p class="nike-text-reveal">Nike consideration jumps to 55.4% among the target market of Gen Z audiences aged 18–26 (Dsouza, 2026).</p>
 </article>
 <article class="nr-data-card nr-data-black">
 <span>#1</span>
-<h3>INDUSTRY STANDING</h3>
-<p>Nike is currently ranked number one in brand consideration among the target market and continues to dominate the athletic and apparel industries (Dsouza, 2026).</p>
+<h3 class="nike-text-reveal">INDUSTRY STANDING</h3>
+<p class="nike-text-reveal">Nike is currently ranked number one in brand consideration among the target market and continues to dominate the athletic and apparel industries (Dsouza, 2026).</p>
 </article>
 </div>
 </div>
@@ -97,12 +2605,12 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   COMPETITIVE SQUEEZE / PRESSURE POINTS
   ====================================================== -->
-<section class="nr-pressure-section">
+<section class="nr-pressure-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#35423A">
 <div class="nr-pressure-grid"></div>
 <div class="nr-pressure-header">
 <div>
-<p class="nr-section-kicker nr-light-kicker">RESEARCH_02 / COMPETITIVE SQUEEZE</p>
-<h2>PRESSURE<br/>POINTS.</h2>
+<p class="nr-section-kicker nr-light-kicker nike-text-reveal">RESEARCH_02 / COMPETITIVE SQUEEZE</p>
+<h2 class="nike-text-reveal">PRESSURE<br/>POINTS.</h2>
 </div>
 <div class="nr-pressure-note">
         COMPETITORS ARE<br/>
@@ -110,7 +2618,7 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
       </div>
 </div>
 <div class="nr-pressure-lead">
-<p>While Nike continues to dominate retail environments, competitors are fast approaching. What Nike currently lacks is the appeal to lifestyle aesthetics and connecting with Gen Z audiences “personally”.</p>
+<p class="nike-text-reveal">While Nike continues to dominate retail environments, competitors are fast approaching. What Nike currently lacks is the appeal to lifestyle aesthetics and connecting with Gen Z audiences “personally”.</p>
 </div>
 <!-- NEW BALANCE COMPETITOR VISUALS -->
 <div class="nr-competitor-visuals">
@@ -151,22 +2659,22 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <article>
 <span>01</span>
 <div>
-<h3>RETRO APPEAL</h3>
-<p>New Balance’s retro aesthetic, natural positioning and lighting highly appeals to our target market (New Balance, 2026).</p>
+<h3 class="nike-text-reveal">RETRO APPEAL</h3>
+<p class="nike-text-reveal">New Balance’s retro aesthetic, natural positioning and lighting highly appeals to our target market (New Balance, 2026).</p>
 </div>
 </article>
 <article>
 <span>02</span>
 <div>
-<h3>FEMALE-FORWARD MARKETING</h3>
-<p>New Balance is prioritizing women’s styles and female-forward marketing on its website (New Balance, 2026).</p>
+<h3 class="nike-text-reveal">FEMALE-FORWARD MARKETING</h3>
+<p class="nike-text-reveal">New Balance is prioritizing women’s styles and female-forward marketing on its website (New Balance, 2026).</p>
 </div>
 </article>
 </div>
 <!-- COMPETITIVE SQUEEZE -->
 <div class="nr-squeeze-title">
 <span>COMPETITIVE_SQUEEZE.TXT</span>
-<h3>WHO IS<br/>CAPTURING<br/>THE CULTURE?</h3>
+<h3 class="nike-text-reveal">WHO IS<br/>CAPTURING<br/>THE CULTURE?</h3>
 </div>
 <div class="nr-squeeze-grid">
 <article class="nr-squeeze-card nr-squeeze-nb">
@@ -178,9 +2686,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <img alt="New Balance Grey Days campaign visual one" loading="lazy" src="https://freight.cargo.site/t/original/i/E3153977492113663927294901160708/greydays_1.jpg"/>
 <img alt="New Balance Grey Days campaign visual two" loading="lazy" src="https://freight.cargo.site/t/original/i/J3153977492095217183221191609092/greydays_2.jpg"/>
 </div>
-<h4>“GREY DAYS 2025”</h4>
-<p>NB's massive month-long campaign successfully blended lifestyle fashion, self-expression, and sport by collaborating with influential young creators like Aminé, Cameron Brink, and Coco Gauff (New Balance, 2025).</p>
-<p>This strategy helped New Balance climb to the #3 favorite footwear brand among upper-income teens by offering “wearable everyday sneakers” that emphasize individuality over hyper-competitive elite specs (Ruben, 2024).</p>
+<h4 class="nike-text-reveal">“GREY DAYS 2025”</h4>
+<p class="nike-text-reveal">NB's massive month-long campaign successfully blended lifestyle fashion, self-expression, and sport by collaborating with influential young creators like Aminé, Cameron Brink, and Coco Gauff (New Balance, 2025).</p>
+<p class="nike-text-reveal">This strategy helped New Balance climb to the #3 favorite footwear brand among upper-income teens by offering “wearable everyday sneakers” that emphasize individuality over hyper-competitive elite specs (Ruben, 2024).</p>
 </article>
 <article class="nr-squeeze-card nr-squeeze-on">
 <div class="nr-squeeze-top">
@@ -191,9 +2699,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <img alt="On Running Zendaya campaign visual one" loading="lazy" src="https://freight.cargo.site/t/original/i/Z3153977492076770439147482057476/onrunning_1.jpg"/>
 <img alt="On Running Zendaya campaign visual two" loading="lazy" src="https://freight.cargo.site/t/original/i/W3153977492058323695073772505860/onrunning_2.jpg"/>
 </div>
-<h4>ZENDAYA PARTNERSHIP / 2024</h4>
-<p>On Running successfully captured Gen Z lifestyle and non-elite runner mindshare by relinquishing creative control to Zendaya for a Spikes Jonze-directed brand film (On, 2024).</p>
-<p>The creative partnership generated over 15 million Instagram views and presented On as a culturally relevant lifestyle label rather than a narrow sports brand (On, 2024).</p>
+<h4 class="nike-text-reveal">ZENDAYA PARTNERSHIP / 2024</h4>
+<p class="nike-text-reveal">On Running successfully captured Gen Z lifestyle and non-elite runner mindshare by relinquishing creative control to Zendaya for a Spikes Jonze-directed brand film (On, 2024).</p>
+<p class="nike-text-reveal">The creative partnership generated over 15 million Instagram views and presented On as a culturally relevant lifestyle label rather than a narrow sports brand (On, 2024).</p>
 </article>
 <article class="nr-squeeze-card nr-squeeze-nike">
 <div class="nr-squeeze-top">
@@ -203,20 +2711,20 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-squeeze-visuals nr-squeeze-visuals-single">
 <img alt="Nike LA Loves A Sequel campaign visual" loading="lazy" src="https://freight.cargo.site/t/original/i/L3153977492039876951000062954244/lasequel_1.jpg"/>
 </div>
-<h4>“LA LOVES A SEQUEL” / 2025</h4>
-<p>Nike's most successful 2025 social ad focused on local city identity, music, and shared cultural celebration instead of direct product promotion (The One Club for Creativity, 2026).</p>
-<p>The Reel achieved 41 million views and 600,000+ likes on Instagram, demonstrating the strength of “participation in a cultural moment” rather than a hard product pitch (The One Club for Creativity, 2026).</p>
+<h4 class="nike-text-reveal">“LA LOVES A SEQUEL” / 2025</h4>
+<p class="nike-text-reveal">Nike's most successful 2025 social ad focused on local city identity, music, and shared cultural celebration instead of direct product promotion (The One Club for Creativity, 2026).</p>
+<p class="nike-text-reveal">The Reel achieved 41 million views and 600,000+ likes on Instagram, demonstrating the strength of “participation in a cultural moment” rather than a hard product pitch (The One Club for Creativity, 2026).</p>
 </article>
 </div>
 </section>
 <!-- =====================================================
   TARGET MARKET / MEET AMIRA
   ====================================================== -->
-<section class="nr-amira-section">
+<section class="nr-amira-section gradient-linked-section seamless-section" style="--join-in:#35423A;--join-out:#EBE3DB">
 <div class="nr-amira-heading">
 <div>
-<p class="nr-section-kicker">RESEARCH_03 / TARGET MARKET</p>
-<h2 class="nr-outline-orange">MEET<br/>AMIRA.</h2>
+<p class="nr-section-kicker nike-text-reveal">RESEARCH_03 / TARGET MARKET</p>
+<h2 class="nr-outline-orange nike-text-reveal">MEET<br/>AMIRA.</h2>
 </div>
 <div class="nr-amira-id">
 <span>TARGET_PROFILE</span>
@@ -226,8 +2734,8 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-amira-intro">
 <div class="nr-amira-big-copy">
-<h3>GENERATION Z<br/>AGES 18–26</h3>
-<p>For advertisement and target market examples, I am using images from Amira’s and my hiking trip, taken on her digital camera. Despite being amateurly taken, it has a beautiful color palette, emphasizes fun fitness, and of course how fitness can create community.</p>
+<h3 class="nike-text-reveal">GENERATION Z<br/>AGES 18–26</h3>
+<p class="nike-text-reveal">For advertisement and target market examples, I am using images from Amira’s and my hiking trip, taken on her digital camera. Despite being amateurly taken, it has a beautiful color palette, emphasizes fun fitness, and of course how fitness can create community.</p>
 </div>
 <div class="nr-amira-profile">
 <div class="nr-profile-row">
@@ -273,66 +2781,66 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-amira-insights">
 <article class="nr-insight nr-insight-green">
 <span class="nr-insight-number">01</span>
-<p class="nr-insight-label">MINDSET + VALUES</p>
-<h3>HUMAN<br/>CONNECTION.</h3>
-<p>Prioritizes human connection and common goals. Views community as the most effective way to overcome challenges both personal and global.</p>
+<p class="nr-insight-label nike-text-reveal">MINDSET + VALUES</p>
+<h3 class="nike-text-reveal">HUMAN<br/>CONNECTION.</h3>
+<p class="nike-text-reveal">Prioritizes human connection and common goals. Views community as the most effective way to overcome challenges both personal and global.</p>
 </article>
 <article class="nr-insight nr-insight-orange">
 <span class="nr-insight-number">02</span>
-<p class="nr-insight-label">MOTIVATIONS</p>
-<h3>MENTAL<br/>WELLNESS.</h3>
-<p>Desires movement that supports mental wellness, post-class stress recovery, and genuine social interactions.</p>
+<p class="nr-insight-label nike-text-reveal">MOTIVATIONS</p>
+<h3 class="nike-text-reveal">MENTAL<br/>WELLNESS.</h3>
+<p class="nike-text-reveal">Desires movement that supports mental wellness, post-class stress recovery, and genuine social interactions.</p>
 </article>
 <article class="nr-insight nr-insight-slate">
 <span class="nr-insight-number">03</span>
-<p class="nr-insight-label">LIFESTYLE + BEHAVIOR</p>
-<h3>MOVE<br/>EVERY DAY.</h3>
-<p>Tries to move at least once a day. PR-based exercise is not helpful for her or her friends. Jogs, campus gyms, and yoga help grow personal connections and prioritize mental wellness over physical aesthetics.</p>
+<p class="nr-insight-label nike-text-reveal">LIFESTYLE + BEHAVIOR</p>
+<h3 class="nike-text-reveal">MOVE<br/>EVERY DAY.</h3>
+<p class="nike-text-reveal">Tries to move at least once a day. PR-based exercise is not helpful for her or her friends. Jogs, campus gyms, and yoga help grow personal connections and prioritize mental wellness over physical aesthetics.</p>
 </article>
 <article class="nr-insight nr-insight-black">
 <span class="nr-insight-number">04</span>
-<p class="nr-insight-label">TECHNOGRAPHICS</p>
-<h3>SOCIAL<br/>NATIVE.</h3>
-<p>Tapped into social media and frequently uses apps such as Instagram or TikTok for sources of news and style updates.</p>
+<p class="nr-insight-label nike-text-reveal">TECHNOGRAPHICS</p>
+<h3 class="nike-text-reveal">SOCIAL<br/>NATIVE.</h3>
+<p class="nike-text-reveal">Tapped into social media and frequently uses apps such as Instagram or TikTok for sources of news and style updates.</p>
 </article>
 </div>
 </section>
 <!-- =====================================================
   RESEARCH → VISUAL DIRECTION
   ====================================================== -->
-<section class="nr-direction-section">
+<section class="nr-direction-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#4A5D4E">
 <div class="nr-direction-grid"></div>
 <div class="nr-direction-heading">
 <span>RESEARCH_04 / APPLICATION</span>
-<h2>RESEARCH →<br/>VISUAL DIRECTION</h2>
+<h2 class="nike-text-reveal">RESEARCH →<br/>VISUAL DIRECTION</h2>
 </div>
 <div class="nr-direction-list">
 <article>
 <span>01</span>
-<p>Nike’s most successful campaigns of the last five years, such as “LA loves a sequel”, stemmed from community involvement and excitement about being involved in a common goal (The One Club for Creativity, 2026).</p>
+<p class="nike-text-reveal">Nike’s most successful campaigns of the last five years, such as “LA loves a sequel”, stemmed from community involvement and excitement about being involved in a common goal (The One Club for Creativity, 2026).</p>
 </article>
 <article>
 <span>02</span>
-<p>Nike’s current biggest competitor, New Balance, has gained exponential popularity due to its retro “dad shoe” and connection with young audiences through trending aesthetics (Ruben, 2024; Ryan, 2024).</p>
+<p class="nike-text-reveal">Nike’s current biggest competitor, New Balance, has gained exponential popularity due to its retro “dad shoe” and connection with young audiences through trending aesthetics (Ruben, 2024; Ryan, 2024).</p>
 </article>
 <article>
 <span>03</span>
-<p>Current consumers are incredibly skeptical of staged diversity and value raw and unfiltered advertising. It signals transparency and insight into what consumers truly want and are looking for in their purchases (OpenAI, 2026).</p>
+<p class="nike-text-reveal">Current consumers are incredibly skeptical of staged diversity and value raw and unfiltered advertising. It signals transparency and insight into what consumers truly want and are looking for in their purchases (OpenAI, 2026).</p>
 </article>
 <article>
 <span>04</span>
-<p>Video posts on Instagram continuously outperform curated grid posts. Showcasing holistic views on athleticism and videos of athletes further instills the idea of authenticity (OpenAI, 2026).</p>
+<p class="nike-text-reveal">Video posts on Instagram continuously outperform curated grid posts. Showcasing holistic views on athleticism and videos of athletes further instills the idea of authenticity (OpenAI, 2026).</p>
 </article>
 </div>
 </section>
 <!-- =====================================================
   TREND RESEARCH ARTIFACTS
   ====================================================== -->
-<section class="nr-trends-section">
+<section class="nr-trends-section gradient-linked-section seamless-section" style="--join-in:#4A5D4E;--join-out:#EBE3DB">
 <div class="nr-trends-heading">
 <div>
-<p class="nr-section-kicker">RESEARCH_05 / TREND RESEARCH ARTIFACTS</p>
-<h2 class="nr-outline-green">TREND<br/>RESEARCH<br/>ARTIFACTS</h2>
+<p class="nr-section-kicker nike-text-reveal">RESEARCH_05 / TREND RESEARCH ARTIFACTS</p>
+<h2 class="nr-outline-green nike-text-reveal">TREND<br/>RESEARCH<br/>ARTIFACTS</h2>
 </div>
 <div class="nr-artifact-counter">
 <span>INSIGHT FILES</span>
@@ -344,9 +2852,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-trend-number">01</div>
 <div class="nr-trend-content">
 <span class="nr-trend-label">INSIGHT / LIFESTYLE + CULTURE</span>
-<h3>CULTURE,<br/>NOT A SALES PITCH.</h3>
-<p>Competitors like On (collaborating with Zendaya) and New Balance (via Grey Days creator campaigns) are capturing young mindshare by prioritizing lifestyle and retro aesthetics (On, 2024; New Balance, 2025).</p>
-<p>Gen Z shares social content when it feels like a native piece of culture, not a traditional sales pitch.</p>
+<h3 class="nike-text-reveal">CULTURE,<br/>NOT A SALES PITCH.</h3>
+<p class="nike-text-reveal">Competitors like On (collaborating with Zendaya) and New Balance (via Grey Days creator campaigns) are capturing young mindshare by prioritizing lifestyle and retro aesthetics (On, 2024; New Balance, 2025).</p>
+<p class="nike-text-reveal">Gen Z shares social content when it feels like a native piece of culture, not a traditional sales pitch.</p>
 <div class="nr-source-box">
 <span>RESEARCHED SOURCE</span>
 <strong>RETAIL DIVE / YOUGOV BRAND CONSIDERATION INDEX</strong>
@@ -358,8 +2866,8 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-application-box">
 <span>POTENTIAL PROJECT APPLICATION</span>
-<p>In our Milestone 3 social visuals, Nike apparel and footwear will appear naturally as part of a styling choice within real-world environments.</p>
-<p>Products will function as a subtle badge of community belonging, a common connection.</p>
+<p class="nike-text-reveal">In our Milestone 3 social visuals, Nike apparel and footwear will appear naturally as part of a styling choice within real-world environments.</p>
+<p class="nike-text-reveal">Products will function as a subtle badge of community belonging, a common connection.</p>
 </div>
 </article>
 <!-- ARTIFACT 02 -->
@@ -367,9 +2875,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-trend-number">02</div>
 <div class="nr-trend-content">
 <span class="nr-trend-label">THE TREND INSIGHT / MIND + BODY</span>
-<h3>MOVEMENT IS<br/>HOLISTIC.</h3>
-<p>Modern fitness definitions include cognitive readiness, mindfulness, and sensory recovery.</p>
-<p>Nike has identified this “mind-body connection” as the next frontier of sport performance, formally launching its own “Mind Science Department” (NIKE, Inc., 2025).</p>
+<h3 class="nike-text-reveal">MOVEMENT IS<br/>HOLISTIC.</h3>
+<p class="nike-text-reveal">Modern fitness definitions include cognitive readiness, mindfulness, and sensory recovery.</p>
+<p class="nike-text-reveal">Nike has identified this “mind-body connection” as the next frontier of sport performance, formally launching its own “Mind Science Department” (NIKE, Inc., 2025).</p>
 <div class="nr-source-box">
 <span>RESEARCHED SOURCE</span>
 <strong>NIKE, INC. NEWSROOM / “NIKE DEBUTS ITS FIRST NEUROSCIENCE-BASED FOOTWEAR”</strong>
@@ -380,8 +2888,8 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-application-box">
 <span>POTENTIAL PROJECT APPLICATION</span>
-<p>In our campaign visuals and content copy, “movement” is defined holistically.</p>
-<p>We will feature everyday athletes in restful, post-workout recovery states.</p>
+<p class="nike-text-reveal">In our campaign visuals and content copy, “movement” is defined holistically.</p>
+<p class="nike-text-reveal">We will feature everyday athletes in restful, post-workout recovery states.</p>
 </div>
 </article>
 <!-- ARTIFACT 03 -->
@@ -389,9 +2897,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-trend-number">03</div>
 <div class="nr-trend-content">
 <span class="nr-trend-label">INSIGHT / HUMAN CONNECTION</span>
-<h3>EVERYDAY<br/>OVER ELITE.</h3>
-<p>Massive sports advertising is moving away from highlighting hyper-competitive professional achievement.</p>
-<p>The focus is on everyday human connection, local run clubs, and casual fitness communities (Marketing Dive, 2026).</p>
+<h3 class="nike-text-reveal">EVERYDAY<br/>OVER ELITE.</h3>
+<p class="nike-text-reveal">Massive sports advertising is moving away from highlighting hyper-competitive professional achievement.</p>
+<p class="nike-text-reveal">The focus is on everyday human connection, local run clubs, and casual fitness communities (Marketing Dive, 2026).</p>
 <div class="nr-source-box">
 <span>RESEARCHED SOURCE</span>
 <strong>MARKETING DIVE / “WHERE NIKE’S MARKETING COMEBACK IS STUMBLING — AND WHERE IT CAN STILL WIN”</strong>
@@ -402,9 +2910,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-application-box">
 <span>POTENTIAL PROJECT APPLICATION</span>
-<p>My campaign directly avoids intimidating, high-pressure sports tropes.</p>
-<p>Visually, we will showcase local communities, slow-paced run clubs, and everyday neighborhood movement.</p>
-<p>Aligns with Nike’s new inclusivity movement.</p>
+<p class="nike-text-reveal">My campaign directly avoids intimidating, high-pressure sports tropes.</p>
+<p class="nike-text-reveal">Visually, we will showcase local communities, slow-paced run clubs, and everyday neighborhood movement.</p>
+<p class="nike-text-reveal">Aligns with Nike’s new inclusivity movement.</p>
 </div>
 </article>
 <!-- ARTIFACT 04 — IMAGE REMOVED -->
@@ -412,9 +2920,9 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="nr-trend-number">04</div>
 <div class="nr-trend-content">
 <span class="nr-trend-label">INSIGHT / VISUAL EVOLUTION</span>
-<h3>HANDHELD.<br/>UNRETOUCHED.<br/>HONEST.</h3>
-<p>Over the last decade, consumer aesthetic preferences have steadily migrated away from highly saturated dark, high-contrast studio setups toward handheld, unretouched, documentary-style formats (OpenAI, 2026).</p>
-<p>Gen Z is highly skeptical of staged diversity and instead prioritizes organic “imperfections” (OpenAI, 2026).</p>
+<h3 class="nike-text-reveal">HANDHELD.<br/>UNRETOUCHED.<br/>HONEST.</h3>
+<p class="nike-text-reveal">Over the last decade, consumer aesthetic preferences have steadily migrated away from highly saturated dark, high-contrast studio setups toward handheld, unretouched, documentary-style formats (OpenAI, 2026).</p>
+<p class="nike-text-reveal">Gen Z is highly skeptical of staged diversity and instead prioritizes organic “imperfections” (OpenAI, 2026).</p>
 <div class="nr-source-box">
 <span>RESEARCHED SOURCE / AI-GENERATED RESPONSE</span>
 <strong>OPENAI. (2026). <em>NIKE CAMPAIGN VISUAL AESTHETIC EVOLUTION (2016–2025)</em> [AI-GENERATED RESPONSE]. CHATGPT.</strong>
@@ -425,19 +2933,19 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="nr-application-box">
 <span>POTENTIAL PROJECT APPLICATION</span>
-<p>Our campaign visuals will be composed of “amateur” content.</p>
-<p>This visual design feels lived-in, honest, and distinct from legacy corporate ads.</p>
+<p class="nike-text-reveal">Our campaign visuals will be composed of “amateur” content.</p>
+<p class="nike-text-reveal">This visual design feels lived-in, honest, and distinct from legacy corporate ads.</p>
 </div>
 </article>
 </section>
 <!-- =====================================================
   RESEARCH SOURCES
   ====================================================== -->
-<section class="nr-sources-section">
+<section class="nr-sources-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#EBE3DB">
 <div class="nr-sources-heading">
 <div>
-<p class="nr-section-kicker">RESEARCH_06 / SOURCE DIRECTORY</p>
-<h2 class="nr-outline-orange">RESEARCH<br/>SOURCES.</h2>
+<p class="nr-section-kicker nike-text-reveal">RESEARCH_06 / SOURCE DIRECTORY</p>
+<h2 class="nr-outline-orange nike-text-reveal">RESEARCH<br/>SOURCES.</h2>
 </div>
 <div class="nr-sources-stamp">
         VERIFIED<br/>LINKS / 10
@@ -498,14 +3006,14 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   CLOSING
   ====================================================== -->
-<section class="nr-closing">
+<section class="nr-closing gradient-linked-section seamless-section" style="--join-in:#EBE3DB">
 <div class="nr-closing-grid"></div>
 <div class="nr-closing-meta">
 <span>RESEARCH_ARCHIVE.EXE</span>
 <span>05 FILES LOADED</span>
 </div>
-<p>MARKET → PEOPLE → CULTURE → MOVEMENT</p>
-<h2>THE THEME<br/>IS PEOPLE.</h2>
+<p class="nike-text-reveal">MARKET → PEOPLE → CULTURE → MOVEMENT</p>
+<h2 class="nike-text-reveal">THE THEME<br/>IS PEOPLE.</h2>
 <div class="nr-closing-sticker">
       EVERY BODY.<br/>EVERYBODY.
     </div>
@@ -513,12 +3021,11 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   FOOTER
   ====================================================== -->
-
+<footer class="nr-footer">
+<span>CAMILLE BICKHAM / FSH 294</span>
+<strong>NIKE / RESEARCH</strong>
+<span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span>
+</footer><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 02 OF 08</p><a class="portfolio-next-link" href="community-gallery.html"><strong>COMMUNITY GALLERY</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="index.html">← HOME</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer>
 </div>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>02 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="community-gallery.html"><span>UP NEXT / COMMUNITY GALLERY</span><strong>Meet the movement.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="index.html">← HOME</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script></body>
 </html>

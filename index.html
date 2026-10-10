@@ -5,23 +5,2589 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Home | Nike Creative AI Portfolio</title>
-<link href="css/home.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="01"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a aria-current="page" href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a aria-current="page" href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
+<link href="css/home.css" rel="stylesheet"/><style data-inlined-from="css/home.css">/* ============================================================
+NIKE HOME PAGE
+BUILT BY MOVEMENT. BOUND BY COMMUNITY.
+CARGO / FULL-BLEED Y2K SYSTEM
+============================================================ */
+
+
+/* ============================================================
+00 — CARGO RESET
+============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  background: #111111 !important;
+  overflow-x: hidden !important;
+}
+
+body {
+  border: 0 !important;
+}
+
+main,
+main-content,
+.page,
+.page-content,
+.page_content,
+[data-page],
+[data-bodyview] {
+  max-width: none !important;
+}
+
+
+/* ============================================================
+01 — MASTER SYSTEM
+============================================================ */
+
+.nike-home {
+  --black: #111111;
+  --white: #FFFFFF;
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+  --cream: #EBE3DB;
+  --silver: #C9CED0;
+  --gold: #D9A05B;
+
+  position: relative;
+  left: 50%;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(-50%);
+
+  color: var(--black);
+  background: var(--cream);
+
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.nike-home *,
+.nike-home *::before,
+.nike-home *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+02 — GLOBAL TYPOGRAPHY NORMALIZATION
+
+This intentionally prevents Cargo from stretching text.
+============================================================ */
+
+.nike-home p,
+.nike-home h1,
+.nike-home h2,
+.nike-home h3,
+.nike-home strong,
+.nike-home small {
+  text-align: left;
+  text-align-last: auto;
+  word-spacing: 0;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.nike-home p {
+  white-space: normal;
+}
+
+
+/* ============================================================
+03 — SYSTEM BAR
+============================================================ */
+
+.home-system-bar {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 9px 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F1F2F2 10%,
+      #D5D8D9 39%,
+      #A8ADB0 47%,
+      #7D8386 50%,
+      #BCC0C2 54%,
+      #E6E8E9 83%,
+      #C9CDCF 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(80,85,87,.8);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.system-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.system-right {
+  white-space: nowrap;
+}
+
+.system-title {
+  margin-left: 8px;
+}
+
+.system-dot {
+  width: 11px;
+  height: 11px;
+
+  display: inline-block;
+
+  border: 1.5px solid var(--black);
+  border-radius: 50%;
+}
+
+.dot-orange {
+  background: var(--orange);
+}
+
+.dot-green {
+  background: var(--green);
+}
+
+.dot-slate {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+04 — HERO
+============================================================ */
+
+.home-hero {
+  position: relative;
+
+  min-height: 940px;
+
+  padding:
+    clamp(55px, 7vw, 110px)
+    clamp(22px, 5vw, 80px)
+    90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 77% 15%,
+      rgba(255,255,255,.36),
+      rgba(255,255,255,.08) 15%,
+      transparent 31%
+    ),
+    linear-gradient(
+      130deg,
+      #F26522 0%,
+      #D96D33 18%,
+      #A06E46 35%,
+      #66705B 48%,
+      #4A5D4E 64%,
+      #59646A 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+}
+
+.hero-grid,
+.closing-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
+
+  background-size: 38px 38px;
+}
+
+.hero-topline {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.rec-chip,
+.raw-input-chip {
+  width: max-content;
+
+  padding: 8px 12px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 1px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.rec-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rec-dot {
+  width: 8px;
+  height: 8px;
+
+  display: block;
+
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.hero-file {
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+
+/* ============================================================
+05 — HERO TYPOGRAPHY
+============================================================ */
+
+.hero-copy {
+  position: relative;
+  z-index: 4;
+
+  width: min(100%, 1180px);
+
+  margin-top: 60px;
+}
+
+.hero-kicker,
+.section-kicker {
+  margin: 0 0 15px;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.hero-kicker {
+  color: var(--white);
+}
+
+.hero-title {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Arial Black", Futura, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(76px, 12vw, 188px);
+  font-weight: 900;
+  line-height: .72;
+
+  letter-spacing: -.082em;
+  word-spacing: 0 !important;
+
+  text-transform: uppercase;
+  text-align: left !important;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    8px 8px 0 rgba(17,17,17,.18);
+}
+
+.hero-title-outline {
+  max-width: 1100px;
+
+  margin-top: 25px;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.7px var(--white);
+
+  paint-order: stroke fill;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(38px, 6vw, 91px);
+  font-weight: 900;
+  line-height: .9;
+
+  letter-spacing: .055em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-transform: uppercase;
+}
+
+.hero-quote {
+  max-width: 660px;
+
+  margin: 35px 0 0;
+
+  color: var(--white);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(24px, 3vw, 43px);
+  font-style: italic;
+  line-height: 1;
+
+  text-shadow: 2px 2px 0 rgba(17,17,17,.4);
+}
+
+
+/* ============================================================
+06 — HERO IMAGE
+============================================================ */
+
+.hero-image-frame {
+  position: relative;
+  z-index: 6;
+
+  width: min(61vw, 900px);
+
+  margin: 80px 3vw 0 auto;
+  padding: 0;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 15px 15px 0 var(--orange);
+
+  transform: rotate(1.2deg);
+}
+
+.image-window-bar,
+.browser-top {
+  min-height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  padding: 8px 11px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF,
+      #D8DBDC 42%,
+      #878D90 49%,
+      #E7E8E8 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.hero-image-frame img,
+.visual-artifact img,
+.palette-frame img {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  transform: none !important;
+  clip-path: none !important;
+}
+
+.hero-image-meta {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 10px 12px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+
+/* ============================================================
+07 — HERO DETAILS
+============================================================ */
+
+.hero-sticker {
+  position: absolute;
+  z-index: 8;
+
+  left: clamp(25px, 6vw, 95px);
+  bottom: 95px;
+
+  padding: 17px 21px;
+
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 9px 9px 0 var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(18px, 2.3vw, 32px);
+  font-weight: 900;
+  line-height: .9;
+
+  transform: rotate(-3deg);
+}
+
+.hero-crosshair {
+  position: absolute;
+
+  color: rgba(255,255,255,.5);
+
+  font-family: "Courier New", monospace;
+  font-size: 50px;
+
+  pointer-events: none;
+}
+
+.hero-crosshair-one {
+  top: 33%;
+  right: 9%;
+}
+
+.hero-crosshair-two {
+  bottom: 22%;
+  left: 42%;
+}
+
+.hero-vertical {
+  position: absolute;
+
+  top: 105px;
+  right: 20px;
+
+  color: rgba(255,255,255,.72);
+
+  writing-mode: vertical-rl;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+
+
+/* ============================================================
+08 — PROJECT META
+============================================================ */
+
+.project-meta {
+  padding: 38px clamp(22px, 5vw, 80px) 75px;
+
+  background: var(--black);
+
+  border-bottom: 5px solid var(--orange);
+}
+
+.meta-heading {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.meta-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.meta-card {
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 17px;
+
+  background: var(--cream);
+
+  border: 3px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--slate);
+}
+
+.meta-label {
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.meta-card strong {
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(18px, 2vw, 29px);
+  line-height: .9;
+
+  word-spacing: 0 !important;
+}
+
+.meta-card small {
+  margin-top: 8px;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+
+.meta-orange {
+  background: var(--orange);
+}
+
+.meta-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+.meta-wide {
+  grid-column: span 2;
+
+  color: var(--white);
+  background: var(--slate);
+}
+
+.meta-black {
+  color: var(--white);
+  background: var(--black);
+
+  border-color: var(--orange);
+}
+
+
+/* ============================================================
+09 — OUTLINED HEADINGS
+============================================================ */
+
+.outline-green,
+.outline-orange {
+  margin: 0;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+
+  paint-order: stroke fill;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(52px, 8vw, 118px);
+  font-weight: 900;
+  line-height: .82;
+
+  letter-spacing: .05em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-transform: uppercase;
+}
+
+.outline-green {
+  -webkit-text-stroke: 1.5px var(--green);
+}
+
+.outline-orange {
+  -webkit-text-stroke: 1.5px var(--orange);
+}
+
+
+/* ============================================================
+10 — CAMPAIGN CONCEPT
+============================================================ */
+
+.concept-section {
+  position: relative;
+
+  padding: 95px clamp(22px, 5vw, 80px) 115px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #F2ECE6,
+      var(--cream)
+    );
+
+  overflow: hidden;
+}
+
+.concept-section::before,
+.guidelines-section::before,
+.palette-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(17,17,17,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.035) 1px, transparent 1px);
+
+  background-size: 30px 30px;
+}
+
+.concept-section > *,
+.guidelines-section > *,
+.palette-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-number {
+  position: absolute;
+
+  top: 20px;
+  right: 4vw;
+
+  color: rgba(17,17,17,.06);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(150px, 25vw, 370px);
+  line-height: .8;
+}
+
+.concept-heading,
+.research-header,
+.guidelines-heading,
+.palette-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+
+  margin-bottom: 70px;
+}
+
+.concept-stamp {
+  flex: 0 0 auto;
+
+  padding: 15px 18px;
+
+  color: var(--green);
+
+  border: 3px solid var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+.concept-layout {
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(300px, .8fr)
+    minmax(0, 1.2fr) !important;
+
+  gap: clamp(50px, 8vw, 130px) !important;
+
+  align-items: start !important;
+
+  width: 100%;
+}
+
+.concept-big-copy {
+  position: static !important;
+
+  width: 100%;
+  max-width: 620px;
+}
+
+.concept-big-copy > p:first-child {
+  display: block;
+
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0;
+
+  font-size: clamp(21px, 2.2vw, 34px);
+  font-weight: 700;
+  line-height: 1.12;
+
+  letter-spacing: -.02em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-align-last: left !important;
+
+  white-space: normal !important;
+}
+
+.concept-serif {
+  max-width: 550px;
+
+  margin: 38px 0 0;
+
+  color: var(--orange);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(28px, 4vw, 55px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: -.02em;
+  word-spacing: 0 !important;
+
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
+.concept-points {
+  display: flex !important;
+  flex-direction: column !important;
+
+  gap: 18px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.concept-point {
+  display: flex !important;
+  align-items: flex-start !important;
+
+  gap: 22px;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 22px;
+
+  background: rgba(255,255,255,.55);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.concept-point:nth-child(even) {
+  box-shadow: 8px 8px 0 var(--green);
+}
+
+.concept-index {
+  flex: 0 0 44px;
+
+  width: 44px;
+
+  margin-top: 3px;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+
+  letter-spacing: .08em;
+}
+
+.concept-point-copy {
+  display: block !important;
+
+  flex: 1 1 auto;
+
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+.concept-point h3 {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 9px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(20px, 2.2vw, 31px);
+  font-weight: 900;
+  line-height: .95;
+
+  letter-spacing: -.025em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-align-last: left !important;
+}
+
+.concept-point p {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  letter-spacing: 0;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-align-last: left !important;
+
+  white-space: normal !important;
+}
+
+
+/* ============================================================
+11 — CAMPAIGN PITCH
+============================================================ */
+
+.pitch-section {
+  padding: 95px clamp(22px, 6vw, 100px);
+
+  background:
+    linear-gradient(
+      130deg,
+      var(--slate),
+      #333A3D
+    );
+
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+}
+
+.pitch-browser {
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 16px 16px 0 var(--orange);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  background: var(--white);
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+.browser-dots span:first-child {
+  background: var(--orange);
+}
+
+.browser-dots span:nth-child(2) {
+  background: var(--green);
+}
+
+.browser-dots span:nth-child(3) {
+  background: var(--slate);
+}
+
+.pitch-content {
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+}
+
+.pitch-side-label {
+  padding: 18px 15px;
+
+  color: var(--white);
+  background: var(--black);
+
+  writing-mode: vertical-rl;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.pitch-main {
+  padding: clamp(35px, 6vw, 85px);
+}
+
+.orange-text {
+  color: var(--orange);
+}
+
+.pitch-main h2 {
+  margin: 0 0 45px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(52px, 8vw, 122px);
+  font-weight: 900;
+  line-height: .76;
+
+  letter-spacing: -.065em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.pitch-main > p:not(.section-kicker) {
+  max-width: 980px;
+
+  margin: 0 0 22px;
+
+  font-size: clamp(16px, 1.5vw, 21px);
+  line-height: 1.55;
+
+  word-spacing: 0 !important;
+  text-align: left !important;
+}
+
+.pitch-main .pitch-final {
+  max-width: none;
+
+  margin-top: 48px;
+
+  padding: 18px 20px;
+
+  color: var(--white);
+  background: var(--green);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 7px 7px 0 var(--orange);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(25px, 4vw, 56px);
+  line-height: .9;
+}
+
+
+/* ============================================================
+12 — COMPANY OVERVIEW
+============================================================ */
+
+.company-section {
+  padding: 100px clamp(22px, 5vw, 80px) 0;
+
+  color: #FFFFFF !important;
+  background: #111111 !important;
+}
+
+.company-header {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 40px;
+
+  align-items: start;
+
+  padding-bottom: 60px;
+
+  color: #FFFFFF !important;
+
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+
+.company-title-block {
+  color: #FFFFFF !important;
+}
+
+.light-kicker {
+  color: rgba(255,255,255,.72) !important;
+}
+
+.company-header .company-mission {
+  display: block;
+
+  max-width: 1200px;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  -webkit-text-stroke: 0 transparent !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(55px, 8vw, 125px);
+  font-weight: 900;
+  line-height: .76;
+
+  letter-spacing: -.07em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+  text-align-last: left !important;
+
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.asterisk {
+  color: var(--orange) !important;
+  -webkit-text-fill-color: var(--orange) !important;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(90px, 13vw, 190px);
+  line-height: .7;
+}
+
+.company-grid {
+  display: grid;
+
+  grid-template-columns: .85fr 1.15fr;
+
+  gap: 70px;
+
+  padding: 70px 0;
+}
+
+.technical-label {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.company-history > p {
+  max-width: 640px;
+
+  color: rgba(255,255,255,.82) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.82) !important;
+
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.55;
+
+  word-spacing: 0 !important;
+}
+
+.company-quote {
+  margin-top: 45px;
+
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.3px var(--orange);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(45px, 6vw, 90px);
+  font-weight: 900;
+  line-height: .78;
+
+  letter-spacing: .04em;
+  word-spacing: 0 !important;
+}
+
+.company-data {
+  display: grid;
+  gap: 12px;
+}
+
+.company-data article {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  border: 2px solid rgba(255,255,255,.35);
+}
+
+.data-number {
+  color: var(--orange);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: .9;
+}
+
+.company-data h3 {
+  margin: 0 0 7px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: 21px;
+
+  word-spacing: 0 !important;
+}
+
+.company-data p {
+  margin: 0;
+
+  color: rgba(255,255,255,.72) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.72) !important;
+
+  line-height: 1.45;
+
+  word-spacing: 0 !important;
+}
+
+.company-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 22px 0;
+
+  border-top: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+/* ============================================================
+13 — RESEARCH TO VISUAL
+============================================================ */
+
+.research-visual-section {
+  padding: 100px clamp(22px, 5vw, 80px) 120px;
+
+  background: var(--cream);
+}
+
+.research-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.research-card {
+  min-height: 370px;
+
+  position: relative;
+
+  padding: 30px;
+
+  border: 4px solid var(--black);
+
+  box-shadow: 11px 11px 0 var(--black);
+}
+
+.research-orange {
+  background: var(--orange);
+}
+
+.research-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+.research-slate {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.research-black {
+  color: var(--white);
+  background: var(--black);
+
+  box-shadow: 11px 11px 0 var(--orange);
+}
+
+.research-index {
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: 50px;
+
+  opacity: .16;
+}
+
+.research-type {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.research-card h3 {
+  margin: 70px 0 22px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(31px, 4vw, 59px);
+  font-weight: 900;
+  line-height: .82;
+
+  letter-spacing: -.035em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.research-card p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  word-spacing: 0 !important;
+  text-align: left !important;
+}
+
+
+/* ============================================================
+14 — VISUAL ARTIFACT
+============================================================ */
+
+.visual-artifact {
+  display: grid;
+
+  grid-template-columns: 1.2fr .8fr;
+
+  gap: clamp(40px, 7vw, 110px);
+
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.artifact-window {
+  background: var(--white);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 13px 13px 0 var(--green);
+
+  transform: rotate(-1deg);
+}
+
+.artifact-copy h3 {
+  margin: 0 0 28px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(46px, 6vw, 90px);
+  font-weight: 900;
+  line-height: .78;
+
+  letter-spacing: -.055em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.artifact-copy p {
+  font-size: 17px;
+  line-height: 1.55;
+
+  word-spacing: 0 !important;
+}
+
+
+/* ============================================================
+15 — HISTORY OF HUMAN CONNECTION
+============================================================ */
+
+.connection-section {
+  position: relative;
+
+  padding: 105px clamp(22px, 5vw, 80px) 0;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green),
+      #313E35
+    );
+
+  border-top: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.connection-number {
+  position: absolute;
+
+  right: -2vw;
+  bottom: 0;
+
+  color: rgba(255,255,255,.05);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(220px, 35vw, 520px);
+  line-height: .65;
+}
+
+.connection-layout {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: .8fr 1.2fr;
+
+  gap: 90px;
+
+  padding-bottom: 95px;
+}
+
+.connection-title h2 {
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(55px, 8vw, 120px);
+  font-weight: 900;
+  line-height: .75;
+
+  letter-spacing: -.06em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.connection-lead {
+  max-width: 700px;
+
+  margin: 0 0 40px;
+
+  color: var(--cream);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(26px, 3vw, 42px);
+  font-style: italic;
+  line-height: 1.05;
+
+  word-spacing: 0 !important;
+}
+
+.timeline {
+  display: grid;
+  gap: 15px;
+}
+
+.timeline-item {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 15px;
+
+  padding: 17px;
+
+  background: rgba(17,17,17,.22);
+
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.timeline-item span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.timeline-item p {
+  margin: 0;
+
+  line-height: 1.5;
+
+  word-spacing: 0 !important;
+}
+
+.connection-banner {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin: 0 calc(clamp(22px, 5vw, 80px) * -1);
+
+  padding: 22px clamp(22px, 5vw, 80px);
+
+  color: var(--black);
+  background: var(--orange);
+
+  border-top: 4px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.connection-banner strong {
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(14px, 2vw, 25px);
+
+  text-align: center;
+}
+
+
+/* ============================================================
+16 — BRAND GUIDELINES
+============================================================ */
+
+.guidelines-section {
+  position: relative;
+
+  padding: 100px clamp(22px, 5vw, 80px) 120px;
+
+  background: var(--cream);
+}
+
+.guideline-file {
+  padding: 13px 16px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--orange);
+
+  box-shadow: 6px 6px 0 var(--slate);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+.guideline-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.guideline-card {
+  min-width: 0;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.guideline-top {
+  padding: 11px 14px;
+
+  border-bottom: 4px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.orange-bar {
+  background: var(--orange);
+}
+
+.green-bar {
+  color: var(--white);
+  background: var(--green);
+}
+
+.slate-bar {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.guideline-body {
+  padding: 25px;
+}
+
+.giant-type {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: 90px;
+  line-height: .8;
+
+  letter-spacing: -.09em;
+}
+
+.guideline-body h3 {
+  margin: 25px 0 8px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: 20px;
+
+  word-spacing: 0 !important;
+}
+
+.guideline-body p {
+  line-height: 1.5;
+
+  word-spacing: 0 !important;
+}
+
+.brand-swatches {
+  display: grid;
+  gap: 9px;
+}
+
+.brand-swatch {
+  min-height: 85px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 15px;
+
+  padding: 12px;
+
+  border: 2px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+}
+
+.swatch-black {
+  color: var(--white);
+  background: var(--black);
+}
+
+.swatch-white {
+  background: var(--white);
+}
+
+.swatch-orange {
+  background: var(--orange);
+}
+
+.rule-symbol {
+  margin-bottom: 30px;
+
+  color: var(--orange);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: 80px;
+  line-height: .8;
+}
+
+.rule-note {
+  margin-top: 30px;
+
+  padding: 12px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+
+/* ============================================================
+17 — COLOR PALETTE
+============================================================ */
+
+.palette-section {
+  position: relative;
+
+  padding: 105px clamp(22px, 5vw, 80px) 120px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #E9E1D9,
+      #D7D2CD
+    );
+
+  border-top: 5px solid var(--slate);
+}
+
+.palette-intro {
+  max-width: 520px;
+
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.55;
+
+  word-spacing: 0 !important;
+}
+
+.palette-images {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: clamp(30px, 5vw, 75px);
+
+  align-items: start;
+}
+
+.palette-frame {
+  margin: 0;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+}
+
+.palette-one {
+  box-shadow: 13px 13px 0 var(--orange);
+
+  transform: rotate(-.7deg);
+}
+
+.palette-two {
+  margin-top: 65px;
+
+  box-shadow: 13px 13px 0 var(--green);
+
+  transform: rotate(.7deg);
+}
+
+.orange-window {
+  background: var(--orange);
+}
+
+.green-window {
+  color: var(--white);
+  background: var(--green);
+}
+
+.campaign-palette {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  margin-top: 100px;
+
+  border: 4px solid var(--black);
+}
+
+.campaign-color {
+  min-height: 155px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 15px;
+
+  border-right: 2px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.campaign-color:last-child {
+  border-right: 0;
+}
+
+.color-orange {
+  background: var(--orange);
+}
+
+.color-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+.color-slate {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.color-cream {
+  background: var(--cream);
+}
+
+.color-black {
+  color: var(--white);
+  background: var(--black);
+}
+
+
+/* ============================================================
+18 — CLOSING
+============================================================ */
+
+.home-closing {
+  position: relative;
+
+  min-height: 690px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px clamp(22px, 6vw, 95px);
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 20%,
+      rgba(255,255,255,.18),
+      transparent 25%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange),
+      var(--green) 58%,
+      var(--slate)
+    );
+
+  border-top: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.closing-top {
+  position: absolute;
+  z-index: 2;
+
+  top: 25px;
+  left: clamp(22px, 6vw, 95px);
+  right: clamp(22px, 6vw, 95px);
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.closing-small,
+.home-closing h2,
+.closing-serif,
+.closing-slogan {
+  position: relative;
+  z-index: 2;
+}
+
+.closing-small {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .17em;
+}
+
+.home-closing h2 {
+  max-width: 1300px;
+
+  margin: 25px 0 35px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(80px, 13vw, 200px);
+  font-weight: 900;
+  line-height: .69;
+
+  letter-spacing: -.08em;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    8px 8px 0 rgba(17,17,17,.15);
+}
+
+.closing-serif {
+  margin: 0;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(23px, 3vw, 43px);
+  font-style: italic;
+  line-height: 1;
+}
+
+.closing-slogan {
+  width: max-content;
+  max-width: 100%;
+
+  margin-top: 55px;
+
+  padding: 13px 17px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(15px, 2vw, 27px);
+  line-height: 1;
+}
+
+
+/* ============================================================
+19 — FOOTER
+============================================================ */
+
+.home-footer {
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.home-footer strong {
+  padding: 7px 12px;
+
+  color: var(--white);
+  background: var(--green);
+
+  border: 1px solid var(--white);
+
+  text-align: center;
+}
+
+.home-footer > span:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+20 — HOVER
+============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .hero-image-frame,
+  .palette-frame,
+  .artifact-window,
+  .guideline-card,
+  .concept-point,
+  .research-card {
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease;
+  }
+
+  .hero-image-frame:hover {
+    transform:
+      translateY(-7px)
+      rotate(0deg)
+      scale(1.012);
+  }
+
+  .palette-frame:hover,
+  .artifact-window:hover {
+    transform:
+      translateY(-7px)
+      rotate(0deg);
+  }
+
+  .guideline-card:hover,
+  .concept-point:hover,
+  .research-card:hover {
+    transform: translateY(-6px);
+  }
+
+}
+
+
+/* ============================================================
+21 — TABLET
+============================================================ */
+
+@media (max-width: 980px) {
+
+  .home-hero {
+    min-height: 820px;
+  }
+
+  .hero-image-frame {
+    width: 78vw;
+  }
+
+  .meta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .concept-heading,
+  .research-header,
+  .guidelines-heading,
+  .palette-header {
+    flex-direction: column;
+  }
+
+  .concept-layout,
+  .company-grid,
+  .connection-layout,
+  .visual-artifact {
+    grid-template-columns: 1fr !important;
+  }
+
+  .concept-big-copy {
+    max-width: 720px;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideline-card {
+    max-width: 750px;
+  }
+
+  .campaign-palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .campaign-color {
+    border-bottom: 2px solid var(--black);
+  }
+
+  .company-grid,
+  .connection-layout {
+    gap: 50px;
+  }
+
+}
+
+
+/* ============================================================
+22 — MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+
+  .system-title {
+    display: none;
+  }
+
+  .system-right {
+    font-size: 7px;
+  }
+
+  .home-hero {
+    min-height: auto;
+
+    padding: 48px 18px 110px;
+  }
+
+  .hero-topline {
+    align-items: flex-start;
+  }
+
+  .hero-file {
+    text-align: right;
+  }
+
+  .hero-title {
+    font-size: clamp(67px, 20vw, 105px);
+  }
+
+  .hero-title-outline {
+    font-size: clamp(34px, 11vw, 60px);
+  }
+
+  .hero-image-frame {
+    width: 91%;
+
+    margin: 65px auto 0;
+  }
+
+  .hero-sticker {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: max-content;
+
+    margin-top: 55px;
+  }
+
+  .hero-crosshair,
+  .hero-vertical {
+    display: none;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-wide {
+    grid-column: auto;
+  }
+
+  .concept-section,
+  .research-visual-section,
+  .guidelines-section,
+  .palette-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .outline-green,
+  .outline-orange {
+    font-size: clamp(41px, 13vw, 67px);
+  }
+
+  .concept-layout {
+    display: block !important;
+  }
+
+  .concept-big-copy {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 55px;
+  }
+
+  .concept-big-copy > p:first-child {
+    max-width: none;
+
+    font-size: 23px;
+    line-height: 1.17;
+  }
+
+  .concept-serif {
+    max-width: none;
+
+    font-size: 38px;
+  }
+
+  .concept-point {
+    gap: 13px;
+
+    padding: 18px;
+  }
+
+  .concept-index {
+    flex-basis: 30px;
+
+    width: 30px;
+  }
+
+  .concept-point h3 {
+    font-size: 24px;
+  }
+
+  .concept-point p {
+    max-width: none;
+
+    font-size: 14px;
+  }
+
+  .pitch-section {
+    padding: 65px 18px;
+  }
+
+  .pitch-content {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-side-label {
+    writing-mode: horizontal-tb;
+  }
+
+  .pitch-main {
+    padding: 28px 20px 40px;
+  }
+
+  .company-section,
+  .connection-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .company-header {
+    grid-template-columns: 1fr;
+  }
+
+  .company-header .company-mission {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  .asterisk {
+    display: none;
+  }
+
+  .company-data article {
+    grid-template-columns: 75px 1fr;
+  }
+
+  .company-bottom,
+  .connection-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .connection-banner {
+    margin: 0 -18px;
+
+    padding: 22px 18px;
+  }
+
+  .palette-images {
+    grid-template-columns: 1fr;
+  }
+
+  .palette-two {
+    margin-top: 20px;
+  }
+
+  .campaign-palette {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-color {
+    min-height: 105px;
+
+    border-right: 0;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .campaign-color:last-child {
+    border-bottom: 0;
+  }
+
+  .home-closing {
+    min-height: 620px;
+
+    padding: 80px 18px;
+  }
+
+  .home-closing h2 {
+    font-size: clamp(70px, 20vw, 110px);
+  }
+
+  .home-footer {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .home-footer > span:last-child {
+    text-align: center;
+  }
+
+}
+
+
+/* ============================================================
+23 — LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1750px) {
+
+  .project-meta > *,
+  .concept-section > *,
+  .company-section > *,
+  .research-visual-section > *,
+  .connection-section > *,
+  .guidelines-section > *,
+  .palette-section > * {
+    max-width: 1600px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+/* ============================================================
+24 — REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-image-frame,
+  .palette-frame,
+  .artifact-window,
+  .guideline-card,
+  .concept-point,
+  .research-card {
+    transition: none !important;
+  }
+
+  .hero-image-frame:hover,
+  .palette-frame:hover,
+  .artifact-window:hover,
+  .guideline-card:hover,
+  .concept-point:hover,
+  .research-card:hover {
+    transform: none !important;
+  }
+
+}
+
+/* ============================================================
+25 — HOME PAGE NAVIGATION + CITATION ADDITIONS
+Only supports the requested navigation and source treatment.
+Existing typography/layout rules above remain unchanged.
+============================================================ */
+
+.home-page-nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border-bottom: 3px solid var(--black);
+  background: var(--black);
+}
+
+.home-page-nav a {
+  flex: 1 1 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 14px;
+  border-right: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  background: var(--cream);
+  color: var(--black) !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .08em;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: transform .16s ease, background .16s ease, color .16s ease;
+}
+
+.home-page-nav a:nth-child(3n + 1) { border-top: 5px solid var(--orange); }
+.home-page-nav a:nth-child(3n + 2) { border-top: 5px solid var(--green); }
+.home-page-nav a:nth-child(3n) { border-top: 5px solid var(--slate); }
+
+.home-page-nav a:hover,
+.home-page-nav a:focus-visible {
+  position: relative;
+  z-index: 2;
+  background: var(--black);
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.home-citation {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .78em;
+  font-weight: 700;
+  letter-spacing: 0;
+  white-space: normal;
+}
+
+.home-sources {
+  width: 100%;
+  background: var(--cream);
+  border-top: 4px solid var(--black);
+  border-bottom: 4px solid var(--black);
+  background-image:
+    linear-gradient(rgba(17,17,17,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.035) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.home-sources-top {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 8px 18px;
+  border-bottom: 3px solid var(--black);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F2F2 10%, #D5D8D9 39%, #A8ADB0 47%, #7D8386 50%, #BCC0C2 54%, #E6E8E9 83%, #C9CDCF 100%);
+  color: var(--black);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.home-sources-inner {
+  padding: clamp(42px, 6vw, 82px) clamp(18px, 5vw, 72px);
+}
+
+.home-sources h2 {
+  margin: 6px 0 28px;
+  font-family: "Arial Black", Futura, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(58px, 9vw, 132px);
+  font-weight: 900;
+  line-height: .82;
+  letter-spacing: -.065em;
+  text-transform: uppercase;
+}
+
+.home-source-list {
+  border: 3px solid var(--black);
+  box-shadow: 10px 10px 0 var(--black);
+  background: var(--white);
+}
+
+.home-source-list p {
+  margin: 0;
+  padding: 15px 16px;
+  border-bottom: 2px solid var(--black);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.home-source-list p:last-child { border-bottom: 0; }
+
+.home-source-list a {
+  display: inline-block;
+  margin-left: 7px;
+  color: var(--green) !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.home-source-list a:hover,
+.home-source-list a:focus-visible {
+  color: var(--orange) !important;
+}
+
+@media (max-width: 760px) {
+  .home-page-nav a { flex-basis: 50%; }
+  .home-sources-top { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .home-source-list p { font-size: 11px; }
+}
+
+@media (max-width: 480px) {
+  .home-page-nav a { flex-basis: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page-nav a { transition: none !important; }
+  .home-page-nav a:hover,
+  .home-page-nav a:focus-visible { transform: none !important; }
+}
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a aria-current="page" class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a aria-current="page" href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a aria-current="page" href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
 <!-- =========================================================
 NIKE — BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 HOME PAGE ONLY
 CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 ========================================================= -->
-<div class="nike-home portfolio-main" id="main-content">
+<div class="nike-home">
 <!-- SYSTEM BAR -->
-
 <!-- PAGE NAVIGATION / added without altering existing page structure -->
-
 <!-- =====================================================
   HERO
   ====================================================== -->
@@ -32,10 +2598,10 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="hero-file">HOME_001 / RAW INPUT</div>
 </div>
 <div class="hero-copy">
-<p class="hero-kicker">NIKE / GRASSROOTS CAMPAIGN PROPOSAL</p>
-<h1 class="hero-title">BUILT BY<br/>MOVEMENT.</h1>
+<p class="hero-kicker nike-text-reveal">NIKE / GRASSROOTS CAMPAIGN PROPOSAL</p>
+<h1 class="hero-title nike-text-reveal">BUILT BY<br/>MOVEMENT.</h1>
 <div class="hero-title-outline">BOUND BY COMMUNITY.</div>
-<p class="hero-quote">“If you have a body, you are an athlete.” <span class="home-citation">(NIKE, Inc., 2026)</span></p>
+<p class="hero-quote nike-text-reveal">“If you have a body, you are an athlete.” <span class="home-citation">(NIKE, Inc., 2026)</span></p>
 </div>
 <figure class="hero-image-frame">
 <div class="image-window-bar">
@@ -56,7 +2622,7 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   PROJECT META
   ====================================================== -->
-<section class="project-meta">
+<section class="project-meta seamless-section" style="--join-out:#111111">
 <div class="meta-heading">
 <span>PROJECT FILE</span>
 <span>01 / HOME</span>
@@ -93,47 +2659,47 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   CAMPAIGN CONCEPT
   ====================================================== -->
-<section class="concept-section">
+<section class="concept-section gradient-linked-section seamless-section" style="--join-in:#111111;--join-out:#EBE3DB">
 <div class="section-number">02</div>
 <div class="concept-heading">
 <div>
-<p class="section-kicker">CAMPAIGN CONCEPT / PEOPLE FIRST</p>
-<h2 class="outline-green">THE EVERYDAY<br/>ATHLETE</h2>
+<p class="section-kicker nike-text-reveal">CAMPAIGN CONCEPT / PEOPLE FIRST</p>
+<h2 class="outline-green nike-text-reveal">THE EVERYDAY<br/>ATHLETE</h2>
 </div>
 <div class="concept-stamp">COMMUNITY<br/>= CAPACITY</div>
 </div>
 <div class="concept-layout">
 <div class="concept-big-copy">
-<p>This campaign steps away from Nike's history of elite celebrity representation and highly polished advertising to center the people who already make movement part of everyday life.</p>
-<p class="concept-serif">The theme of this campaign is people.</p>
+<p class="nike-text-reveal">This campaign steps away from Nike's history of elite celebrity representation and highly polished advertising to center the people who already make movement part of everyday life.</p>
+<p class="concept-serif nike-text-reveal">The theme of this campaign is people.</p>
 </div>
 <div class="concept-points">
 <article class="concept-point">
 <span class="concept-index">01</span>
 <div class="concept-point-copy">
-<h3>UNIVERSAL ATHLETE</h3>
-<p>If you have a body, you are an athlete. Athleticism is not reserved for the rich, famous, professional, or elite.</p>
+<h3 class="nike-text-reveal">UNIVERSAL ATHLETE</h3>
+<p class="nike-text-reveal">If you have a body, you are an athlete. Athleticism is not reserved for the rich, famous, professional, or elite.</p>
 </div>
 </article>
 <article class="concept-point">
 <span class="concept-index">02</span>
 <div class="concept-point-copy">
-<h3>THE THEME OF PEOPLE</h3>
-<p>Grassroots community, individuality, togetherness, and shared optimism replace isolation and hyper-competitive performance.</p>
+<h3 class="nike-text-reveal">THE THEME OF PEOPLE</h3>
+<p class="nike-text-reveal">Grassroots community, individuality, togetherness, and shared optimism replace isolation and hyper-competitive performance.</p>
 </div>
 </article>
 <article class="concept-point">
 <span class="concept-index">03</span>
 <div class="concept-point-copy">
-<h3>ACTIVE INCLUSIVITY</h3>
-<p>Different bodies and different levels of mobility reinforce a simple idea: everybody and every body can belong in sport.</p>
+<h3 class="nike-text-reveal">ACTIVE INCLUSIVITY</h3>
+<p class="nike-text-reveal">Different bodies and different levels of mobility reinforce a simple idea: everybody and every body can belong in sport.</p>
 </div>
 </article>
 <article class="concept-point">
 <span class="concept-index">04</span>
 <div class="concept-point-copy">
-<h3>CANDID CONTENT</h3>
-<p>Digital cameras, Polaroids, mobile phones, raw footage, and ordinary customers create natural, lived-in documentation of movement.</p>
+<h3 class="nike-text-reveal">CANDID CONTENT</h3>
+<p class="nike-text-reveal">Digital cameras, Polaroids, mobile phones, raw footage, and ordinary customers create natural, lived-in documentation of movement.</p>
 </div>
 </article>
 </div>
@@ -142,7 +2708,7 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   CAMPAIGN PITCH
   ====================================================== -->
-<section class="pitch-section">
+<section class="pitch-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#333A3D">
 <div class="pitch-browser">
 <div class="browser-top">
 <div class="browser-dots">
@@ -156,15 +2722,15 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="pitch-content">
 <div class="pitch-side-label">NIKE / PEOPLE / COMMUNITY / AUTHENTICITY</div>
 <div class="pitch-main">
-<p class="section-kicker orange-text">THE PITCH</p>
-<h2>BUILT FOR THE<br/>EVERYDAY ARENA.</h2>
-<p>“If you have a body, you are an athlete”, a powerful statement from Nike’s most recent letter to its investors. This statement steps away from their long history of being represented by athletes and celebrities. <span class="home-citation">(NIKE, Inc., 2026)</span></p>
-<p>Over the last decade, Nike has been defined by highly curated commercials, impeccable cinematography, and polished advertisements. My idea for a new campaign comes from the idea of community; the new generation of customers values individuality, togetherness, and optimism.</p>
-<p>Other brands such as On, New Balance, and Adidas have captured the aesthetic preferences of our desired market — Gen Z college students aged 18–26 — as well as the need for authenticity and progressive action desired by our target market. This campaign rebuilds trust and consumer intimacy. <span class="home-citation">(Marketing Dive, 2026; Ruben, 2024)</span></p>
-<p>Showcasing different types of bodies and levels of mobility reinforces the idea that athleticism isn't reserved for the rich and famous. It also communicates a progressive and “cool” take on Nike's marketing.</p>
-<p>Through Nike's website and Instagram, the campaign is composed of “amateur” videos and pictures taken by ordinary customers using digital cameras, Polaroids, and similar physical-media formats. The result is candid, natural fun through community and sports.</p>
-<p>Natural lighting, raw footage, subtle brand imaging, and an everyday visual language keep the focus on the people participating in movement.</p>
-<p class="pitch-final">THE THEME OF THIS CAMPAIGN IS PEOPLE.</p>
+<p class="section-kicker orange-text nike-text-reveal">THE PITCH</p>
+<h2 class="nike-text-reveal">BUILT FOR THE<br/>EVERYDAY ARENA.</h2>
+<p class="nike-text-reveal">“If you have a body, you are an athlete”, a powerful statement from Nike’s most recent letter to its investors. This statement steps away from their long history of being represented by athletes and celebrities. <span class="home-citation">(NIKE, Inc., 2026)</span></p>
+<p class="nike-text-reveal">Over the last decade, Nike has been defined by highly curated commercials, impeccable cinematography, and polished advertisements. My idea for a new campaign comes from the idea of community; the new generation of customers values individuality, togetherness, and optimism.</p>
+<p class="nike-text-reveal">Other brands such as On, New Balance, and Adidas have captured the aesthetic preferences of our desired market — Gen Z college students aged 18–26 — as well as the need for authenticity and progressive action desired by our target market. This campaign rebuilds trust and consumer intimacy. <span class="home-citation">(Marketing Dive, 2026; Ruben, 2024)</span></p>
+<p class="nike-text-reveal">Showcasing different types of bodies and levels of mobility reinforces the idea that athleticism isn't reserved for the rich and famous. It also communicates a progressive and “cool” take on Nike's marketing.</p>
+<p class="nike-text-reveal">Through Nike's website and Instagram, the campaign is composed of “amateur” videos and pictures taken by ordinary customers using digital cameras, Polaroids, and similar physical-media formats. The result is candid, natural fun through community and sports.</p>
+<p class="nike-text-reveal">Natural lighting, raw footage, subtle brand imaging, and an everyday visual language keep the focus on the people participating in movement.</p>
+<p class="pitch-final nike-text-reveal">THE THEME OF THIS CAMPAIGN IS PEOPLE.</p>
 </div>
 </div>
 </div>
@@ -172,48 +2738,48 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   COMPANY OVERVIEW
   ====================================================== -->
-<section class="company-section">
+<section class="company-section gradient-linked-section seamless-section" style="--join-in:#333A3D;--join-out:#111111">
 <div class="company-header">
 <div class="company-title-block">
-<p class="section-kicker light-kicker">COMPANY OVERVIEW / NIKE, INC.</p>
-<h2 class="company-mission">TO BRING INSPIRATION<br/>AND INNOVATION TO<br/>EVERY ATHLETE*</h2>
+<p class="section-kicker light-kicker nike-text-reveal">COMPANY OVERVIEW / NIKE, INC.</p>
+<h2 class="company-mission nike-text-reveal">TO BRING INSPIRATION<br/>AND INNOVATION TO<br/>EVERY ATHLETE*</h2>
 </div>
 <div class="asterisk">*</div>
 </div>
 <div class="company-grid">
 <div class="company-history">
 <span class="technical-label">COMPANY_ARCHIVE / 1964→NOW</span>
-<p>Nike was founded in 1964 under a different name and rose to popularity in the late 1980s through its “Just Do It” campaign, which remains one of the company's defining statements. <span class="home-citation">(Sandu, 2026)</span></p>
-<p>Originally focused on innovative footwear for runners and sprinters, Nike grew into a dominant athletic footwear brand while continuing to connect sport, fashion, and technological innovation.</p>
+<p class="nike-text-reveal">Nike was founded in 1964 under a different name and rose to popularity in the late 1980s through its “Just Do It” campaign, which remains one of the company's defining statements. <span class="home-citation">(Sandu, 2026)</span></p>
+<p class="nike-text-reveal">Originally focused on innovative footwear for runners and sprinters, Nike grew into a dominant athletic footwear brand while continuing to connect sport, fashion, and technological innovation.</p>
 <div class="company-quote">EVERYBODY.<br/>EVERY BODY.</div>
 </div>
 <div class="company-data">
 <article>
 <span class="data-number">03</span>
 <div>
-<h3>PRODUCT SEGMENTS</h3>
-<p>Footwear / Apparel / Equipment</p>
+<h3 class="nike-text-reveal">PRODUCT SEGMENTS</h3>
+<p class="nike-text-reveal">Footwear / Apparel / Equipment</p>
 </div>
 </article>
 <article>
 <span class="data-number">≈⅔</span>
 <div>
-<h3>FOOTWEAR</h3>
-<p>Footwear accounts for around two-thirds of total revenue generated through sales. <span class="home-citation">(NIKE, Inc., 2026)</span></p>
+<h3 class="nike-text-reveal">FOOTWEAR</h3>
+<p class="nike-text-reveal">Footwear accounts for around two-thirds of total revenue generated through sales. <span class="home-citation">(NIKE, Inc., 2026)</span></p>
 </div>
 </article>
 <article>
 <span class="data-number">15–45</span>
 <div>
-<h3>PRIMARY CONSUMER RANGE</h3>
-<p>Nike's broad consumer base prioritizes style, innovation, and new technology.</p>
+<h3 class="nike-text-reveal">PRIMARY CONSUMER RANGE</h3>
+<p class="nike-text-reveal">Nike's broad consumer base prioritizes style, innovation, and new technology.</p>
 </div>
 </article>
 <article>
 <span class="data-number">→</span>
 <div>
-<h3>SPORT OFFENSE</h3>
-<p>Nike's current direction emphasizes sport-specific organization and a renewed focus on athletes, including stronger attention to women's sport. <span class="home-citation">(Hill, 2026)</span></p>
+<h3 class="nike-text-reveal">SPORT OFFENSE</h3>
+<p class="nike-text-reveal">Nike's current direction emphasizes sport-specific organization and a renewed focus on athletes, including stronger attention to women's sport. <span class="home-citation">(Hill, 2026)</span></p>
 </div>
 </article>
 </div>
@@ -226,11 +2792,11 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   RESEARCH TO VISUAL
   ====================================================== -->
-<section class="research-visual-section">
+<section class="research-visual-section gradient-linked-section seamless-section" style="--join-in:#111111;--join-out:#EBE3DB">
 <div class="research-header">
 <div>
-<p class="section-kicker">RESEARCH → VISUAL DIRECTION</p>
-<h2 class="outline-orange">WHY THIS<br/>LOOKS DIFFERENT.</h2>
+<p class="section-kicker nike-text-reveal">RESEARCH → VISUAL DIRECTION</p>
+<h2 class="outline-orange nike-text-reveal">WHY THIS<br/>LOOKS DIFFERENT.</h2>
 </div>
 <div class="raw-input-chip">RAW INPUT / CULTURE → CAMPAIGN</div>
 </div>
@@ -238,26 +2804,26 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <article class="research-card research-orange">
 <span class="research-index">01</span>
 <span class="research-type">COMMUNITY</span>
-<h3>COMMON GOALS<br/>CREATE ENERGY.</h3>
-<p>Nike's successful community-centered work demonstrates the power of involving people in a common goal. This campaign makes participation part of the creative system rather than treating the audience as spectators. <span class="home-citation">(The One Club for Creativity, 2026)</span></p>
+<h3 class="nike-text-reveal">COMMON GOALS<br/>CREATE ENERGY.</h3>
+<p class="nike-text-reveal">Nike's successful community-centered work demonstrates the power of involving people in a common goal. This campaign makes participation part of the creative system rather than treating the audience as spectators. <span class="home-citation">(The One Club for Creativity, 2026)</span></p>
 </article>
 <article class="research-card research-green">
 <span class="research-index">02</span>
 <span class="research-type">COMPETITION</span>
-<h3>RETRO IS<br/>CULTURAL CURRENCY.</h3>
-<p>New Balance has built momentum through retro aesthetics and connections with younger audiences. The campaign answers that shift through Nike's own physical-media, community-first visual language. <span class="home-citation">(New Balance, 2025; Ruben, 2024)</span></p>
+<h3 class="nike-text-reveal">RETRO IS<br/>CULTURAL CURRENCY.</h3>
+<p class="nike-text-reveal">New Balance has built momentum through retro aesthetics and connections with younger audiences. The campaign answers that shift through Nike's own physical-media, community-first visual language. <span class="home-citation">(New Balance, 2025; Ruben, 2024)</span></p>
 </article>
 <article class="research-card research-slate">
 <span class="research-index">03</span>
 <span class="research-type">AUTHENTICITY</span>
-<h3>IMPERFECTION<br/>SIGNALS TRUST.</h3>
-<p>Current consumers are skeptical of staged diversity and overly polished advertising. Raw, unfiltered imagery can signal transparency and make the campaign feel lived-in rather than manufactured. <span class="home-citation">(OpenAI, 2026)</span></p>
+<h3 class="nike-text-reveal">IMPERFECTION<br/>SIGNALS TRUST.</h3>
+<p class="nike-text-reveal">Current consumers are skeptical of staged diversity and overly polished advertising. Raw, unfiltered imagery can signal transparency and make the campaign feel lived-in rather than manufactured. <span class="home-citation">(OpenAI, 2026)</span></p>
 </article>
 <article class="research-card research-black">
 <span class="research-index">04</span>
 <span class="research-type">MOVING IMAGE</span>
-<h3>SHOW THE<br/>WHOLE ATHLETE.</h3>
-<p>Video and candid movement provide a more holistic view of athleticism. The campaign uses movement, recovery, friendship, and everyday activity to expand what an athlete can look like. <span class="home-citation">(NIKE, Inc., 2025)</span></p>
+<h3 class="nike-text-reveal">SHOW THE<br/>WHOLE ATHLETE.</h3>
+<p class="nike-text-reveal">Video and candid movement provide a more holistic view of athleticism. The campaign uses movement, recovery, friendship, and everyday activity to expand what an athlete can look like. <span class="home-citation">(NIKE, Inc., 2025)</span></p>
 </article>
 </div>
 <div class="visual-artifact">
@@ -275,40 +2841,40 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 </div>
 <div class="artifact-copy">
 <span class="technical-label">RESEARCH ARTIFACT / PHYSICAL MEDIA</span>
-<h3>HANDHELD.<br/>UNRETOUCHED.<br/>LIVED-IN.</h3>
-<p>The visual direction moves away from highly saturated, dark, high-contrast studio setups and toward handheld, documentary-style formats. <span class="home-citation">(OpenAI, 2026)</span></p>
-<p>Amateur image-making becomes part of the campaign language: digital cameras, Polaroids, mobile phones, flash reflections, film grain, and the visual imperfections of real participation. <span class="home-citation">(OpenAI, 2026)</span></p>
+<h3 class="nike-text-reveal">HANDHELD.<br/>UNRETOUCHED.<br/>LIVED-IN.</h3>
+<p class="nike-text-reveal">The visual direction moves away from highly saturated, dark, high-contrast studio setups and toward handheld, documentary-style formats. <span class="home-citation">(OpenAI, 2026)</span></p>
+<p class="nike-text-reveal">Amateur image-making becomes part of the campaign language: digital cameras, Polaroids, mobile phones, flash reflections, film grain, and the visual imperfections of real participation. <span class="home-citation">(OpenAI, 2026)</span></p>
 </div>
 </div>
 </section>
 <!-- =====================================================
   HISTORY OF HUMAN CONNECTION
   ====================================================== -->
-<section class="connection-section">
+<section class="connection-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#313E35">
 <div class="connection-number">05</div>
 <div class="connection-layout">
 <div class="connection-title">
-<p class="section-kicker light-kicker">BRAND GUIDELINES / HISTORY OF HUMAN CONNECTION</p>
-<h2>A MARK<br/>MADE BY<br/>A STUDENT.</h2>
+<p class="section-kicker light-kicker nike-text-reveal">BRAND GUIDELINES / HISTORY OF HUMAN CONNECTION</p>
+<h2 class="nike-text-reveal">A MARK<br/>MADE BY<br/>A STUDENT.</h2>
 </div>
 <div class="connection-story">
-<p class="connection-lead">The original Nike Swoosh was created in haste by graphic design student Carolyn Davidson. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
+<p class="connection-lead nike-text-reveal">The original Nike Swoosh was created in haste by graphic design student Carolyn Davidson. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
 <div class="timeline">
 <div class="timeline-item">
 <span>01</span>
-<p>Davidson was a student at Portland State University taking a class under Nike co-founder Phil Knight. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
+<p class="nike-text-reveal">Davidson was a student at Portland State University taking a class under Nike co-founder Phil Knight. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
 </div>
 <div class="timeline-item">
 <span>02</span>
-<p>After being briefed on the project, she spent just under 18 hours sketching the “stripe” onto tissue paper. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
+<p class="nike-text-reveal">After being briefed on the project, she spent just under 18 hours sketching the “stripe” onto tissue paper. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
 </div>
 <div class="timeline-item">
 <span>03</span>
-<p>Although the design was initially received poorly by Knight, the Swoosh became one of Nike's most recognizable brand marks. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
+<p class="nike-text-reveal">Although the design was initially received poorly by Knight, the Swoosh became one of Nike's most recognizable brand marks. <span class="home-citation">(NIKE, Inc., 2022)</span></p>
 </div>
 <div class="timeline-item">
 <span>04</span>
-<p>Her story reflects the spirit of “Just Do It” and connects naturally to a campaign about participation, creativity, and ordinary people shaping the brand.</p>
+<p class="nike-text-reveal">Her story reflects the spirit of “Just Do It” and connects naturally to a campaign about participation, creativity, and ordinary people shaping the brand.</p>
 </div>
 </div>
 </div>
@@ -322,11 +2888,11 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   BRAND GUIDELINES
   ====================================================== -->
-<section class="guidelines-section">
+<section class="guidelines-section gradient-linked-section seamless-section" style="--join-in:#313E35;--join-out:#EBE3DB">
 <div class="guidelines-heading">
 <div>
-<p class="section-kicker">BRAND SYSTEM / GUARDRAILS</p>
-<h2 class="outline-green">NIKE,<br/>STILL NIKE.</h2>
+<p class="section-kicker nike-text-reveal">BRAND SYSTEM / GUARDRAILS</p>
+<h2 class="outline-green nike-text-reveal">NIKE,<br/>STILL NIKE.</h2>
 </div>
 <div class="guideline-file">BRAND_GUIDELINES.PDF<br/>STATUS / ACTIVE</div>
 </div>
@@ -335,10 +2901,10 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <div class="guideline-top orange-bar">TYPOGRAPHY</div>
 <div class="guideline-body">
 <span class="giant-type">Aa</span>
-<h3>PRIMARY HEADERS</h3>
-<p>Custom Futura Bold, all caps and tightly kerned, or Times New Roman where an editorial serif accent is appropriate.</p>
-<h3>BODY + SUBHEADINGS</h3>
-<p>Clean humanist sans-serif typography such as Inter or Helvetica Neue.</p>
+<h3 class="nike-text-reveal">PRIMARY HEADERS</h3>
+<p class="nike-text-reveal">Custom Futura Bold, all caps and tightly kerned, or Times New Roman where an editorial serif accent is appropriate.</p>
+<h3 class="nike-text-reveal">BODY + SUBHEADINGS</h3>
+<p class="nike-text-reveal">Clean humanist sans-serif typography such as Inter or Helvetica Neue.</p>
 </div>
 </article>
 <article class="guideline-card">
@@ -358,16 +2924,16 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <strong>#F26522</strong>
 </div>
 </div>
-<p>Black, White, and Nike Orange anchor the brand identity while the campaign extends the palette through Court Green, Slate Grey, and physical-media inspired tones.</p>
+<p class="nike-text-reveal">Black, White, and Nike Orange anchor the brand identity while the campaign extends the palette through Court Green, Slate Grey, and physical-media inspired tones.</p>
 </div>
 </article>
 <article class="guideline-card">
 <div class="guideline-top slate-bar">THE SWOOSH</div>
 <div class="guideline-body swoosh-rules">
 <div class="rule-symbol">3:1</div>
-<p>Preserve the Swoosh's original proportions. Never warp, stretch, outline, drop-shadow, or apply gradients to the mark.</p>
-<p>Maintain clear space equivalent to the Swoosh's height on all sides and use vector scaling when resizing.</p>
-<p class="rule-note">THE Y2K SYSTEM HAPPENS AROUND THE MARK — NOT TO THE MARK.</p>
+<p class="nike-text-reveal">Preserve the Swoosh's original proportions. Never warp, stretch, outline, drop-shadow, or apply gradients to the mark.</p>
+<p class="nike-text-reveal">Maintain clear space equivalent to the Swoosh's height on all sides and use vector scaling when resizing.</p>
+<p class="rule-note nike-text-reveal">THE Y2K SYSTEM HAPPENS AROUND THE MARK — NOT TO THE MARK.</p>
 </div>
 </article>
 </div>
@@ -375,13 +2941,13 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   COLOR PALETTE IDEAS
   ====================================================== -->
-<section class="palette-section">
+<section class="palette-section gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#D7D2CD">
 <div class="palette-header">
 <div>
-<p class="section-kicker">BRAND GUIDELINES / COLOR PALETTE IDEAS</p>
-<h2 class="outline-orange">COLOR FROM<br/>PHYSICAL MEDIA.</h2>
+<p class="section-kicker nike-text-reveal">BRAND GUIDELINES / COLOR PALETTE IDEAS</p>
+<h2 class="outline-orange nike-text-reveal">COLOR FROM<br/>PHYSICAL MEDIA.</h2>
 </div>
-<p class="palette-intro">Using a color picker and images from Fuji Weekly, color palettes were generated to match the ideas for customer-submitted images and videos. The direction adopts the retro, physical-media aesthetic visible across contemporary social platforms while giving Nike a visual response to retroism already used by competitors. <span class="home-citation">(ImageColorPicker, 2026; Roesch, 2023)</span></p>
+<p class="palette-intro nike-text-reveal">Using a color picker and images from Fuji Weekly, color palettes were generated to match the ideas for customer-submitted images and videos. The direction adopts the retro, physical-media aesthetic visible across contemporary social platforms while giving Nike a visual response to retroism already used by competitors. <span class="home-citation">(ImageColorPicker, 2026; Roesch, 2023)</span></p>
 </div>
 <div class="palette-images">
 <figure class="palette-frame palette-one">
@@ -425,53 +2991,52 @@ CAMILLE BICKHAM / FSH 294 / MARKETING TRACK
 <!-- =====================================================
   HOME PAGE SOURCES / APA SUPPORT
   ====================================================== -->
-<section aria-labelledby="home-sources-title" class="home-sources">
+<section aria-labelledby="home-sources-title" class="home-sources gradient-linked-section seamless-section" style="--join-in:#D7D2CD;--join-out:#EBE3DB">
 <div class="home-sources-top">
 <span>SOURCE_DIRECTORY.TXT</span>
 <span>HOME / APA 7</span>
 </div>
 <div class="home-sources-inner">
-<p class="section-kicker">CITATION DIRECTORY / HOME PAGE</p>
-<h2 id="home-sources-title">SOURCES.</h2>
+<p class="section-kicker nike-text-reveal">CITATION DIRECTORY / HOME PAGE</p>
+<h2 class="nike-text-reveal" id="home-sources-title">SOURCES.</h2>
 <div class="home-source-list">
-<p><strong>Hill, E. (2026).</strong> <em>NIKE, Inc. 2026 shareholder letter.</em> NIKE, Inc. <a href="http://investors.nike.com" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>NIKE, Inc. (2026).</strong> <em>2026 letter to shareholders</em> [Shareholder letter by Elliott Hill]. <a href="http://investors.nike.com" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>NIKE, Inc. (2022, May 16).</strong> <em>Never done leaving a mark: Swoosh.</em> Nike.com. <a href="https://www.nike.com/a/never-done-leaving-a-mark-swoosh" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>NIKE, Inc. (2025, October 23).</strong> <em>Nike debuts its first neuroscience-based footwear to help athletes feel calm, focused and present.</em> NIKE, Inc. Newsroom. <a href="https://about.nike.com/en/newsroom/releases/nike-mind-001-mind-002-official-images" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>Marketing Dive. (2026, September 3).</strong> <em>Where Nike’s marketing comeback is stumbling—and where it can still win.</em> <a href="https://www.marketingdive.com/news/where-nikes-marketing-comeback-is-stumbling-and-where-it-can-still-win/819788/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>Ruben, H. (2024, October 10).</strong> <em>Nike remains the top brand among teens, but it’s losing share.</em> Retail Dive. <a href="https://www.retaildive.com/news/nike-losing-share-among-teens-gen-z/729446/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>New Balance. (2025).</strong> <em>Grey Days 2025</em> [Campaign photograph].</p>
-<p><strong>The One Club for Creativity. (2026).</strong> <em>LA Loves A Sequel.</em> The One Show. <a href="https://www.oneclub.org/awards/theoneshow/-award/64891/la-loves-a-sequel/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>Sandu, B. (2026, September 6).</strong> <em>The Nike logo history, colors, font, and meaning.</em> Design Your Way. <a href="https://www.designyourway.net/blog/nike-logo/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>ImageColorPicker. (2026).</strong> <em>Image color picker: Palettes dashboard</em> [Color palette tool]. <a href="https://imagecolorpicker.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>Roesch, R. (2023, July 19).</strong> <em>Getting that ’90s film look with Fujifilm cameras</em> [Photographs]. Fuji X Weekly. <a href="https://fujixweekly.com/2023/07/19/getting-that-90s-film-look-with-fujifilm-cameras/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>OpenAI. (2026).</strong> <em>“Built by Movement. Bound by Community.” campaign moodboard</em> [AI-generated image]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>OpenAI. (2026).</strong> <em>FujiFilm cameras for “Built by Movement. Bound by Community.”</em> [AI-generated image]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
-<p><strong>OpenAI. (2026).</strong> <em>Nike campaign visual aesthetic evolution (2016–2025)</em> [AI-generated response]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>Hill, E. (2026).</strong> <em>NIKE, Inc. 2026 shareholder letter.</em> NIKE, Inc. <a href="http://investors.nike.com" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>NIKE, Inc. (2026).</strong> <em>2026 letter to shareholders</em> [Shareholder letter by Elliott Hill]. <a href="http://investors.nike.com" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>NIKE, Inc. (2022, May 16).</strong> <em>Never done leaving a mark: Swoosh.</em> Nike.com. <a href="https://www.nike.com/a/never-done-leaving-a-mark-swoosh" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>NIKE, Inc. (2025, October 23).</strong> <em>Nike debuts its first neuroscience-based footwear to help athletes feel calm, focused and present.</em> NIKE, Inc. Newsroom. <a href="https://about.nike.com/en/newsroom/releases/nike-mind-001-mind-002-official-images" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>Marketing Dive. (2026, September 3).</strong> <em>Where Nike’s marketing comeback is stumbling—and where it can still win.</em> <a href="https://www.marketingdive.com/news/where-nikes-marketing-comeback-is-stumbling-and-where-it-can-still-win/819788/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>Ruben, H. (2024, October 10).</strong> <em>Nike remains the top brand among teens, but it’s losing share.</em> Retail Dive. <a href="https://www.retaildive.com/news/nike-losing-share-among-teens-gen-z/729446/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>New Balance. (2025).</strong> <em>Grey Days 2025</em> [Campaign photograph].</p>
+<p class="nike-text-reveal"><strong>The One Club for Creativity. (2026).</strong> <em>LA Loves A Sequel.</em> The One Show. <a href="https://www.oneclub.org/awards/theoneshow/-award/64891/la-loves-a-sequel/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>Sandu, B. (2026, September 6).</strong> <em>The Nike logo history, colors, font, and meaning.</em> Design Your Way. <a href="https://www.designyourway.net/blog/nike-logo/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>ImageColorPicker. (2026).</strong> <em>Image color picker: Palettes dashboard</em> [Color palette tool]. <a href="https://imagecolorpicker.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>Roesch, R. (2023, July 19).</strong> <em>Getting that ’90s film look with Fujifilm cameras</em> [Photographs]. Fuji X Weekly. <a href="https://fujixweekly.com/2023/07/19/getting-that-90s-film-look-with-fujifilm-cameras/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>OpenAI. (2026).</strong> <em>“Built by Movement. Bound by Community.” campaign moodboard</em> [AI-generated image]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>OpenAI. (2026).</strong> <em>FujiFilm cameras for “Built by Movement. Bound by Community.”</em> [AI-generated image]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
+<p class="nike-text-reveal"><strong>OpenAI. (2026).</strong> <em>Nike campaign visual aesthetic evolution (2016–2025)</em> [AI-generated response]. ChatGPT. <a href="https://chatgpt.com/" rel="noopener" target="_blank">OPEN SOURCE ↗</a></p>
 </div>
 </div>
 </section>
 <!-- =====================================================
   FINAL CAMPAIGN STATEMENT
   ====================================================== -->
-<section class="home-closing">
+<section class="home-closing gradient-linked-section seamless-section" style="--join-in:#EBE3DB">
 <div class="closing-grid"></div>
 <div class="closing-top">
 <span>CAMPAIGN_MANIFESTO / FINAL FRAME</span>
 <span>REC ●</span>
 </div>
-<p class="closing-small">APPROACHABLE / RAW / UNPOSED / UNSCRIPTED / OPTIMISTIC</p>
-<h2>EVERY PACE<br/>HAS A PLACE.</h2>
-<p class="closing-serif">Movement makes the athlete.<br/>Community makes the movement matter.</p>
+<p class="closing-small nike-text-reveal">APPROACHABLE / RAW / UNPOSED / UNSCRIPTED / OPTIMISTIC</p>
+<h2 class="nike-text-reveal">EVERY PACE<br/>HAS A PLACE.</h2>
+<p class="closing-serif nike-text-reveal">Movement makes the athlete.<br/>Community makes the movement matter.</p>
 <div class="closing-slogan">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</div>
 </section>
 <!-- FOOTER -->
-
+<footer class="home-footer">
+<span>CAMILLE BICKHAM / FSH 294</span>
+<strong>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</strong>
+<span>NIKE / MARKETING TRACK / 2026</span>
+</footer><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 01 OF 08</p><a class="portfolio-next-link" href="research.html"><strong>RESEARCH</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="final-reflection.html">← FINAL REFLECTION</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer>
 </div>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>01 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="research.html"><span>UP NEXT / RESEARCH</span><strong>Understand the culture.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="final-reflection.html">← FINAL REFLECTION</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script></body>
 </html>

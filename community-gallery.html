@@ -5,29 +5,2595 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Community Gallery | Nike Creative AI Portfolio</title>
-<link href="css/community-gallery.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="03"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a aria-current="page" href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a aria-current="page" href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
-<div class="cg-page portfolio-main" id="main-content">
+<link href="css/community-gallery.css" rel="stylesheet"/><style data-inlined-from="css/community-gallery.css">/* ============================================================
+   NIKE COMMUNITY GALLERY
+   CARGO — COMPLETE FULL-BLEED CSS
+
+   BUILT BY MOVEMENT.
+   BOUND BY COMMUNITY.
+
+   Y2K / DIGICAM / EDITORIAL CAMPAIGN SYSTEM
+   ============================================================ */
+
+
+/* ============================================================
+   00 — CARGO FULL-BLEED RESET
+   Removes the white perimeter around the page
+   ============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  min-height: 100%;
+
+  background: #111111 !important;
+
+  overflow-x: hidden !important;
+}
+
+
+body {
+  border: 0 !important;
+}
+
+
+/*
+   Neutralize common Cargo wrappers.
+   This allows the custom page to run edge-to-edge.
+*/
+
+main,
+main-content,
+.page,
+.page-content,
+.page_content,
+[data-page],
+[data-bodyview] {
+  max-width: none !important;
+}
+
+
+/* ============================================================
+   01 — MASTER PAGE / BRAND SYSTEM
+   ============================================================ */
+
+.cg-page {
+  --black: #111111;
+  --white: #FFFFFF;
+
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+
+  --cream: #EBE3DB;
+
+  --silver-light: #F3F4F4;
+  --silver: #C9CED0;
+  --silver-mid: #9CA2A5;
+  --chrome-dark: #747B7E;
+
+  /*
+    FULL-BLEED CARGO BEHAVIOR
+  */
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    var(--black);
+
+  background:
+    var(--cream);
+
+  border:
+    0;
+
+  overflow:
+    visible;
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  box-sizing:
+    border-box;
+}
+
+
+.cg-page *,
+.cg-page *::before,
+.cg-page *::after {
+  box-sizing:
+    border-box;
+}
+
+
+/*
+   Force every major page chapter
+   to occupy the full page width.
+*/
+
+.cg-system-bar,
+.cg-hero,
+.cg-gallery-section,
+.cg-divider,
+.cg-utilization,
+.cg-footer {
+  width:
+    100%;
+
+  max-width:
+    none;
+}
+
+
+/* ============================================================
+   02 — CHROME / EARLY INTERNET SYSTEM BAR
+   ============================================================ */
+
+.cg-system-bar {
+  min-height:
+    48px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  padding:
+    9px 18px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F1F2F2 10%,
+      #D5D8D9 39%,
+      #A8ADB0 47%,
+      #7D8386 50%,
+      #BCC0C2 54%,
+      #E6E8E9 83%,
+      #C9CDCF 100%
+    );
+
+  border-top:
+    1px solid #FFFFFF;
+
+  border-bottom:
+    3px solid var(--black);
+
+  box-shadow:
+
+    inset 0 1px 0
+    rgba(255,255,255,.95),
+
+    inset 0 -1px 0
+    rgba(80,85,87,.8);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.cg-system-left {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+}
+
+
+.cg-system-right {
+  white-space:
+    nowrap;
+}
+
+
+.cg-system-name {
+  margin-left:
+    8px;
+}
+
+
+/* Chrome window dots */
+
+.cg-dot {
+  display:
+    inline-block;
+
+  width:
+    11px;
+
+  height:
+    11px;
+
+  border:
+    1.5px solid var(--black);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+    inset 1px 1px 0
+    rgba(255,255,255,.45);
+}
+
+
+.cg-dot-orange {
+  background:
+    var(--orange);
+}
+
+
+.cg-dot-green {
+  background:
+    var(--green);
+}
+
+
+.cg-dot-slate {
+  background:
+    var(--slate);
+}
+
+
+/* ============================================================
+   03 — HERO
+   ORANGE → GREEN → SLATE Y2K OMBRE
+   ============================================================ */
+
+.cg-hero {
+  position:
+    relative;
+
+  min-height:
+    650px;
+
+  padding:
+
+    clamp(52px, 7vw, 105px)
+
+    clamp(24px, 6vw, 92px)
+
+    72px;
+
+  overflow:
+    hidden;
+
+  background:
+
+    /* digicam flash bloom */
+
+    radial-gradient(
+      circle at 78% 17%,
+      rgba(255,255,255,.34) 0%,
+      rgba(255,255,255,.12) 11%,
+      rgba(255,255,255,.04) 21%,
+      transparent 31%
+    ),
+
+    /* horizontal grid */
+
+    linear-gradient(
+      rgba(255,255,255,.10) 1px,
+      transparent 1px
+    ),
+
+    /* vertical grid */
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.10) 1px,
+      transparent 1px
+    ),
+
+    /* campaign ombre */
+
+    linear-gradient(
+      130deg,
+
+      #F26522 0%,
+
+      #D96D33 18%,
+
+      #A06E46 35%,
+
+      #66705B 48%,
+
+      #4A5D4E 64%,
+
+      #59646A 100%
+    );
+
+  background-size:
+
+    auto,
+
+    38px 38px,
+
+    38px 38px,
+
+    auto;
+
+  border-bottom:
+    4px solid var(--black);
+}
+
+
+/* giant translucent archival numeral */
+
+.cg-hero::after {
+  content:
+    "01";
+
+  position:
+    absolute;
+
+  right:
+    -2vw;
+
+  bottom:
+    -7vw;
+
+  color:
+    rgba(255,255,255,.10);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(220px, 34vw, 540px);
+
+  font-weight:
+    900;
+
+  line-height:
+    .72;
+
+  letter-spacing:
+    -.1em;
+
+  pointer-events:
+    none;
+}
+
+
+/* ============================================================
+   04 — REC / ARCHIVE UI
+   ============================================================ */
+
+.cg-rec {
+  position:
+    relative;
+
+  z-index:
+    5;
+
+  width:
+    max-content;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    36px;
+
+  padding:
+    8px 12px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--black);
+
+  border:
+    1px solid var(--white);
+
+  box-shadow:
+    6px 6px 0 var(--orange);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .15em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.cg-rec-dot {
+  display:
+    block;
+
+  width:
+    8px;
+
+  height:
+    8px;
+
+  background:
+    var(--orange);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(242,101,34,.22);
+}
+
+
+.cg-hero-index {
+  position:
+    absolute;
+
+  top:
+    32px;
+
+  right:
+    29px;
+
+  z-index:
+    4;
+
+  color:
+    rgba(255,255,255,.76);
+
+  writing-mode:
+    vertical-rl;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .22em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* ============================================================
+   05 — COMMUNITY GALLERY HERO TYPOGRAPHY
+   ============================================================ */
+
+.cg-title {
+  position:
+    relative;
+
+  z-index:
+    3;
+
+  max-width:
+    1280px;
+
+  margin:
+    0;
+
+  color:
+    var(--white);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(72px, 12.5vw, 192px);
+
+  font-weight:
+    900;
+
+  line-height:
+    .73;
+
+  letter-spacing:
+    -.082em;
+
+  text-transform:
+    uppercase;
+
+  text-shadow:
+
+    4px 4px 0
+    var(--black),
+
+    8px 8px 0
+    rgba(17,17,17,.18);
+}
+
+
+/* ============================================================
+   06 — HERO LOWER CONTENT
+   ============================================================ */
+
+.cg-hero-footer {
+  position:
+    relative;
+
+  z-index:
+    5;
+
+  margin-top:
+    76px;
+
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  gap:
+    35px;
+}
+
+
+/* Nike-orange campaign sticker */
+
+.cg-campaign-sticker {
+  padding:
+    16px 20px;
+
+  color:
+    var(--black);
+
+  background:
+    var(--orange);
+
+  border:
+    3px solid var(--black);
+
+  box-shadow:
+    9px 9px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(16px, 2vw, 25px);
+
+  font-weight:
+    900;
+
+  line-height:
+    .94;
+
+  letter-spacing:
+    -.025em;
+
+  transform:
+    rotate(-1.5deg);
+}
+
+
+/* Editorial serif note */
+
+.cg-hero-note {
+  color:
+    var(--white);
+
+  text-align:
+    right;
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size:
+    clamp(18px, 2vw, 29px);
+
+  font-style:
+    italic;
+
+  line-height:
+    1.02;
+
+  text-shadow:
+    2px 2px 0
+    rgba(17,17,17,.4);
+}
+
+
+/* Y2K crosshairs */
+
+.cg-crosshair {
+  position:
+    absolute;
+
+  color:
+    rgba(255,255,255,.45);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    44px;
+
+  line-height:
+    1;
+
+  pointer-events:
+    none;
+}
+
+
+.cg-crosshair-one {
+  top:
+    22%;
+
+  right:
+    17%;
+}
+
+
+.cg-crosshair-two {
+  bottom:
+    14%;
+
+  left:
+    48%;
+}
+
+
+/* ============================================================
+   07 — MAIN GALLERY SURFACE
+   ============================================================ */
+
+.cg-gallery-section {
+  position:
+    relative;
+
+  padding:
+
+    70px
+
+    clamp(24px, 5vw, 78px)
+
+    125px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #F2ECE6 0%,
+      #EBE3DB 100%
+    );
+
+  border-bottom:
+    4px solid var(--black);
+
+  overflow:
+    visible;
+}
+
+
+/* drafting / graph paper texture */
+
+.cg-gallery-section::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+
+  background-image:
+
+    linear-gradient(
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    30px 30px;
+
+  opacity:
+    .85;
+}
+
+
+.cg-gallery-section > * {
+  position:
+    relative;
+
+  z-index:
+    2;
+}
+
+
+/* ============================================================
+   08 — GALLERY SECTION HEADER
+   ============================================================ */
+
+.cg-section-top {
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-start;
+
+  gap:
+    40px;
+
+  margin-bottom:
+    66px;
+}
+
+
+.cg-eyebrow {
+  margin-bottom:
+    14px;
+
+  color:
+    var(--black);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .18em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* ============================================================
+   09 — MEET OUR ATHLETES...
+   OPEN COURT-GREEN TYPE
+   ============================================================ */
+
+.cg-athlete-title {
+  margin:
+    0;
+
+  color:
+    transparent;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  -webkit-text-stroke:
+    1.5px var(--green);
+
+  paint-order:
+    stroke fill;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(40px, 6.6vw, 98px);
+
+  font-weight:
+    900;
+
+  line-height:
+    .88;
+
+  /*
+    Wider tracking prevents the
+    outlined letters from touching.
+  */
+
+  letter-spacing:
+    .055em;
+
+  word-spacing:
+    .12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* ============================================================
+   10 — COMMUNITY ARCHIVE STAMP
+   ============================================================ */
+
+.cg-archive-stamp {
+  flex:
+    0 0 auto;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    2px;
+
+  padding:
+    14px 17px;
+
+  color:
+    var(--green);
+
+  background:
+    rgba(235,227,219,.72);
+
+  border:
+    3px solid var(--green);
+
+  text-align:
+    center;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .13em;
+
+  transform:
+    rotate(3deg);
+}
+
+
+.cg-archive-stamp strong {
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size:
+    21px;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -.04em;
+}
+
+
+/* ============================================================
+   11 — EDITORIAL PHOTO COLLAGE
+
+   IMPORTANT:
+
+   Widths are intentionally different.
+
+   Image HEIGHTS are never forced.
+
+   This is what keeps portrait and landscape
+   images in their natural proportions.
+   ============================================================ */
+
+.cg-gallery {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(12, minmax(0, 1fr));
+
+  column-gap:
+    clamp(24px, 3vw, 46px);
+
+  row-gap:
+    clamp(50px, 6vw, 92px);
+
+  align-items:
+    start;
+
+  overflow:
+    visible;
+}
+
+
+/* ============================================================
+   12 — INDIVIDUAL PHOTO PLACEMENT
+
+   This is intentionally asymmetrical.
+   It recreates the editorial / Y2K collage
+   feeling rather than a standard gallery grid.
+   ============================================================ */
+
+.cg-photo {
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  align-self:
+    start;
+
+  overflow:
+    visible;
+
+  transition:
+
+    transform .28s ease,
+
+    filter .28s ease;
+
+  transform-origin:
+    center center;
+}
+
+
+/* PHOTO 01 */
+
+.cg-photo:nth-child(1) {
+  grid-column:
+    1 / span 7;
+
+  margin-top:
+    0;
+}
+
+
+/* PHOTO 02 */
+
+.cg-photo:nth-child(2) {
+  grid-column:
+    9 / span 3;
+
+  margin-top:
+    68px;
+}
+
+
+/* PHOTO 03 */
+
+.cg-photo:nth-child(3) {
+  grid-column:
+    2 / span 4;
+
+  margin-top:
+    8px;
+}
+
+
+/* PHOTO 04 */
+
+.cg-photo:nth-child(4) {
+  grid-column:
+    7 / span 6;
+
+  margin-top:
+    -24px;
+}
+
+
+/* PHOTO 05 */
+
+.cg-photo:nth-child(5) {
+  grid-column:
+    1 / span 3;
+
+  margin-top:
+    42px;
+}
+
+
+/* PHOTO 06 */
+
+.cg-photo:nth-child(6) {
+  grid-column:
+    5 / span 7;
+
+  margin-top:
+    0;
+}
+
+
+/* PHOTO 07 */
+
+.cg-photo:nth-child(7) {
+  grid-column:
+    1 / span 7;
+
+  margin-top:
+    18px;
+}
+
+
+/* PHOTO 08 */
+
+.cg-photo:nth-child(8) {
+  grid-column:
+    9 / span 3;
+
+  margin-top:
+    62px;
+}
+
+
+/*
+   The nth-child layout above is now
+   the master layout.
+
+   These original HTML classes should
+   not force additional sizing.
+*/
+
+.cg-photo-wide,
+.cg-photo-medium,
+.cg-photo-tall,
+.cg-photo-small-tall {
+  width:
+    auto;
+}
+
+
+/* ============================================================
+   13 — PHYSICAL PHOTO FRAME
+   ============================================================ */
+
+.cg-photo-inner {
+  position:
+    relative;
+
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  max-height:
+    none !important;
+
+  overflow:
+    visible !important;
+
+  background:
+    transparent;
+}
+
+
+/* ============================================================
+   14 — ACTUAL PHOTOGRAPHS
+
+   NO CROPPING
+   NO FIXED HEIGHT
+   NO UNIVERSAL ASPECT RATIO
+   ============================================================ */
+
+.cg-photo-inner img {
+  display:
+    block !important;
+
+  width:
+    100% !important;
+
+  max-width:
+    100% !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  max-height:
+    none !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  background:
+    transparent;
+
+  border:
+    4px solid var(--orange);
+
+  box-shadow:
+    11px 11px 0 var(--black);
+
+  /*
+    Cargo crop safeguards
+  */
+
+  aspect-ratio:
+    auto !important;
+
+  object-fit:
+    contain !important;
+
+  object-position:
+    center center !important;
+
+  transform:
+    none !important;
+
+  clip-path:
+    none !important;
+}
+
+
+/* ============================================================
+   15 — PHYSICAL / CANDID ROTATION
+   ============================================================ */
+
+.cg-tilt-left {
+  transform:
+    rotate(-.55deg);
+}
+
+
+.cg-tilt-right {
+  transform:
+    rotate(.55deg);
+}
+
+
+/* ============================================================
+   16 — IMAGE ARCHIVE NUMBER
+   ============================================================ */
+
+.cg-photo-number {
+  position:
+    absolute;
+
+  top:
+    11px;
+
+  right:
+    11px;
+
+  z-index:
+    7;
+
+  min-width:
+    31px;
+
+  padding:
+    6px 7px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--green);
+
+  border:
+    2px solid var(--black);
+
+  box-shadow:
+    3px 3px 0 var(--black);
+
+  text-align:
+    center;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .08em;
+}
+
+
+/* ============================================================
+   17 — HOVER INFORMATION
+   DATE / TIME / LOCATION ONLY
+   ============================================================ */
+
+.cg-hover-info {
+  position:
+    absolute;
+
+  left:
+    4px;
+
+  right:
+    4px;
+
+  bottom:
+    4px;
+
+  z-index:
+    8;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    12px;
+
+  padding:
+    12px 14px;
+
+  color:
+    var(--white);
+
+  background:
+    rgba(17,17,17,.93);
+
+  border-top:
+    3px solid var(--orange);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    clamp(8px, .8vw, 11px);
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .08em;
+
+  text-transform:
+    uppercase;
+
+  opacity:
+    0;
+
+  transform:
+    translateY(7px);
+
+  transition:
+
+    opacity .2s ease,
+
+    transform .2s ease;
+
+  pointer-events:
+    none;
+}
+
+
+/* ============================================================
+   18 — DESKTOP HOVER EFFECT
+
+   The WHOLE PHOTO expands.
+
+   The image itself does not zoom
+   inside a crop container.
+   ============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .cg-photo:hover {
+    z-index:
+      50;
+
+    transform:
+
+      translateY(-8px)
+
+      scale(1.035)
+
+      rotate(0deg);
+
+    filter:
+
+      saturate(1.06)
+
+      contrast(1.02);
+  }
+
+
+  .cg-photo:hover .cg-hover-info {
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* ============================================================
+   19 — SLATE GREY TRANSITION DIVIDER
+   ============================================================ */
+
+.cg-divider {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  gap:
+    20px;
+
+  padding:
+
+    38px
+
+    clamp(24px, 5vw, 78px);
+
+  background:
+    var(--cream);
+}
+
+
+.cg-divider-line {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    5px;
+
+  background:
+    var(--slate);
+}
+
+
+.cg-divider-label {
+  color:
+    var(--slate);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .17em;
+
+  text-transform:
+    uppercase;
+
+  white-space:
+    nowrap;
+}
+
+
+/* ============================================================
+   20 — CONTENT UTILIZATION CHAPTER
+   ============================================================ */
+
+.cg-utilization {
+  position:
+    relative;
+
+  padding:
+
+    45px
+
+    clamp(24px, 5vw, 78px)
+
+    115px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #EBE3DB 0%,
+      #E4DDD6 100%
+    );
+
+  overflow:
+    hidden;
+}
+
+
+/* faint UI grid */
+
+.cg-utilization::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+
+  background-image:
+
+    linear-gradient(
+      rgba(89,100,106,.055) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(89,100,106,.055) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    40px 40px;
+}
+
+
+.cg-utilization > * {
+  position:
+    relative;
+
+  z-index:
+    2;
+}
+
+
+/* ============================================================
+   21 — CONTENT UTILIZATION HEADER
+   ============================================================ */
+
+.cg-utilization-header {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    35px;
+
+  margin-bottom:
+    58px;
+}
+
+
+.cg-eyebrow-dark {
+  color:
+    var(--black);
+}
+
+
+/* Open Nike-orange outline */
+
+.cg-utilization-title {
+  margin:
+    0;
+
+  color:
+    transparent;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  -webkit-text-stroke:
+    1.5px var(--orange);
+
+  paint-order:
+    stroke fill;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(40px, 6.4vw, 94px);
+
+  font-weight:
+    900;
+
+  line-height:
+    .87;
+
+  letter-spacing:
+    .055em;
+
+  word-spacing:
+    .12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* Chapter number */
+
+.cg-util-number {
+  flex:
+    0 0 auto;
+
+  padding:
+    10px 14px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--slate);
+
+  border:
+    2px solid var(--black);
+
+  box-shadow:
+    5px 5px 0 var(--black);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size:
+    28px;
+
+  font-style:
+    italic;
+}
+
+
+/* ============================================================
+   22 — CONTENT UTILIZATION WINDOWS
+   ============================================================ */
+
+.cg-util-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    clamp(28px, 3vw, 44px);
+
+  align-items:
+    start;
+}
+
+
+.cg-util-card {
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  background:
+    var(--white);
+
+  border:
+    3px solid var(--black);
+
+  box-shadow:
+    10px 10px 0 var(--orange);
+
+  transition:
+
+    transform .25s ease,
+
+    box-shadow .25s ease;
+}
+
+
+/* green application */
+
+.cg-util-card:nth-child(2) {
+  margin-top:
+    42px;
+
+  box-shadow:
+    10px 10px 0 var(--green);
+}
+
+
+/* slate application */
+
+.cg-util-card:nth-child(3) {
+  margin-top:
+    8px;
+
+  box-shadow:
+    10px 10px 0 var(--slate);
+}
+
+
+/* ============================================================
+   23 — Y2K APPLICATION WINDOW BARS
+   ============================================================ */
+
+.cg-util-bar {
+  min-height:
+    34px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+
+  padding:
+    8px 11px;
+
+  border-bottom:
+    3px solid var(--black);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.cg-orange {
+  color:
+    var(--black);
+
+  background:
+    var(--orange);
+}
+
+
+.cg-green {
+  color:
+    var(--white);
+
+  background:
+    var(--green);
+}
+
+
+.cg-slate {
+  color:
+    var(--white);
+
+  background:
+    var(--slate);
+}
+
+
+/* ============================================================
+   24 — UTILIZATION IMAGES
+   NATURAL PROPORTIONS
+   ============================================================ */
+
+.cg-util-image {
+  padding:
+    14px;
+
+  background:
+    var(--white);
+}
+
+
+.cg-util-image img {
+  display:
+    block !important;
+
+  width:
+    100% !important;
+
+  max-width:
+    100% !important;
+
+  height:
+    auto !important;
+
+  min-height:
+    0 !important;
+
+  max-height:
+    none !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+
+  border:
+    2px solid var(--black);
+
+  aspect-ratio:
+    auto !important;
+
+  object-fit:
+    contain !important;
+
+  object-position:
+    center !important;
+
+  transform:
+    none !important;
+
+  clip-path:
+    none !important;
+}
+
+
+/* ============================================================
+   25 — APPLICATION WINDOW FOOTER
+   ============================================================ */
+
+.cg-util-bottom {
+  padding:
+    12px;
+
+  color:
+    var(--black);
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #F7F7F7,
+      #D9DCDE
+    );
+
+  border-top:
+    3px solid var(--black);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .11em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* Utilization hover */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .cg-util-card:hover {
+    transform:
+      translateY(-8px);
+  }
+
+
+  .cg-util-card:nth-child(1):hover {
+    box-shadow:
+      14px 14px 0 var(--orange);
+  }
+
+
+  .cg-util-card:nth-child(2):hover {
+    box-shadow:
+      14px 14px 0 var(--green);
+  }
+
+
+  .cg-util-card:nth-child(3):hover {
+    box-shadow:
+      14px 14px 0 var(--slate);
+  }
+
+}
+
+
+/* ============================================================
+   26 — FOOTER
+   ============================================================ */
+
+.cg-footer {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  gap:
+    24px;
+
+  padding:
+    25px 30px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--black);
+
+  border-top:
+    5px solid var(--orange);
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    .13em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.cg-footer > span:last-child {
+  text-align:
+    right;
+}
+
+
+.cg-footer-highlight {
+  padding:
+    7px 12px;
+
+  color:
+    var(--white);
+
+  background:
+    var(--green);
+
+  border:
+    1px solid var(--white);
+
+  white-space:
+    nowrap;
+}
+
+
+/* ============================================================
+   27 — TABLET
+   ============================================================ */
+
+@media (max-width: 950px) {
+
+  .cg-hero {
+    min-height:
+      560px;
+  }
+
+
+  .cg-section-top,
+  .cg-utilization-header {
+    flex-direction:
+      column;
+  }
+
+
+  .cg-archive-stamp {
+    align-self:
+      flex-end;
+  }
+
+
+  /*
+    Switch collage to two columns.
+
+    Images STILL retain natural
+    proportions.
+  */
+
+  .cg-gallery {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      46px 34px;
+  }
+
+
+  .cg-photo:nth-child(1),
+  .cg-photo:nth-child(2),
+  .cg-photo:nth-child(3),
+  .cg-photo:nth-child(4),
+  .cg-photo:nth-child(5),
+  .cg-photo:nth-child(6),
+  .cg-photo:nth-child(7),
+  .cg-photo:nth-child(8) {
+    grid-column:
+      auto;
+
+    margin-top:
+      0;
+  }
+
+
+  /*
+    Portrait-style cards remain
+    intentionally narrower.
+  */
+
+  .cg-photo:nth-child(2) .cg-photo-inner,
+  .cg-photo:nth-child(5) .cg-photo-inner,
+  .cg-photo:nth-child(8) .cg-photo-inner {
+    width:
+      76%;
+
+    margin:
+      0 auto;
+  }
+
+
+  .cg-util-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .cg-util-card:nth-child(2),
+  .cg-util-card:nth-child(3) {
+    margin-top:
+      0;
+  }
+
+
+  .cg-util-card:nth-child(3) {
+    grid-column:
+      1 / -1;
+
+    width:
+      58%;
+
+    justify-self:
+      center;
+
+    margin-top:
+      15px;
+  }
+
+}
+
+
+/* ============================================================
+   28 — MOBILE
+   ============================================================ */
+
+@media (max-width: 620px) {
+
+  .cg-system-bar {
+    padding:
+      8px 10px;
+  }
+
+
+  .cg-system-name {
+    display:
+      none;
+  }
+
+
+  .cg-system-right {
+    font-size:
+      8px;
+  }
+
+
+  .cg-hero {
+    min-height:
+      auto;
+
+    padding:
+
+      48px
+
+      19px
+
+      55px;
+  }
+
+
+  .cg-title {
+    font-size:
+      clamp(58px, 20vw, 104px);
+
+    line-height:
+      .76;
+  }
+
+
+  .cg-hero::after {
+    font-size:
+      70vw;
+
+    bottom:
+      -7vw;
+  }
+
+
+  .cg-hero-index,
+  .cg-crosshair {
+    display:
+      none;
+  }
+
+
+  .cg-hero-footer {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    margin-top:
+      52px;
+  }
+
+
+  .cg-hero-note {
+    text-align:
+      left;
+  }
+
+
+  .cg-gallery-section {
+    padding:
+
+      52px
+
+      18px
+
+      80px;
+  }
+
+
+  .cg-athlete-title {
+    font-size:
+      clamp(37px, 13vw, 66px);
+
+    letter-spacing:
+      .045em;
+  }
+
+
+  /*
+    One-column mobile gallery
+  */
+
+  .cg-gallery {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      48px;
+  }
+
+
+  .cg-photo:nth-child(1),
+  .cg-photo:nth-child(2),
+  .cg-photo:nth-child(3),
+  .cg-photo:nth-child(4),
+  .cg-photo:nth-child(5),
+  .cg-photo:nth-child(6),
+  .cg-photo:nth-child(7),
+  .cg-photo:nth-child(8) {
+    grid-column:
+      auto;
+
+    margin-top:
+      0;
+  }
+
+
+  /*
+    Narrow portrait images by WIDTH.
+
+    We never shorten/crop them.
+  */
+
+  .cg-photo:nth-child(2) .cg-photo-inner {
+    width:
+      70%;
+
+    margin:
+      0 auto;
+  }
+
+
+  .cg-photo:nth-child(5) .cg-photo-inner {
+    width:
+      68%;
+
+    margin:
+      0 auto;
+  }
+
+
+  .cg-photo:nth-child(8) .cg-photo-inner {
+    width:
+      72%;
+
+    margin:
+      0 auto;
+  }
+
+
+  /*
+    Mobile does not depend on hover,
+    so metadata remains readable.
+  */
+
+  .cg-hover-info {
+    position:
+      relative;
+
+    left:
+      auto;
+
+    right:
+      auto;
+
+    bottom:
+      auto;
+
+    margin-top:
+      0;
+
+    flex-wrap:
+      wrap;
+
+    justify-content:
+      flex-start;
+
+    opacity:
+      1;
+
+    transform:
+      none;
+
+    border:
+      4px solid var(--orange);
+
+    border-top:
+      0;
+
+    box-shadow:
+      11px 11px 0 var(--black);
+  }
+
+
+  .cg-photo-inner img {
+    box-shadow:
+      11px 0 0 var(--black);
+  }
+
+
+  .cg-divider {
+    grid-template-columns:
+      1fr;
+
+    padding:
+
+      30px
+
+      18px;
+
+    text-align:
+      center;
+  }
+
+
+  .cg-divider-label {
+    white-space:
+      normal;
+  }
+
+
+  .cg-utilization {
+    padding:
+
+      40px
+
+      18px
+
+      80px;
+  }
+
+
+  .cg-utilization-title {
+    font-size:
+      clamp(37px, 12vw, 64px);
+
+    letter-spacing:
+      .045em;
+  }
+
+
+  .cg-util-grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      38px;
+  }
+
+
+  .cg-util-card:nth-child(1),
+  .cg-util-card:nth-child(2),
+  .cg-util-card:nth-child(3) {
+    grid-column:
+      auto;
+
+    width:
+      100%;
+
+    margin-top:
+      0;
+  }
+
+
+  .cg-footer {
+    grid-template-columns:
+      1fr;
+
+    text-align:
+      center;
+
+    gap:
+      13px;
+  }
+
+
+  .cg-footer > span:last-child {
+    text-align:
+      center;
+  }
+
+
+  .cg-footer-highlight {
+    white-space:
+      normal;
+  }
+
+}
+
+
+/* ============================================================
+   29 — VERY LARGE DESKTOPS
+
+   Prevents the content from becoming awkwardly
+   oversized while backgrounds remain full bleed.
+   ============================================================ */
+
+@media (min-width: 1700px) {
+
+  .cg-hero > *,
+  .cg-gallery-section > *,
+  .cg-utilization > * {
+    max-width:
+      1550px;
+
+    margin-left:
+      auto;
+
+    margin-right:
+      auto;
+  }
+
+
+  .cg-hero-footer {
+    margin-top:
+      76px;
+  }
+
+
+  .cg-gallery {
+    margin-top:
+      0;
+  }
+
+}
+
+
+/* ============================================================
+   30 — REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cg-photo,
+  .cg-hover-info,
+  .cg-util-card {
+    transition:
+      none !important;
+  }
+
+
+  .cg-photo:hover,
+  .cg-util-card:hover {
+    transform:
+      none !important;
+  }
+
+}
+
+
+/* ============================================================
+   31 — HOME NAVIGATION BUTTON
+   Added to the existing chrome system bar only.
+   ============================================================ */
+
+.cg-system-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cg-home-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+  padding: 5px 11px;
+  color: var(--white);
+  background: var(--black);
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 0 var(--orange);
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.cg-home-nav:visited {
+  color: var(--white);
+}
+
+.cg-home-nav:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .cg-home-nav:hover {
+    color: var(--white);
+    background: var(--green);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--orange);
+  }
+}
+
+@media (max-width: 620px) {
+  .cg-system-right {
+    gap: 5px;
+  }
+
+  .cg-home-nav {
+    min-height: 23px;
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .cg-system-meta {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-home-nav {
+    transition: none !important;
+  }
+
+  .cg-home-nav:hover {
+    transform: none !important;
+  }
+}
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a aria-current="page" href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a aria-current="page" href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
+<div class="cg-page">
 <!-- =========================================
        Y2K / NIKE SYSTEM HEADER
   ========================================== -->
-<div class="cg-system-bar">
-<div class="cg-system-left">
-<span class="cg-dot cg-dot-orange"></span>
-<span class="cg-dot cg-dot-green"></span>
-<span class="cg-dot cg-dot-slate"></span>
-<span class="cg-system-name">NIKE / COMMUNITY ARCHIVE</span>
-</div>
-<div class="cg-system-right">
-<a aria-label="Return to Home page" class="cg-home-nav" href="index.html">HOME</a>
-<span class="cg-system-meta">      FSH 294   /   2026    </span>
-</div>
-</div>
 <!-- =========================================
        HERO
   ========================================== -->
@@ -39,7 +2605,7 @@
 <div class="cg-hero-index">
       01 / GALLERY
     </div>
-<h1 class="cg-title">
+<h1 class="cg-title nike-text-reveal">
 COMMUNITY<br/>GALLERY
     </h1>
 <div class="cg-hero-footer">
@@ -59,13 +2625,13 @@ EVERYBODY.
 <!-- =========================================
        COMMUNITY GALLERY
   ========================================== -->
-<section class="cg-gallery-section">
+<section class="cg-gallery-section seamless-section" style="--join-out:#EBE3DB">
 <div class="cg-section-top">
 <div>
 <div class="cg-eyebrow">
           08 MOMENTS   /   ONE COMMUNITY
         </div>
-<h2 class="cg-athlete-title">
+<h2 class="cg-athlete-title nike-text-reveal">
 MEET<br/>
 OUR<br/>
 ATHLETES...
@@ -180,13 +2746,13 @@ ATHLETES...
 <!-- =========================================
        CONTENT UTILIZATION EXAMPLES
   ========================================== -->
-<section class="cg-utilization">
+<section class="cg-utilization gradient-linked-section seamless-section" style="--join-in:#EBE3DB">
 <div class="cg-utilization-header">
 <div>
 <div class="cg-eyebrow cg-eyebrow-dark">
           03 APPLICATIONS / CAMPAIGN SYSTEM
         </div>
-<h2 class="cg-utilization-title">
+<h2 class="cg-utilization-title nike-text-reveal">
 CONTENT <br/>
 UTILIZATION<br/>
 EXAMPLES
@@ -232,12 +2798,13 @@ EXAMPLES
 <!-- =========================================
        FOOTER
   ========================================== -->
-
+<footer class="cg-footer">
+<span>BUILT BY MOVEMENT.</span>
+<span class="cg-footer-highlight">
+      EVERY PACE HAS A PLACE.
+    </span>
+<span>BOUND BY COMMUNITY.</span>
+</footer><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 03 OF 08</p><a class="portfolio-next-link" href="channel-integration.html"><strong>CHANNEL INTEGRATION</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="research.html">← RESEARCH</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer>
 </div>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>03 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="channel-integration.html"><span>UP NEXT / CHANNEL INTEGRATION</span><strong>Bring the story to life.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="research.html">← RESEARCH</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script></body>
 </html>

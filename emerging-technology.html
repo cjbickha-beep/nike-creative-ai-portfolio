@@ -5,27 +5,2232 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Emerging Technology | Nike Creative AI Portfolio</title>
-<link href="css/emerging-technology.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="07"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a aria-current="page" href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a aria-current="page" href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
+<link href="css/emerging-technology.css" rel="stylesheet"/><style data-inlined-from="css/emerging-technology.css">/* =========================================================
+NIKE CREATIVE AI PORTFOLIO
+EMERGING TECHNOLOGY
+HIGH-CONTRAST Y2K / ARCHIVE SYSTEM
+========================================================= */
+
+:root {
+  --et-black: #111111;
+  --et-white: #ffffff;
+  --et-orange: #f26522;
+  --et-green: #4a5d4e;
+  --et-green-dark: #34453a;
+  --et-slate: #59646a;
+  --et-slate-light: #d4dadd;
+  --et-cream: #ebe3db;
+  --et-silver: #c9ced0;
+  --et-red: #c8322b;
+
+  --et-display: Futura, "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --et-body: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --et-serif: "Times New Roman", Times, serif;
+
+  --et-border: 3px solid var(--et-black);
+  --et-shadow: 8px 8px 0 var(--et-black);
+}
+
+
+/* =========================================================
+RESET + WORD SPACING PROTECTION
+========================================================= */
+
+.et-page,
+.et-page * {
+  box-sizing: border-box;
+}
+
+.et-page {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--et-cream);
+  color: var(--et-black);
+  font-family: var(--et-body);
+
+  word-spacing: normal !important;
+  text-align: left;
+  white-space: normal;
+  font-kerning: normal;
+}
+
+.et-page p,
+.et-page h1,
+.et-page h2,
+.et-page h3,
+.et-page span,
+.et-page strong,
+.et-page small,
+.et-page a,
+.et-page li {
+  word-spacing: normal !important;
+}
+
+.et-page p {
+  text-align: left;
+  text-justify: auto;
+}
+
+.et-page h1,
+.et-page h2,
+.et-page h3,
+.et-page p {
+  margin-top: 0;
+}
+
+.et-page video {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+HOME NAVIGATION
+========================================================= */
+
+.et-nav {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 8px 3vw;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border-top: 3px solid var(--et-black);
+  border-bottom: 3px solid var(--et-black);
+}
+
+.et-home-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 17px;
+  background: var(--et-orange);
+  color: var(--et-black);
+  border: 2px solid var(--et-black);
+  box-shadow: 4px 4px 0 var(--et-black);
+  text-decoration: none;
+  font-family: var(--et-display);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.et-home-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--et-black);
+  background: var(--et-white);
+}
+
+.et-home-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.et-nav-id {
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+/* =========================================================
+GLOBAL COMPONENTS
+========================================================= */
+
+.et-kicker {
+  margin: 0 0 14px;
+  color: var(--et-black);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.et-kicker-light {
+  color: var(--et-white);
+}
+
+.et-section-tag {
+  display: flex;
+  align-items: stretch;
+  width: fit-content;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: 2px solid var(--et-black);
+  box-shadow: 4px 4px 0 var(--et-black);
+}
+
+.et-section-tag span {
+  display: grid;
+  place-items: center;
+  padding: 8px 13px;
+  background: var(--et-orange);
+  color: var(--et-black);
+  border-right: 2px solid var(--et-black);
+  font-weight: 950;
+}
+
+.et-section-tag p {
+  margin: 0;
+  padding: 8px 15px;
+  color: var(--et-black);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+
+/* =========================================================
+HERO
+========================================================= */
+
+.et-hero {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  color: var(--et-white);
+  background:
+    linear-gradient(
+      130deg,
+      #f26522 0%,
+      #d8793c 22%,
+      #8c7350 38%,
+      #536657 58%,
+      #59646a 100%
+    );
+  border-bottom: 8px solid var(--et-black);
+}
+
+.et-hero-grid,
+.et-artifacts-grid-bg,
+.et-verdict-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.et-hero-topbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 3vw;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border-bottom: 3px solid var(--et-black);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.et-rec {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.et-rec i,
+.et-rec-overlay i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ff2b22;
+  border-radius: 50%;
+  box-shadow: 0 0 9px #ff2b22;
+}
+
+.et-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr) 180px;
+  gap: 35px;
+  align-items: center;
+  max-width: 1450px;
+  min-height: 650px;
+  margin: auto;
+  padding: 70px 4vw 100px;
+}
+
+.et-hero-index {
+  align-self: start;
+  margin-top: 70px;
+  padding-left: 15px;
+  border-left: 4px solid var(--et-white);
+}
+
+.et-hero-index span {
+  display: block;
+  font-family: var(--et-display);
+  font-size: 64px;
+  font-weight: 950;
+  line-height: .8;
+}
+
+.et-hero-index p {
+  margin: 12px 0 0;
+  color: var(--et-white);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  line-height: 1.5;
+}
+
+.et-hero-title h1 {
+  max-width: 1000px;
+  margin: 0;
+  color: var(--et-white);
+  font-family: var(--et-display);
+  font-size: clamp(72px, 10.5vw, 168px);
+  font-weight: 950;
+  line-height: .73;
+  letter-spacing: -.07em;
+  text-transform: uppercase;
+}
+
+.et-hero-title h1 span {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--et-white);
+  text-shadow: 5px 5px 0 var(--et-black);
+}
+
+.et-title-rule {
+  width: 72%;
+  height: 7px;
+  margin: 35px 0 20px;
+  background: var(--et-orange);
+  border: 2px solid var(--et-black);
+}
+
+.et-hero-sub {
+  color: var(--et-white);
+  font-family: var(--et-serif);
+  font-size: clamp(18px, 2vw, 30px);
+  font-style: italic;
+}
+
+.et-hero-sticker {
+  padding: 20px 15px;
+  transform: rotate(7deg);
+  background: var(--et-silver);
+  color: var(--et-black);
+  border: var(--et-border);
+  box-shadow: var(--et-shadow);
+  text-align: center;
+}
+
+.et-hero-sticker span,
+.et-hero-sticker small {
+  display: block;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .14em;
+}
+
+.et-hero-sticker strong {
+  display: block;
+  margin: 4px 0;
+  color: var(--et-orange);
+  font-family: var(--et-display);
+  font-size: 58px;
+  line-height: .9;
+}
+
+.et-marquee {
+  position: absolute;
+  z-index: 3;
+  left: -1%;
+  bottom: 20px;
+  width: 102%;
+  overflow: hidden;
+  transform: rotate(-1.5deg);
+  background: var(--et-orange);
+  color: var(--et-black);
+  border-top: 3px solid var(--et-black);
+  border-bottom: 3px solid var(--et-black);
+}
+
+.et-marquee-track {
+  width: max-content;
+  padding: 10px 0;
+  white-space: nowrap;
+  font-family: var(--et-display);
+  font-size: 15px;
+  font-weight: 950;
+  letter-spacing: .12em;
+  animation: et-scroll 24s linear infinite;
+}
+
+@keyframes et-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-35%);
+  }
+}
+
+
+/* =========================================================
+OVERVIEW
+========================================================= */
+
+.et-overview {
+  position: relative;
+  padding: 85px 5vw 110px;
+  background:
+    linear-gradient(rgba(17,17,17,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.045) 1px, transparent 1px),
+    var(--et-cream);
+  background-size: 25px 25px;
+  color: var(--et-black);
+}
+
+.et-overview-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.35fr .55fr;
+  gap: 32px;
+  align-items: start;
+  max-width: 1450px;
+  margin: 55px auto 0;
+}
+
+.et-overview-title h2,
+.et-section-header h2,
+.et-learning-title h2,
+.et-industry-title h2 {
+  margin: 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(58px, 7vw, 108px);
+  font-weight: 950;
+  line-height: .77;
+  letter-spacing: -.065em;
+}
+
+.et-overview-title h2 span,
+.et-section-header h2 span,
+.et-learning-title h2 span,
+.et-industry-title h2 span {
+  color: var(--et-orange);
+}
+
+.et-platform-card {
+  margin-top: 65px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: var(--et-border);
+  box-shadow: var(--et-shadow);
+}
+
+.et-window-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px;
+  background: linear-gradient(#f5f5f5, var(--et-silver));
+  color: var(--et-black);
+  border-bottom: 3px solid var(--et-black);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.et-window-bar div {
+  display: flex;
+  gap: 5px;
+}
+
+.et-window-bar i {
+  width: 11px;
+  height: 11px;
+  background: var(--et-orange);
+  border: 1px solid var(--et-black);
+}
+
+.et-platform-copy {
+  padding: 32px;
+}
+
+.et-label,
+.et-score-label {
+  display: inline-block;
+  margin-bottom: 17px;
+  padding: 5px 8px;
+  background: var(--et-black);
+  color: var(--et-white);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+}
+
+.et-platform-copy p {
+  color: var(--et-black);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.et-platform-copy .et-lead {
+  font-family: var(--et-serif);
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.et-score-card {
+  position: relative;
+  margin-top: -15px;
+  padding: 25px 20px;
+  transform: rotate(2deg);
+  background: var(--et-green);
+  color: var(--et-white);
+  border: var(--et-border);
+  box-shadow: var(--et-shadow);
+}
+
+.et-score {
+  display: flex;
+  align-items: flex-start;
+}
+
+.et-score strong {
+  color: var(--et-white);
+  font-family: var(--et-display);
+  font-size: 100px;
+  line-height: .8;
+}
+
+.et-score span {
+  color: var(--et-white);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.et-score-card > p {
+  margin: 18px 0 0;
+  color: var(--et-white);
+  font-family: var(--et-display);
+  font-size: 23px;
+  font-weight: 950;
+  line-height: .9;
+}
+
+.et-score-card .et-score-warning {
+  padding-top: 14px;
+  color: #ffe3d3;
+  border-top: 2px solid var(--et-white);
+}
+
+
+/* =========================================================
+CREATIVITY HAS A PRICE TAG
+LIGHT VERSION — FIXED CONTRAST
+========================================================= */
+
+.et-cost {
+  padding: 80px 5vw 100px;
+  background:
+    linear-gradient(rgba(17,17,17,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.045) 1px, transparent 1px),
+    var(--et-silver);
+  background-size: 28px 28px;
+  color: var(--et-black);
+  border-top: 8px solid var(--et-orange);
+  border-bottom: 8px solid var(--et-black);
+}
+
+.et-cost-warning {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 50px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 5px 5px 0 var(--et-black);
+}
+
+.et-cost-warning span {
+  padding: 8px 14px;
+  background: var(--et-orange);
+  color: var(--et-black);
+  border-right: 3px solid var(--et-black);
+  font-family: var(--et-display);
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.et-cost-warning p {
+  margin: 0;
+  padding: 8px 14px;
+  color: var(--et-black);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.et-cost-main {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: end;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-cost-title h2 {
+  margin: 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(60px, 7.5vw, 115px);
+  font-weight: 950;
+  line-height: .76;
+  letter-spacing: -.065em;
+}
+
+.et-cost-title h2 span {
+  color: var(--et-orange);
+  -webkit-text-stroke: 1px var(--et-black);
+}
+
+.et-cost-intro {
+  max-width: 550px;
+  margin: 30px 0 0;
+  padding-left: 18px;
+  color: var(--et-black);
+  border-left: 5px solid var(--et-green);
+  font-family: var(--et-serif);
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.et-price-stack {
+  display: grid;
+  gap: 15px;
+}
+
+.et-price-stack article {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  padding: 18px 20px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 5px 5px 0 var(--et-black);
+}
+
+.et-price-stack article span {
+  grid-column: 1;
+  color: var(--et-black);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.et-price-stack article strong {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: .8;
+}
+
+.et-price-stack article small {
+  margin-top: 8px;
+  color: var(--et-black);
+  font-weight: 800;
+}
+
+.et-price-stack .et-price-orange {
+  margin-left: -25px;
+  background: var(--et-orange);
+  color: var(--et-black);
+}
+
+.et-cost-note {
+  max-width: 650px;
+  margin: 55px 0 0 auto;
+  padding: 20px 23px;
+  background: var(--et-green);
+  color: var(--et-white);
+  border: 3px solid var(--et-black);
+  box-shadow: 6px 6px 0 var(--et-black);
+}
+
+.et-cost-note span {
+  color: #ffd5bd;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .14em;
+}
+
+.et-cost-note p {
+  margin: 8px 0 0;
+  color: var(--et-white);
+  font-family: var(--et-serif);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+WORKFLOW
+========================================================= */
+
+.et-workflow {
+  padding: 100px 5vw 110px;
+  background: var(--et-cream);
+  color: var(--et-black);
+}
+
+.et-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-header-meta {
+  min-width: 190px;
+  padding: 14px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: var(--et-border);
+  box-shadow: 5px 5px 0 var(--et-black);
+}
+
+.et-header-meta span,
+.et-header-meta small {
+  display: block;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.et-header-meta strong {
+  display: block;
+  margin: 5px 0;
+  font-family: var(--et-display);
+  font-size: 26px;
+}
+
+.et-workflow-track {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr 80px 1fr;
+  align-items: center;
+  max-width: 1450px;
+  margin: 70px auto 0;
+}
+
+.et-step {
+  position: relative;
+  min-height: 365px;
+  padding: 28px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: var(--et-border);
+  box-shadow: var(--et-shadow);
+}
+
+.et-step-two {
+  transform: translateY(25px) rotate(-1deg);
+  background: var(--et-green);
+  color: var(--et-white);
+}
+
+.et-step-three {
+  transform: translateY(-12px) rotate(1deg);
+  background: var(--et-orange);
+  color: var(--et-black);
+}
+
+.et-step-number {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  color: rgba(17,17,17,.13);
+  font-family: var(--et-display);
+  font-size: 75px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.et-step-two .et-step-number {
+  color: rgba(255,255,255,.18);
+}
+
+.et-step-label {
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+}
+
+.et-step h3 {
+  margin: 55px 0 20px;
+  color: inherit;
+  font-family: var(--et-display);
+  font-size: 42px;
+  font-weight: 950;
+  line-height: .83;
+}
+
+.et-step p {
+  max-width: 330px;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.et-file-tag {
+  position: absolute;
+  left: 25px;
+  bottom: 22px;
+  padding: 5px 8px;
+  background: var(--et-black);
+  color: var(--et-white);
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.et-arrow {
+  color: var(--et-black);
+  text-align: center;
+}
+
+.et-arrow span {
+  display: block;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.et-arrow small {
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .1em;
+}
+
+.et-tools-tested {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  max-width: 1450px;
+  margin: 75px auto 0;
+  padding-top: 25px;
+  border-top: 3px solid var(--et-black);
+}
+
+.et-tools-label {
+  margin-right: 15px;
+  color: var(--et-black);
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .14em;
+}
+
+.et-tool {
+  padding: 8px 11px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border: 2px solid var(--et-black);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+PROMPT EVOLUTION
+LIGHTER COURT GREEN TREATMENT
+========================================================= */
+
+.et-prompts {
+  padding: 90px 5vw 120px;
+  background: #718175;
+  color: var(--et-black);
+  border-top: 8px solid var(--et-black);
+  border-bottom: 8px solid var(--et-black);
+}
+
+.et-section-tag-light {
+  background: var(--et-cream);
+  color: var(--et-black);
+}
+
+.et-prompt-header {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 60px;
+  align-items: end;
+  max-width: 1450px;
+  margin: 55px auto 65px;
+}
+
+.et-prompt-header h2 {
+  margin: 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(48px, 6.5vw, 100px);
+  font-weight: 950;
+  line-height: .8;
+  letter-spacing: -.06em;
+}
+
+.et-prompt-header h2 span {
+  color: var(--et-cream);
+  -webkit-text-stroke: 2px var(--et-black);
+}
+
+.et-prompt-header > p {
+  padding: 20px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 5px 5px 0 var(--et-black);
+  font-family: var(--et-serif);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.et-prompt-comparison {
+  display: grid;
+  grid-template-columns: .8fr 120px 1.2fr;
+  gap: 25px;
+  align-items: center;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-prompt-card {
+  position: relative;
+  padding: 28px;
+  color: var(--et-black);
+  border: var(--et-border);
+  box-shadow: var(--et-shadow);
+}
+
+.et-raw {
+  transform: rotate(-1.5deg);
+  background: var(--et-silver);
+}
+
+.et-refined {
+  transform: rotate(.6deg);
+  background: var(--et-cream);
+}
+
+.et-prompt-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  color: var(--et-black);
+  border-bottom: 2px solid var(--et-black);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.et-prompt-card > p {
+  color: var(--et-black);
+  font-family: var(--et-serif);
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+.et-prompt-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-top: 25px;
+  padding: 6px 8px;
+  background: var(--et-black);
+  color: var(--et-white);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .13em;
+}
+
+.et-prompt-status i {
+  width: 7px;
+  height: 7px;
+  background: var(--et-orange);
+  border-radius: 50%;
+}
+
+.et-prompt-status.et-success i {
+  background: #82c78c;
+}
+
+.et-prompt-arrow {
+  color: var(--et-black);
+  text-align: center;
+}
+
+.et-prompt-arrow span {
+  display: block;
+  color: var(--et-orange);
+  font-family: var(--et-display);
+  font-size: 75px;
+  line-height: .8;
+  -webkit-text-stroke: 1px var(--et-black);
+}
+
+.et-prompt-arrow small {
+  color: var(--et-black);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .1em;
+}
+
+
+/* =========================================================
+LEARNING
+========================================================= */
+
+.et-learning {
+  padding: 100px 5vw 115px;
+  background: var(--et-cream);
+  color: var(--et-black);
+}
+
+.et-learning-title {
+  display: flex;
+  gap: 35px;
+  align-items: start;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-big-number {
+  color: var(--et-orange);
+  font-family: var(--et-display);
+  font-size: 125px;
+  font-weight: 950;
+  line-height: .7;
+}
+
+.et-learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1450px;
+  margin: 70px auto 0;
+  border: 3px solid var(--et-black);
+}
+
+.et-learning-grid article {
+  min-height: 320px;
+  padding: 25px;
+  background: var(--et-white);
+  color: var(--et-black);
+  border-right: 2px solid var(--et-black);
+}
+
+.et-learning-grid article:last-child {
+  border-right: 0;
+}
+
+.et-learning-grid article > span {
+  color: var(--et-black);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.et-learning-grid h3 {
+  margin: 50px 0 18px;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: 28px;
+  line-height: .9;
+}
+
+.et-learning-grid p {
+  color: var(--et-black);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.et-learning-grid .et-learning-orange {
+  background: var(--et-orange);
+}
+
+
+/* =========================================================
+ARTIFACT ARCHIVE
+LIGHT SLATE / HIGH CONTRAST
+========================================================= */
+
+.et-artifacts {
+  position: relative;
+  padding: 100px 5vw 130px;
+  background: var(--et-slate-light);
+  color: var(--et-black);
+  border-top: 8px solid var(--et-black);
+}
+
+.et-artifacts-grid-bg {
+  background-image:
+    linear-gradient(rgba(17,17,17,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,17,17,.07) 1px, transparent 1px);
+}
+
+.et-artifact-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-artifact-header h2 {
+  margin: 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(65px, 8.5vw, 130px);
+  font-weight: 950;
+  line-height: .72;
+  letter-spacing: -.065em;
+}
+
+.et-artifact-header h2 span {
+  color: var(--et-orange);
+  -webkit-text-stroke: 1px var(--et-black);
+}
+
+.et-archive-stamp {
+  width: 210px;
+  padding: 22px 14px;
+  transform: rotate(5deg);
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 4px double var(--et-black);
+  text-align: center;
+}
+
+.et-archive-stamp span,
+.et-archive-stamp small {
+  display: block;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .13em;
+}
+
+.et-archive-stamp strong {
+  display: block;
+  margin: 5px 0;
+  color: var(--et-orange);
+  font-family: var(--et-display);
+  font-size: 33px;
+}
+
+.et-featured-video {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 85px auto 0;
+}
+
+.et-video-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px 13px;
+  background: var(--et-green);
+  color: var(--et-white);
+  border: 3px solid var(--et-black);
+}
+
+.et-video-meta div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.et-video-meta span {
+  color: var(--et-white);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.et-video-meta strong {
+  color: var(--et-white);
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.et-video-meta .et-approved {
+  color: #ffd3b8;
+}
+
+.et-video-frame {
+  position: relative;
+  padding: 14px;
+  background: var(--et-orange);
+  border: 4px solid var(--et-black);
+  box-shadow: 12px 12px 0 var(--et-black);
+}
+
+.et-video-frame video {
+  max-height: 700px;
+  background: var(--et-black);
+  object-fit: contain;
+}
+
+.et-rec-overlay {
+  position: absolute;
+  z-index: 3;
+  top: 27px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--et-white);
+  pointer-events: none;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.et-video-caption {
+  max-width: 620px;
+  margin: 35px 0 0 auto;
+  padding: 20px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border-left: 5px solid var(--et-orange);
+  box-shadow: 5px 5px 0 var(--et-black);
+}
+
+.et-video-caption > span {
+  color: #b34108;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+}
+
+.et-video-caption h3 {
+  margin: 8px 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: 35px;
+}
+
+.et-video-caption p {
+  color: var(--et-black);
+  font-family: var(--et-serif);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.et-artifact-subhead {
+  position: relative;
+  z-index: 2;
+  max-width: 1450px;
+  margin: 110px auto 40px;
+  padding: 22px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 6px 6px 0 var(--et-black);
+}
+
+.et-artifact-subhead span {
+  color: #b34108;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+}
+
+.et-artifact-subhead h3 {
+  margin: 8px 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(30px, 4vw, 55px);
+}
+
+.et-artifact-subhead p {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: var(--et-black);
+}
+
+.et-video-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-video-card {
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 7px 7px 0 var(--et-black);
+}
+
+.et-video-card.et-offset {
+  transform: translateY(35px) rotate(1deg);
+}
+
+.et-video-card-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  color: var(--et-black);
+  border-bottom: 2px solid var(--et-black);
+  font-family: monospace;
+  font-size: 9px;
+}
+
+.et-video-card-top span {
+  color: #b34108;
+  font-weight: 950;
+}
+
+.et-small-video {
+  padding: 9px;
+  background: var(--et-black);
+}
+
+.et-small-video video {
+  aspect-ratio: 4 / 3;
+  background: var(--et-black);
+  object-fit: contain;
+}
+
+.et-card-bottom {
+  padding: 18px;
+}
+
+.et-card-bottom span {
+  display: inline-block;
+  padding: 4px 6px;
+  background: var(--et-orange);
+  color: var(--et-black);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .1em;
+}
+
+.et-card-bottom p {
+  margin: 12px 0 0;
+  color: var(--et-black);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+FAILED ATTEMPTS
+========================================================= */
+
+.et-fails {
+  padding: 105px 5vw 120px;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(17,17,17,.035),
+      rgba(17,17,17,.035) 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    var(--et-orange);
+  color: var(--et-black);
+  border-top: 8px solid var(--et-black);
+  border-bottom: 8px solid var(--et-black);
+}
+
+.et-fail-header {
+  display: grid;
+  grid-template-columns: 160px 1fr .7fr;
+  gap: 35px;
+  align-items: center;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.et-error-code {
+  padding: 15px;
+  transform: rotate(-4deg);
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 6px 6px 0 var(--et-black);
+  text-align: center;
+}
+
+.et-error-code span {
+  display: block;
+  color: var(--et-red);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .2em;
+}
+
+.et-error-code strong {
+  display: block;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: 65px;
+  line-height: 1;
+}
+
+.et-fail-header h2 {
+  margin: 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: clamp(55px, 7vw, 105px);
+  font-weight: 950;
+  line-height: .76;
+  letter-spacing: -.06em;
+}
+
+.et-fail-header h2 span {
+  color: var(--et-cream);
+  -webkit-text-stroke: 2px var(--et-black);
+}
+
+.et-fail-intro {
+  padding: 18px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  box-shadow: 6px 6px 0 var(--et-black);
+  font-family: var(--et-serif);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.et-fail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  max-width: 1250px;
+  margin: 80px auto 0;
+}
+
+.et-fail-card {
+  position: relative;
+  padding: 14px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 4px solid var(--et-black);
+  box-shadow: 11px 11px 0 var(--et-black);
+}
+
+.et-fail-card.et-fail-tilt {
+  transform: rotate(1.4deg) translateY(35px);
+}
+
+.et-fail-tape {
+  position: absolute;
+  z-index: 3;
+  top: -18px;
+  left: 8%;
+  right: 8%;
+  padding: 6px;
+  transform: rotate(-2deg);
+  background: var(--et-green);
+  color: var(--et-white);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+  text-align: center;
+}
+
+.et-fail-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 4px;
+  color: var(--et-black);
+  font-family: monospace;
+  font-size: 9px;
+}
+
+.et-fail-meta span {
+  color: var(--et-red);
+  font-weight: 950;
+}
+
+.et-fail-video {
+  padding: 7px;
+  background: var(--et-black);
+}
+
+.et-fail-video video {
+  aspect-ratio: 4 / 3;
+  background: var(--et-black);
+  object-fit: contain;
+}
+
+.et-fail-copy {
+  padding: 18px 7px 8px;
+}
+
+.et-fail-copy span {
+  display: inline-block;
+  padding: 4px 7px;
+  background: var(--et-red);
+  color: var(--et-white);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.et-fail-copy p {
+  margin: 12px 0 0;
+  color: var(--et-black);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.et-flipbook-fail {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr .7fr;
+  gap: 25px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 28px;
+  background: var(--et-green);
+  color: var(--et-white);
+  border: 4px solid var(--et-black);
+  box-shadow: 12px 12px 0 var(--et-black);
+}
+
+.et-glitch-title span {
+  color: #ffd1b5;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .15em;
+}
+
+.et-glitch-title h3 {
+  margin: 10px 0 0;
+  color: var(--et-white);
+  font-family: var(--et-display);
+  font-size: 38px;
+  line-height: .9;
+}
+
+.et-flipbook-copy p {
+  color: var(--et-white);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.et-error-message {
+  padding: 15px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-orange);
+  text-align: center;
+}
+
+.et-error-message span,
+.et-error-message small {
+  display: block;
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+.et-error-message strong {
+  display: block;
+  margin: 7px 0;
+  color: var(--et-black);
+  font-family: var(--et-display);
+  font-size: 23px;
+  line-height: .9;
+}
+
+
+/* =========================================================
+INDUSTRY IMPLICATIONS
+========================================================= */
+
+.et-industry {
+  padding: 100px 5vw 120px;
+  background: var(--et-cream);
+  color: var(--et-black);
+}
+
+.et-industry-title {
+  max-width: 1450px;
+  margin: 60px auto;
+}
+
+.et-industry-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1450px;
+  margin: auto;
+  border: 4px solid var(--et-black);
+  box-shadow: 10px 10px 0 var(--et-black);
+}
+
+.et-positive,
+.et-negative {
+  padding: 35px;
+}
+
+.et-positive {
+  background: var(--et-green);
+  color: var(--et-white);
+}
+
+.et-negative {
+  background: var(--et-silver);
+  color: var(--et-black);
+}
+
+.et-side-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid currentColor;
+}
+
+.et-side-title span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: var(--et-orange);
+  color: var(--et-black);
+  border: 2px solid var(--et-black);
+  font-family: var(--et-display);
+  font-size: 32px;
+  font-weight: 950;
+}
+
+.et-side-title h3 {
+  margin: 0;
+  color: inherit;
+  font-family: var(--et-display);
+  font-size: 35px;
+}
+
+.et-industry-split ul {
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.et-industry-split li {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid currentColor;
+}
+
+.et-industry-split li strong {
+  color: var(--et-orange);
+  font-family: var(--et-display);
+  font-size: 23px;
+}
+
+.et-industry-split li p {
+  margin: 0;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+FINAL VERDICT
+========================================================= */
+
+.et-verdict {
+  position: relative;
+  min-height: 680px;
+  padding: 110px 5vw 80px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      130deg,
+      var(--et-orange) 0%,
+      #c9783d 30%,
+      var(--et-green) 62%,
+      var(--et-slate) 100%
+    );
+  color: var(--et-white);
+}
+
+.et-verdict-main {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+.et-verdict-main h2 {
+  margin: 0;
+  color: var(--et-white);
+  font-family: var(--et-display);
+  font-size: clamp(65px, 9vw, 135px);
+  font-weight: 950;
+  line-height: .74;
+  letter-spacing: -.065em;
+}
+
+.et-verdict-main h2 span {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--et-white);
+}
+
+.et-verdict-copy {
+  max-width: 690px;
+  margin: 45px 0 0;
+  padding: 20px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 3px solid var(--et-black);
+  border-left: 7px solid var(--et-orange);
+  box-shadow: 6px 6px 0 var(--et-black);
+  font-family: var(--et-serif);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.et-verdict-stamp {
+  position: absolute;
+  z-index: 3;
+  top: 130px;
+  right: 7%;
+  width: 230px;
+  padding: 20px;
+  transform: rotate(6deg);
+  background: var(--et-silver);
+  color: var(--et-black);
+  border: 4px solid var(--et-black);
+  box-shadow: 9px 9px 0 var(--et-black);
+  text-align: center;
+}
+
+.et-verdict-stamp span,
+.et-verdict-stamp small {
+  display: block;
+  color: var(--et-black);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .13em;
+}
+
+.et-verdict-stamp strong {
+  display: block;
+  margin: 6px 0;
+  color: #b34108;
+  font-family: var(--et-display);
+  font-size: 48px;
+}
+
+.et-verdict-footer {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  right: 5%;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 14px;
+  background: var(--et-cream);
+  color: var(--et-black);
+  border: 2px solid var(--et-black);
+  font-size: 8px;
+  font-weight: 950;
+  letter-spacing: .12em;
+}
+
+
+/* =========================================================
+VIDEO INTERACTION
+========================================================= */
+
+.et-video-frame,
+.et-small-video,
+.et-fail-video {
+  overflow: hidden;
+}
+
+.et-video-frame video,
+.et-small-video video,
+.et-fail-video video {
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.et-video-frame:hover video,
+.et-small-video:hover video,
+.et-fail-video:hover video {
+  transform: scale(1.015);
+}
+
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .et-hero-content {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .et-hero-sticker {
+    position: absolute;
+    right: 5%;
+    bottom: 120px;
+    width: 150px;
+  }
+
+  .et-overview-layout {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .et-score-card {
+    grid-column: 2;
+    width: 230px;
+  }
+
+  .et-workflow-track {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .et-arrow {
+    transform: rotate(90deg);
+  }
+
+  .et-step-two,
+  .et-step-three {
+    transform: none;
+  }
+
+  .et-learning-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .et-learning-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .et-learning-grid article {
+    border-bottom: 2px solid var(--et-black);
+  }
+
+  .et-video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .et-video-card.et-offset {
+    transform: none;
+  }
+
+  .et-fail-header {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .et-fail-intro {
+    grid-column: 1 / -1;
+  }
+
+  .et-verdict-stamp {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 50px 0 100px auto;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .et-nav {
+    gap: 15px;
+  }
+
+  .et-nav-id {
+    font-size: 7px;
+  }
+
+  .et-hero {
+    min-height: 650px;
+  }
+
+  .et-hero-topbar span:nth-child(2),
+  .et-hero-topbar span:nth-child(3) {
+    display: none;
+  }
+
+  .et-hero-content {
+    display: block;
+    min-height: 570px;
+    padding-top: 80px;
+  }
+
+  .et-hero-index {
+    display: none;
+  }
+
+  .et-hero-title h1 {
+    font-size: clamp(58px, 18vw, 105px);
+  }
+
+  .et-hero-sticker {
+    right: 7%;
+    bottom: 100px;
+    width: 120px;
+    padding: 12px 8px;
+  }
+
+  .et-hero-sticker strong {
+    font-size: 38px;
+  }
+
+  .et-overview-layout,
+  .et-cost-main,
+  .et-prompt-header,
+  .et-prompt-comparison,
+  .et-video-grid,
+  .et-fail-grid,
+  .et-industry-split,
+  .et-flipbook-fail {
+    grid-template-columns: 1fr;
+  }
+
+  .et-platform-card,
+  .et-score-card {
+    grid-column: auto;
+    margin-top: 10px;
+  }
+
+  .et-cost-main {
+    gap: 45px;
+  }
+
+  .et-price-stack .et-price-orange {
+    margin-left: 0;
+  }
+
+  .et-section-header,
+  .et-artifact-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .et-prompt-arrow {
+    margin: -15px 0;
+    transform: rotate(90deg);
+  }
+
+  .et-learning-title {
+    display: block;
+  }
+
+  .et-big-number {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .et-learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .et-learning-grid article {
+    border-right: 0;
+  }
+
+  .et-artifact-header h2 {
+    font-size: clamp(55px, 16vw, 95px);
+  }
+
+  .et-archive-stamp {
+    width: 170px;
+    align-self: flex-end;
+  }
+
+  .et-video-meta {
+    display: block;
+  }
+
+  .et-video-meta div + div {
+    margin-top: 6px;
+  }
+
+  .et-fail-header {
+    grid-template-columns: 1fr;
+  }
+
+  .et-error-code {
+    width: 125px;
+  }
+
+  .et-fail-card.et-fail-tilt {
+    transform: none;
+  }
+
+  .et-flipbook-fail {
+    margin-top: 80px;
+  }
+
+  .et-verdict {
+    min-height: 760px;
+  }
+
+  .et-verdict-main h2 {
+    font-size: clamp(55px, 16vw, 100px);
+  }
+
+  .et-verdict-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .et-overview,
+  .et-cost,
+  .et-workflow,
+  .et-prompts,
+  .et-learning,
+  .et-artifacts,
+  .et-fails,
+  .et-industry,
+  .et-verdict {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .et-home-button {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .et-nav-id {
+    max-width: 170px;
+    text-align: right;
+  }
+
+  .et-learning-grid {
+    border-width: 2px;
+  }
+
+  .et-platform-copy {
+    padding: 22px;
+  }
+
+  .et-platform-copy .et-lead {
+    font-size: 21px;
+  }
+
+  .et-step {
+    min-height: 340px;
+  }
+
+  .et-artifact-header h2,
+  .et-verdict-main h2 {
+    letter-spacing: -.075em;
+  }
+
+}
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style><link href="css/emerging-full-bleed-fix.css" rel="stylesheet"/><style data-inlined-from="css/emerging-full-bleed-fix.css">/* Emerging Technology only: full-bleed layout and non-overlapping hero */
+html,body{margin:0!important;width:100%;max-width:100%;overflow-x:clip}
+body{background:#59646a}
+.et-page{width:100%!important;max-width:none!important;margin:0!important;overflow:clip}
+.et-page>section{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+.et-hero{
+  position:relative;
+  background:linear-gradient(130deg,#f26522 0%,#d8793c 22%,#8c7350 38%,#536657 58%,#59646a 100%)!important;
+}
+.et-hero-grid{
+  position:absolute!important;inset:0!important;display:block!important;
+  background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px)!important;
+  background-size:38px 38px!important;
+  pointer-events:none!important;z-index:0!important;
+}
+.et-hero-content{
+  max-width:1550px!important;
+  width:100%!important;
+  grid-template-columns:minmax(72px,105px) minmax(0,1fr)!important;
+  gap:clamp(16px,3vw,42px)!important;
+  align-items:center!important;
+  padding:clamp(70px,9vw,115px) clamp(22px,5vw,90px) 145px!important;
+}
+.et-hero-title{min-width:0;position:relative;z-index:2}
+.et-hero-title h1{
+  font-size:clamp(56px,8.3vw,136px)!important;
+  line-height:.87!important;
+  overflow:visible!important;
+  overflow-wrap:normal!important;
+}
+.et-hero-sticker{
+  grid-column:2!important;
+  justify-self:end!important;
+  align-self:start!important;
+  width:clamp(145px,15vw,185px)!important;
+  margin-top:8px!important;
+  margin-right:clamp(4px,2vw,25px)!important;
+  transform:rotate(5deg)!important;
+  position:relative!important;
+  z-index:2!important;
+}
+@media(max-width:850px){
+  .et-hero-content{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:30px!important;padding:75px 6vw 155px!important}
+  .et-hero-index{display:none!important}
+  .et-hero-title h1{font-size:clamp(50px,12vw,95px)!important;line-height:.88!important}
+  .et-hero-sticker{align-self:flex-end!important;margin:0 18px 0 0!important;width:150px!important;right:auto!important;bottom:auto!important}
+}
+@media(max-width:480px){
+  .et-hero-title h1{font-size:clamp(43px,12vw,64px)!important;letter-spacing:-.065em!important}
+  .et-hero-sticker{width:130px!important}
+}
+</style><style data-priority-fixes="2026-10">
+/* Actual text reflow: no justification, no staggered hard line breaks. */
+.aiw-page section h1,.aiw-page section h2,.aiw-page section h3,
+.aiw-page section p,.aiw-page section li,
+.et-page section h1,.et-page section h2,.et-page section h3,
+.et-page section p,.et-page section li{
+ text-align:left!important;text-align-last:left!important;
+ word-spacing:normal!important;white-space:normal!important;
+ overflow-wrap:normal!important;word-break:normal!important;
+ hyphens:none!important;
+}
+.aiw-page section h1,.aiw-page section h2,.aiw-page section h3,
+.et-page section h1,.et-page section h2,.et-page section h3{
+ letter-spacing:-.035em!important;line-height:1.02!important;
+ max-width:100%!important;min-width:0!important;
+}
+.aiw-page section h2,.aiw-page section h3,.et-page section h2,.et-page section h3{font-size:clamp(25px,4.5vw,68px)!important;}
+.aiw-page .aiw-case-title h3{font-size:clamp(28px,4.4vw,60px)!important;}
+.aiw-page section :is(article,div){min-width:0;}
+.et-page .et-hero-title h1{font-size:clamp(48px,7vw,112px)!important;line-height:.94!important;letter-spacing:-.06em!important;}
+.et-page .et-hero-content{min-width:0!important;}
+@media(max-width:700px){
+ .aiw-page section h2,.aiw-page section h3,.et-page section h2,.et-page section h3{font-size:clamp(25px,7vw,43px)!important;}
+ .et-page .et-hero-title h1{font-size:clamp(42px,10vw,72px)!important;}
+}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a aria-current="page" href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a aria-current="page" href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
 <!-- =========================================================
 NIKE CREATIVE AI PORTFOLIO
 EMERGING TECHNOLOGY
 BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 ========================================================= -->
-<main class="et-page portfolio-main" id="main-content">
+<main class="et-page">
 <!-- =====================================================
   TOP NAVIGATION
   ====================================================== -->
-
 <!-- =====================================================
   HERO
   ====================================================== -->
-<section class="et-hero">
+<section class="et-hero seamless-section" style="--join-out:#59646A">
 <div class="et-hero-grid"></div>
 <div class="et-hero-topbar">
 <span>NIKE / CREATIVE AI PORTFOLIO</span>
@@ -36,16 +2241,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <div class="et-hero-content">
 <div class="et-hero-index">
 <span>07</span>
-<p>EMERGING<br/>TECHNOLOGY</p>
+<p class="nike-text-reveal">EMERGING<br/>TECHNOLOGY</p>
 </div>
 <div class="et-hero-title">
-<p class="et-kicker et-kicker-light">EXPERIMENT LOG / AI VIDEO GENERATION</p>
-<h1>
-          EMERGING<br/>
-<span>TECHNOLOGY</span>
-</h1>
+<p class="et-kicker et-kicker-light nike-text-reveal">EXPERIMENT LOG / AI VIDEO GENERATION</p>
+<h1 class="nike-text-reveal"> EMERGING  <span>TECHNOLOGY</span> </h1>
 <div class="et-title-rule"></div>
-<p class="et-hero-sub">
+<p class="et-hero-sub nike-text-reveal">
           KAIBER AI VIDEO GENERATION
         </p>
 </div>
@@ -64,18 +2266,15 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   PLATFORM OVERVIEW
   ====================================================== -->
-<section class="et-overview">
+<section class="et-overview gradient-linked-section seamless-section" style="--join-in:#59646A;--join-out:#EBE3DB">
 <div class="et-section-tag">
 <span>01</span>
-<p>PLATFORM_OVERVIEW</p>
+<p class="nike-text-reveal">PLATFORM_OVERVIEW</p>
 </div>
 <div class="et-overview-layout">
 <div class="et-overview-title">
-<p class="et-kicker">EMERGING PLATFORM REVIEW</p>
-<h2>
-          MEET<br/>
-<span>KAIBER.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">EMERGING PLATFORM REVIEW</p>
+<h2 class="nike-text-reveal"> MEET  <span>KAIBER.</span> </h2>
 </div>
 <article class="et-platform-card">
 <div class="et-window-bar">
@@ -88,13 +2287,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-platform-copy">
 <span class="et-label">WHAT IS IT?</span>
-<p class="et-lead">
+<p class="et-lead nike-text-reveal">
             Kaiber is an AI-powered platform built around video, music, motion, and brand-enhancement workflows.
           </p>
-<p>
+<p class="nike-text-reveal">
             Its tools include Beatsync, lyric generation, moving avatars, image animation and reworking, logo enhancement, music-video generation, and other specialized creative workflows.
           </p>
-<p>
+<p class="nike-text-reveal">
             I chose Kaiber because I wanted to create mock videos and an advertisement that could communicate the motion, music, and visual energy I had imagined for <strong>Built By Movement. Bound By Community.</strong>
 </p>
 </div>
@@ -105,8 +2304,8 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <strong>8</strong>
 <span>/10</span>
 </div>
-<p>INCREDIBLY<br/>USEFUL.</p>
-<p class="et-score-warning">
+<p class="nike-text-reveal">INCREDIBLY<br/>USEFUL.</p>
+<p class="et-score-warning nike-text-reveal">
           INCREDIBLY<br/>EXPENSIVE.
         </p>
 </aside>
@@ -115,20 +2314,16 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   CREATIVITY HAS A PRICE TAG
   ====================================================== -->
-<section class="et-cost">
+<section class="et-cost gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#EBE3DB">
 <div class="et-cost-warning">
 <span>!</span>
-<p>CREDIT LOW / EXPERIMENT CAREFULLY</p>
+<p class="nike-text-reveal">CREDIT LOW / EXPERIMENT CAREFULLY</p>
 </div>
 <div class="et-cost-main">
 <div class="et-cost-title">
-<p class="et-kicker">THE CATCH</p>
-<h2>
-          CREATIVITY<br/>
-          HAS A<br/>
-<span>PRICE TAG.</span>
-</h2>
-<p class="et-cost-intro">
+<p class="et-kicker nike-text-reveal">THE CATCH</p>
+<h2 class="nike-text-reveal"> CREATIVITY  HAS A  <span>PRICE TAG.</span> </h2>
+<p class="et-cost-intro nike-text-reveal">
           Kaiber opened up new creative possibilities for the campaign, but experimentation came with a very real financial limitation: credits.
         </p>
 </div>
@@ -152,7 +2347,7 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-cost-note">
 <span>FIELD NOTE_001</span>
-<p>
+<p class="nike-text-reveal">
         If you're limited on credits, there is not much room for experimentation. Every failed generation becomes part of the creative cost.
       </p>
 </div>
@@ -160,14 +2355,11 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   WORKFLOW
   ====================================================== -->
-<section class="et-workflow">
+<section class="et-workflow gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#EBE3DB">
 <header class="et-section-header">
 <div>
-<p class="et-kicker">TESTING / WORKFLOW</p>
-<h2>
-          HOW I<br/>
-<span>WORKED.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">TESTING / WORKFLOW</p>
+<h2 class="nike-text-reveal"> HOW I  <span>WORKED.</span> </h2>
 </div>
 <div class="et-header-meta">
 <span>PROCESS.LOG</span>
@@ -179,11 +2371,8 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <article class="et-step et-step-one">
 <div class="et-step-number">01</div>
 <span class="et-step-label">HUMAN INPUT</span>
-<h3>
-          WRITE<br/>
-          THE IDEA.
-        </h3>
-<p>
+<h3 class="nike-text-reveal"> WRITE  THE IDEA. </h3>
+<p class="nike-text-reveal">
           I started by writing a quick draft describing what I wanted each video to accomplish.
         </p>
 <div class="et-file-tag">RAW_PROMPT.TXT</div>
@@ -195,11 +2384,8 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <article class="et-step et-step-two">
 <div class="et-step-number">02</div>
 <span class="et-step-label">CHATGPT</span>
-<h3>
-          BUILD<br/>
-          THE PROMPT.
-        </h3>
-<p>
+<h3 class="nike-text-reveal"> BUILD  THE PROMPT. </h3>
+<p class="nike-text-reveal">
           I brought the draft into ChatGPT and asked it to expand the direction while following the campaign's visual guidelines, tone, and Y2K aesthetic.
         </p>
 <div class="et-file-tag">PROMPT_V02.TXT</div>
@@ -211,11 +2397,8 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <article class="et-step et-step-three">
 <div class="et-step-number">03</div>
 <span class="et-step-label">KAIBER</span>
-<h3>
-          MAKE IT<br/>
-          MOVE.
-        </h3>
-<p>
+<h3 class="nike-text-reveal"> MAKE IT  MOVE. </h3>
+<p class="nike-text-reveal">
           The refined prompt was then adapted to whichever Kaiber workflow I was testing and generated into a moving artifact.
         </p>
 <div class="et-file-tag">OUTPUT.MP4</div>
@@ -232,17 +2415,14 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   PROMPT EVOLUTION
   ====================================================== -->
-<section class="et-prompts">
+<section class="et-prompts gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#718175">
 <div class="et-section-tag et-section-tag-light">
 <span>03</span>
-<p>PROMPT_EVOLUTION</p>
+<p class="nike-text-reveal">PROMPT_EVOLUTION</p>
 </div>
 <header class="et-prompt-header">
-<h2>
-        FROM QUICK IDEA<br/>
-        TO <span>CAMPAIGN LANGUAGE.</span>
-</h2>
-<p>
+<h2 class="nike-text-reveal"> FROM QUICK IDEA  TO <span>CAMPAIGN LANGUAGE.</span> </h2>
+<p class="nike-text-reveal">
         Different Kaiber tools ask for different types of input. My prompts became more deliberate as I learned what each model actually needed.
       </p>
 </header>
@@ -252,7 +2432,7 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <span>V01</span>
 <strong>RAW INPUT</strong>
 </div>
-<p>
+<p class="nike-text-reveal">
           “Montage of people having fun, dancing, and exercising to every other beat of the song, make sure the full audio is used and each image/video is given the same amount of time in the video. The images/videos should feel candid, follow a retro Y2K aesthetic, and showcase community.”
         </p>
 <div class="et-prompt-status">
@@ -269,10 +2449,10 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <span>V02</span>
 <strong>REFINED DIRECTION</strong>
 </div>
-<p>
+<p class="nike-text-reveal">
           Create an energetic, nostalgic montage centered on community, movement, and everyday athletes. Showcase ordinary people having fun, dancing, exercising, playing sports, laughing, celebrating, and spending time together. The footage should feel captured by friends rather than produced as a polished corporate sports commercial.
         </p>
-<p>
+<p class="nike-text-reveal">
           Use a late-1990s / early-2000s Y2K visual language inspired by compact digital cameras, MiniDV, home video, disposable cameras, Polaroids, candid flash photography, natural motion blur, film grain, exposure imperfections, and handheld energy.
         </p>
 <div class="et-prompt-status et-success">
@@ -285,46 +2465,40 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   LEARNING THE PLATFORM
   ====================================================== -->
-<section class="et-learning">
+<section class="et-learning gradient-linked-section seamless-section" style="--join-in:#718175;--join-out:#EBE3DB">
 <div class="et-learning-title">
 <span class="et-big-number">04</span>
 <div>
-<p class="et-kicker">WHAT I LEARNED</p>
-<h2>
-          READ THE<br/>
-<span>TOOL FIRST.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">WHAT I LEARNED</p>
+<h2 class="nike-text-reveal"> READ THE  <span>TOOL FIRST.</span> </h2>
 </div>
 </div>
 <div class="et-learning-grid">
 <article>
 <span>01 / SPECIFICITY</span>
-<h3>EVERY WORKFLOW IS DIFFERENT.</h3>
-<p>
+<h3 class="nike-text-reveal">EVERY WORKFLOW IS DIFFERENT.</h3>
+<p class="nike-text-reveal">
           Some tools ask for general tone. Others ask for aesthetics. Music-video generation separates subject and visual treatment. There is no single universal Kaiber prompt format.
         </p>
 </article>
 <article>
 <span>02 / RESEARCH</span>
-<h3>KNOW BEFORE YOU GENERATE.</h3>
-<p>
+<h3 class="nike-text-reveal">KNOW BEFORE YOU GENERATE.</h3>
+<p class="nike-text-reveal">
           The platform contains an enormous number of workflows. Researching Canvas, Beatsync, Editor, Flipbook, and the other tools before pressing generate saves both time and credits.
         </p>
 </article>
 <article>
 <span>03 / ITERATION</span>
-<h3>REGENERATING ISN'T FREE.</h3>
-<p>
+<h3 class="nike-text-reveal">REGENERATING ISN'T FREE.</h3>
+<p class="nike-text-reveal">
           Altering an existing generation can consume a large amount of credits, and the revised output is not always more accurate than the first result.
         </p>
 </article>
 <article class="et-learning-orange">
 <span>04 / BEST USE</span>
-<h3>
-          CREATE HERE.<br/>
-          EDIT ELSEWHERE.
-        </h3>
-<p>
+<h3 class="nike-text-reveal"> CREATE HERE.  EDIT ELSEWHERE. </h3>
+<p class="nike-text-reveal">
           Kaiber worked best for AI video and content generation rather than functioning as a traditional video editor.
         </p>
 </article>
@@ -333,16 +2507,12 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   EMERGING TECHNOLOGY ARTIFACTS
   ====================================================== -->
-<section class="et-artifacts">
+<section class="et-artifacts gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#B9C0BC">
 <div class="et-artifacts-grid-bg"></div>
 <header class="et-artifact-header">
 <div>
-<p class="et-kicker">OUTPUT ARCHIVE / 006 FILES</p>
-<h2>
-          EMERGING<br/>
-          TECHNOLOGY<br/>
-<span>ARTIFACTS.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">OUTPUT ARCHIVE / 006 FILES</p>
+<h2 class="nike-text-reveal"> EMERGING  TECHNOLOGY  <span>ARTIFACTS.</span> </h2>
 </div>
 <div class="et-archive-stamp">
 <span>AI VIDEO</span>
@@ -368,14 +2538,14 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <span>CAM_01</span>
 </div>
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/finalmontage.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/S3165688907182028184414105176836/finalmontage.mp4" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
 </div>
 <div class="et-video-caption">
 <span>GOAL ARTIFACT</span>
-<h3>THE FINAL ADVERTISEMENT.</h3>
-<p>
+<h3 class="nike-text-reveal">THE FINAL ADVERTISEMENT.</h3>
+<p class="nike-text-reveal">
           The strongest expression of the experiment: movement, community, music, and candid campaign imagery translated into motion.
         </p>
 </div>
@@ -383,8 +2553,8 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- PROCESS ARTIFACTS -->
 <div class="et-artifact-subhead">
 <span>TRIAL GENERATIONS</span>
-<h3>SMALLER ARTIFACTS / PROCESS FILES</h3>
-<p>
+<h3 class="nike-text-reveal">SMALLER ARTIFACTS / PROCESS FILES</h3>
+<p class="nike-text-reveal">
         Not every output had to become the final advertisement to teach me something.
       </p>
 </div>
@@ -396,13 +2566,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-small-video">
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/hikingbuddies.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/I3165688907384942369224910244612/hikingbuddies.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
 </div>
 <div class="et-card-bottom">
 <span>IMAGE ANIMATION</span>
-<p>
+<p class="nike-text-reveal">
             Early testing of how Kaiber could extend an existing campaign image into motion.
           </p>
 </div>
@@ -414,13 +2584,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-small-video">
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/firstkaiber.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/W3165688907366495625151200692996/firstkaiber.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
 </div>
 <div class="et-card-bottom">
 <span>EARLY GENERATION</span>
-<p>
+<p class="nike-text-reveal">
             An early experiment used to understand how the model interpreted motion, duration, and prompt instructions.
           </p>
 </div>
@@ -432,13 +2602,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-small-video">
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/trialmontage.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/S3165688907403389113298619796228/trialmontage.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
 </div>
 <div class="et-card-bottom">
 <span>MONTAGE TEST</span>
-<p>
+<p class="nike-text-reveal">
             Testing pacing, asset distribution, rhythm, and whether multiple campaign visuals could feel like one archive.
           </p>
 </div>
@@ -448,20 +2618,17 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   FAILED ATTEMPTS
   ====================================================== -->
-<section class="et-fails">
+<section class="et-fails gradient-linked-section seamless-section" style="--join-in:#B9C0BC;--join-out:#EBE3DB">
 <header class="et-fail-header">
 <div class="et-error-code">
 <span>ERROR</span>
 <strong>404</strong>
 </div>
 <div>
-<p class="et-kicker">THE FAILED ATTEMPTS</p>
-<h2>
-          NOT EVERYTHING<br/>
-<span>WORKED.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">THE FAILED ATTEMPTS</p>
+<h2 class="nike-text-reveal"> NOT EVERYTHING  <span>WORKED.</span> </h2>
 </div>
-<p class="et-fail-intro">
+<p class="et-fail-intro nike-text-reveal">
         The unsuccessful generations mattered just as much as the polished result. They exposed the limits of the tool—and the cost of learning by trial and error.
       </p>
 </header>
@@ -476,13 +2643,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-fail-video">
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/unusedtrialmontage.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/N3165688907421835857372329347844/unusedtrialmontage.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
 </div>
 <div class="et-fail-copy">
 <span>WHY IT MATTERS</span>
-<p>
+<p class="nike-text-reveal">
             A trial generation that did not make the final campaign. Keeping it in the archive documents the real iteration process instead of presenting AI generation as frictionless.
           </p>
 </div>
@@ -497,13 +2664,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 <div class="et-fail-video">
 <video controls="" playsinline="" preload="metadata">
-<source src="assets/videos/unusedtrialmusicvideo.mp4" type="video/mp4"/>
+<source src="https://freight.cargo.site/t/original/i/O3165688907440282601446038899460/unusedtrialmusicvideo.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
 </div>
 <div class="et-fail-copy">
 <span>WHY IT MATTERS</span>
-<p>
+<p class="nike-text-reveal">
             Another unused experiment that helped clarify which workflows actually translated the campaign's candid Y2K direction into motion effectively.
           </p>
 </div>
@@ -512,13 +2679,13 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <div class="et-flipbook-fail">
 <div class="et-glitch-title">
 <span>FAILED EXPERIMENT_03</span>
-<h3>THE FLIPBOOK PROBLEM.</h3>
+<h3 class="nike-text-reveal">THE FLIPBOOK PROBLEM.</h3>
 </div>
 <div class="et-flipbook-copy">
-<p>
+<p class="nike-text-reveal">
           In an attempt to make a more cohesive montage, I used the <strong>Flipbook workflow</strong> without fully understanding what the workflow actually did.
         </p>
-<p>
+<p class="nike-text-reveal">
           The result reinforced one of the biggest lessons from the entire test: <strong>research the workflow before spending the credits.</strong>
 </p>
 </div>
@@ -532,65 +2699,61 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   INDUSTRY IMPLICATIONS
   ====================================================== -->
-<section class="et-industry">
+<section class="et-industry gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#EBE3DB">
 <div class="et-section-tag">
 <span>06</span>
-<p>INDUSTRY_IMPLICATIONS</p>
+<p class="nike-text-reveal">INDUSTRY_IMPLICATIONS</p>
 </div>
 <header class="et-industry-title">
-<p class="et-kicker">WHAT HAPPENS NEXT?</p>
-<h2>
-        FAST<br/>
-        DOESN'T MEAN<br/>
-<span>SIMPLE.</span>
-</h2>
+<p class="et-kicker nike-text-reveal">WHAT HAPPENS NEXT?</p>
+<h2 class="nike-text-reveal"> FAST  DOESN'T MEAN  <span>SIMPLE.</span> </h2>
 </header>
 <div class="et-industry-split">
 <article class="et-positive">
 <div class="et-side-title">
 <span>+</span>
-<h3>THE UPSIDE</h3>
+<h3 class="nike-text-reveal">THE UPSIDE</h3>
 </div>
 <ul>
 <li>
 <strong>01</strong>
-<p>Can reduce a multi-day creative process to seconds or minutes.</p>
+<p class="nike-text-reveal">Can reduce a multi-day creative process to seconds or minutes.</p>
 </li>
 <li>
 <strong>02</strong>
-<p>Creates new advertising and channel opportunities for small creators.</p>
+<p class="nike-text-reveal">Creates new advertising and channel opportunities for small creators.</p>
 </li>
 <li>
 <strong>03</strong>
-<p>Puts powerful AI video generation into a consumer-friendly context.</p>
+<p class="nike-text-reveal">Puts powerful AI video generation into a consumer-friendly context.</p>
 </li>
 <li>
 <strong>04</strong>
-<p>Especially useful for creators trying to build or enhance a visual brand.</p>
+<p class="nike-text-reveal">Especially useful for creators trying to build or enhance a visual brand.</p>
 </li>
 </ul>
 </article>
 <article class="et-negative">
 <div class="et-side-title">
 <span>−</span>
-<h3>THE TRADEOFF</h3>
+<h3 class="nike-text-reveal">THE TRADEOFF</h3>
 </div>
 <ul>
 <li>
 <strong>01</strong>
-<p>The same efficiency could reduce demand for traditional production roles.</p>
+<p class="nike-text-reveal">The same efficiency could reduce demand for traditional production roles.</p>
 </li>
 <li>
 <strong>02</strong>
-<p>Actors, photographers, lighting teams, models, set designers, and directors can potentially be replaced in portions of production.</p>
+<p class="nike-text-reveal">Actors, photographers, lighting teams, models, set designers, and directors can potentially be replaced in portions of production.</p>
 </li>
 <li>
 <strong>03</strong>
-<p>Repeated AI generations carry an environmental and energy cost.</p>
+<p class="nike-text-reveal">Repeated AI generations carry an environmental and energy cost.</p>
 </li>
 <li>
 <strong>04</strong>
-<p>The speed of generation does not eliminate the need for human creative judgment.</p>
+<p class="nike-text-reveal">The speed of generation does not eliminate the need for human creative judgment.</p>
 </li>
 </ul>
 </article>
@@ -599,16 +2762,12 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 <!-- =====================================================
   FINAL VERDICT
   ====================================================== -->
-<section class="et-verdict">
+<section class="et-verdict gradient-linked-section seamless-section" style="--join-in:#EBE3DB">
 <div class="et-verdict-grid"></div>
 <div class="et-verdict-main">
-<p class="et-kicker et-kicker-light">FINAL FIELD NOTE</p>
-<h2>
-        POWERFUL<br/>
-        ENOUGH TO<br/>
-<span>CHANGE THE WORKFLOW.</span>
-</h2>
-<p class="et-verdict-copy">
+<p class="et-kicker et-kicker-light nike-text-reveal">FINAL FIELD NOTE</p>
+<h2 class="nike-text-reveal"> POWERFUL  ENOUGH TO  <span>CHANGE THE WORKFLOW.</span> </h2>
+<p class="et-verdict-copy nike-text-reveal">
         Kaiber gave me a way to move this campaign beyond static imagery and test what <em>Built By Movement. Bound By Community.</em> could feel like as a real video advertisement. The results can be incredibly effective—but the credit system, dense interface, and cost of experimentation mean the strongest results come from planning first and generating second.
       </p>
 </div>
@@ -624,10 +2783,5 @@ BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 </div>
 </section>
 </main>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>07 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="final-reflection.html"><span>UP NEXT / FINAL REFLECTION</span><strong>What the work taught me.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="ai-workflow.html">← AI WORKFLOW</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 07 OF 08</p><a class="portfolio-next-link" href="final-reflection.html"><strong>FINAL REFLECTION</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="ai-workflow.html">← AI WORKFLOW</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer></body>
 </html>

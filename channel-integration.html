@@ -5,32 +5,3295 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Channel Integration | Nike Creative AI Portfolio</title>
-<link href="css/channel-integration.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="04"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a aria-current="page" href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a aria-current="page" href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
+<link href="css/channel-integration.css" rel="stylesheet"/><style data-inlined-from="css/channel-integration.css">/* ============================================================
+NIKE — CONTENT + CHANNEL
+COMPLETE CARGO CSS
+Y2K / COMMUNITY / DIGITAL ARCHIVE
+============================================================ */
+
+
+/* ============================================================
+01 — CARGO RESET
+============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  overflow-x: hidden !important;
+  background: #111111 !important;
+}
+
+.cc-page {
+  --black: #111111;
+  --white: #FFFFFF;
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+  --cream: #EBE3DB;
+  --silver: #C9CED0;
+
+  position: relative;
+  left: 50%;
+
+  width: 100vw;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+
+  transform: translateX(-50%);
+
+  color: var(--black);
+  background: var(--cream);
+
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  overflow: hidden;
+}
+
+.cc-page *,
+.cc-page *::before,
+.cc-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* PREVENT CARGO TEXT SPACING ISSUES */
+
+.cc-page p,
+.cc-page h1,
+.cc-page h2,
+.cc-page h3,
+.cc-page h4,
+.cc-page strong,
+.cc-page small,
+.cc-page span,
+.cc-page a {
+  word-spacing: 0 !important;
+  text-align-last: auto !important;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.cc-page p {
+  white-space: normal !important;
+}
+
+
+/* ============================================================
+02 — SYSTEM BAR
+============================================================ */
+
+.cc-system-bar {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 9px 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F1F2F2 10%,
+      #D5D8D9 39%,
+      #A8ADB0 47%,
+      #7D8386 50%,
+      #BCC0C2 54%,
+      #E6E8E9 83%,
+      #C9CDCF 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-system-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cc-system-right {
+  white-space: nowrap;
+}
+
+.cc-dot {
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+.cc-dot-orange {
+  background: var(--orange);
+}
+
+.cc-dot-green {
+  background: var(--green);
+}
+
+.cc-dot-slate {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+03 — SHARED ELEMENTS
+============================================================ */
+
+.cc-label,
+.cc-light-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .15em;
+}
+
+.cc-label {
+  color: var(--orange);
+}
+
+.cc-light-label {
+  color: rgba(255,255,255,.72);
+}
+
+.cc-outline-green,
+.cc-outline-orange {
+  margin: 0;
+
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(57px, 8.7vw, 132px);
+  font-weight: 900;
+
+  line-height: .78;
+
+  letter-spacing: .035em !important;
+  word-spacing: 0 !important;
+
+  text-align: left !important;
+}
+
+.cc-outline-green {
+  -webkit-text-stroke: 1.5px var(--green);
+}
+
+.cc-outline-orange {
+  -webkit-text-stroke: 1.5px var(--orange);
+}
+
+.cc-grid-overlay,
+.cc-social-grid,
+.cc-music-grid,
+.cc-closing-grid,
+.cc-headlines-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.075) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.075) 1px,
+      transparent 1px
+    );
+
+  background-size: 36px 36px;
+}
+
+
+/* ============================================================
+04 — CHROME WINDOWS
+============================================================ */
+
+.cc-window-bar {
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 8px 12px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF,
+      #D8DBDC 42%,
+      #878D90 49%,
+      #E7E8E8 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+}
+
+.cc-window-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.cc-window-dots span {
+  width: 9px;
+  height: 9px;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+.cc-window-dots span:nth-child(1) {
+  background: var(--orange);
+}
+
+.cc-window-dots span:nth-child(2) {
+  background: var(--green);
+}
+
+.cc-window-dots span:nth-child(3) {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+05 — HERO
+============================================================ */
+
+.cc-hero {
+  position: relative;
+
+  min-height: 830px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    100px
+    clamp(22px, 5vw, 82px)
+    70px;
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(255,255,255,.28),
+      transparent 24%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange) 0%,
+      #D96D33 18%,
+      #A06E46 35%,
+      #66705B 48%,
+      var(--green) 64%,
+      var(--slate) 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.cc-flash {
+  position: absolute;
+
+  width: 440px;
+  height: 440px;
+
+  right: 4%;
+  top: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.5),
+      transparent 68%
+    );
+}
+
+.cc-hero-meta {
+  position: absolute;
+  z-index: 3;
+
+  top: 26px;
+  left: clamp(22px, 5vw, 82px);
+  right: clamp(22px, 5vw, 82px);
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .15em;
+}
+
+.cc-rec {
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 28px;
+
+  padding: 8px 11px;
+
+  background: var(--black);
+
+  border: 1px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-rec span {
+  width: 8px;
+  height: 8px;
+
+  background: var(--orange);
+
+  border-radius: 50%;
+}
+
+.cc-kicker {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 18px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .17em;
+}
+
+.cc-hero h1 {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(83px, 14.5vw, 220px);
+  font-weight: 900;
+
+  line-height: .68;
+
+  letter-spacing: -.08em;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(17,17,17,.17);
+}
+
+.cc-hero h2 {
+  position: relative;
+  z-index: 3;
+
+  margin: 35px 0 0;
+
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 1.5px #FFFFFF;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(40px, 6vw, 92px);
+
+  line-height: .8;
+
+  letter-spacing: .04em;
+}
+
+.cc-hero-bottom {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 60px;
+}
+
+.cc-hero-bottom > p {
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .15em;
+}
+
+.cc-hero-sticker,
+.cc-closing-sticker {
+  padding: 14px 18px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(18px, 2.2vw, 30px);
+
+  line-height: .9;
+
+  transform: rotate(-2deg);
+}
+
+.cc-hero-number {
+  position: absolute;
+
+  right: -1vw;
+  bottom: -8vw;
+
+  color: rgba(255,255,255,.07);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(280px, 39vw, 590px);
+
+  line-height: .7;
+}
+
+
+/* ============================================================
+06 — STRATEGY
+============================================================ */
+
+.cc-strategy,
+.cc-captions,
+.cc-website {
+  position: relative;
+
+  padding:
+    105px
+    clamp(22px, 5vw, 82px)
+    120px;
+
+  background-color: var(--cream);
+
+  background-image:
+    linear-gradient(
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+}
+
+.cc-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+
+  margin-bottom: 70px;
+}
+
+.cc-file-stamp {
+  padding: 14px 17px;
+
+  color: var(--green);
+
+  border: 3px solid var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+
+  line-height: 1.25;
+  letter-spacing: .12em;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+.cc-strategy-intro {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    .72fr;
+
+  gap: clamp(45px, 7vw, 105px);
+
+  margin-bottom: 80px;
+}
+
+.cc-big-copy > p:first-child {
+  margin: 0;
+
+  font-size: clamp(25px, 3vw, 45px);
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  text-align: left !important;
+}
+
+.cc-serif {
+  margin: 28px 0 0;
+
+  color: var(--orange);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(30px, 4vw, 58px);
+  font-style: italic;
+
+  line-height: 1;
+}
+
+.cc-strategy-note {
+  padding: 24px;
+
+  background: var(--white);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 9px 9px 0 var(--orange);
+}
+
+.cc-strategy-note span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-strategy-note p {
+  margin: 22px 0 0;
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+.cc-channel-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.cc-channel-card {
+  position: relative;
+
+  min-height: 400px;
+
+  padding: 26px;
+
+  border: 4px solid var(--black);
+
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.cc-instagram {
+  background: var(--orange);
+}
+
+.cc-web {
+  color: var(--white);
+  background: var(--green);
+}
+
+.cc-physical {
+  color: var(--white);
+  background: var(--slate);
+}
+
+.cc-channel-num {
+  position: absolute;
+
+  top: 12px;
+  right: 20px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 65px;
+
+  opacity: .13;
+}
+
+.cc-card-label {
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-channel-card h3 {
+  margin: 95px 0 25px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(36px, 4vw, 60px);
+
+  line-height: .8;
+}
+
+.cc-channel-card > p:not(.cc-card-label) {
+  line-height: 1.5;
+}
+
+.cc-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 25px;
+}
+
+.cc-tags span {
+  padding: 6px 8px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+
+/* ============================================================
+07 — BRAND VOICE
+============================================================ */
+
+.cc-voice {
+  position: relative;
+
+  padding:
+    105px
+    clamp(22px, 5vw, 82px)
+    120px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      #202426,
+      var(--slate) 55%,
+      #344139
+    );
+
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+}
+
+.cc-voice > *:not(.cc-grid-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.cc-voice-head h2 {
+  margin: 0 0 70px;
+
+  color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(68px, 10vw, 150px);
+
+  line-height: .7;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+.cc-voice-cues {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.cc-voice-cues article {
+  min-height: 310px;
+
+  padding: 20px;
+
+  background: rgba(17,17,17,.5);
+
+  border: 2px solid rgba(255,255,255,.4);
+}
+
+.cc-voice-cues article > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.cc-voice-cues h3 {
+  margin: 90px 0 18px;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(21px, 2vw, 30px);
+
+  line-height: .9;
+}
+
+.cc-voice-cues p {
+  margin: 0;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.cc-message-pillars {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 60px;
+}
+
+.cc-pillar {
+  padding: 22px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.cc-pillar > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.cc-pillar h3 {
+  margin: 30px 0 12px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(25px, 3vw, 42px);
+}
+
+.cc-pillar p {
+  margin: 0;
+
+  line-height: 1.45;
+}
+
+
+/* ============================================================
+08 — CAPTION IDEAS
+============================================================ */
+
+.cc-caption-counter {
+  padding: 14px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--orange);
+
+  box-shadow: 7px 7px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+}
+
+.cc-caption-counter span {
+  display: block;
+
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+.cc-caption-counter strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 40px;
+}
+
+.cc-caption-board {
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+.cc-caption {
+  padding: 23px;
+
+  background: var(--white);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.cc-caption span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .11em;
+}
+
+.cc-caption p {
+  margin: 30px 0 0;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: clamp(23px, 2.7vw, 40px);
+  font-style: italic;
+
+  line-height: 1.05;
+}
+
+.cc-caption-1 {
+  grid-column: 1 / span 5;
+  transform: rotate(-1deg);
+}
+
+.cc-caption-2 {
+  grid-column: 7 / span 6;
+  margin-top: 45px;
+  transform: rotate(1deg);
+}
+
+.cc-caption-3 {
+  grid-column: 2 / span 5;
+  margin-top: 20px;
+}
+
+.cc-caption-4 {
+  grid-column: 8 / span 5;
+  margin-top: 55px;
+  transform: rotate(-1deg);
+}
+
+.cc-caption-5 {
+  grid-column: 1 / span 7;
+  margin-top: 30px;
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.cc-caption-6 {
+  grid-column: 8 / span 5;
+  margin-top: 10px;
+
+  box-shadow: 8px 8px 0 var(--green);
+}
+
+.cc-headline-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 90px;
+
+  padding: 18px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 3px solid var(--orange);
+}
+
+.cc-headline-strip span {
+  margin-right: 15px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.cc-headline-strip strong {
+  padding: 8px 10px;
+
+  border: 1px solid rgba(255,255,255,.3);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+09 — HOMEPAGE HEADLINES
+============================================================ */
+
+.cc-headlines {
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    105px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      #111111 0%,
+      #202426 40%,
+      #38443D 72%,
+      #4A5D4E 100%
+    );
+
+  border-top: 5px solid var(--orange);
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.cc-headlines > *:not(.cc-headlines-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+.cc-headlines-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+}
+
+.cc-headlines-top h2 {
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(75px, 11vw, 170px);
+  font-weight: 900;
+
+  line-height: .7;
+
+  letter-spacing: -.075em;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(0,0,0,.16);
+}
+
+.cc-headline-stamp {
+  flex: 0 0 auto;
+
+  padding: 14px 17px;
+
+  color: var(--orange);
+
+  border: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  line-height: 1.35;
+  letter-spacing: .12em;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+.cc-headline-intro {
+  width: min(700px, 100%);
+
+  margin:
+    55px
+    0
+    80px
+    auto;
+}
+
+.cc-headline-intro p {
+  margin: 0;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+.cc-headline-layout {
+  display: grid;
+
+  grid-template-columns:
+    1.08fr
+    .92fr;
+
+  gap: clamp(35px, 5vw, 75px);
+
+  align-items: start;
+}
+
+.cc-headline-window {
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+}
+
+.cc-headline-window-orange {
+  box-shadow:
+    13px 13px 0 var(--orange),
+    18px 18px 0 var(--black);
+}
+
+.cc-headline-window-green {
+  margin-top: 90px;
+
+  box-shadow:
+    13px 13px 0 var(--green),
+    18px 18px 0 var(--black);
+}
+
+.cc-headline-window-body {
+  min-height: 610px;
+
+  padding:
+    clamp(25px, 4vw, 55px);
+
+  color: var(--black);
+
+  background-color: var(--cream);
+
+  background-image:
+    linear-gradient(
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 26px 26px;
+}
+
+.cc-headline-source {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-display-headline > span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.cc-display-headline h3 {
+  margin: 0;
+
+  color: var(--black);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(48px, 6vw, 90px);
+
+  line-height: .75;
+
+  letter-spacing: -.055em;
+}
+
+.cc-display-headline-small h3 {
+  font-size: clamp(38px, 4.7vw, 70px);
+}
+
+.cc-headline-rule {
+  width: 100%;
+  height: 4px;
+
+  margin: 48px 0;
+
+  background: var(--black);
+}
+
+.cc-headline-personal {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-community-equation {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.cc-community-equation span {
+  color: var(--green);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(30px, 4vw, 56px);
+
+  line-height: .8;
+
+  text-align: center !important;
+}
+
+.cc-community-equation strong {
+  color: var(--orange);
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: clamp(65px, 8vw, 115px);
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+.cc-everybody-headline {
+  margin-top: auto;
+}
+
+.cc-everybody-headline span,
+.cc-everybody-headline strong {
+  display: block;
+}
+
+.cc-everybody-headline span {
+  color: transparent;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px var(--green);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(50px, 6vw, 90px);
+
+  line-height: .78;
+
+  letter-spacing: .02em;
+}
+
+.cc-everybody-headline strong {
+  margin-top: 8px;
+
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(50px, 6vw, 90px);
+
+  line-height: .78;
+
+  letter-spacing: -.05em;
+}
+
+.cc-headline-ticker {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr;
+
+  gap: 25px;
+
+  align-items: center;
+
+  margin-top: 105px;
+
+  padding: 15px 18px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+}
+
+.cc-headline-ticker > span {
+  padding-right: 20px;
+
+  border-right: 2px solid var(--black);
+}
+
+.cc-headline-ticker div {
+  line-height: 1.7;
+}
+
+.cc-headline-ticker b {
+  margin: 0 10px;
+
+  color: var(--white);
+}
+
+
+/* ============================================================
+10 — SOCIAL / INSTAGRAM
+============================================================ */
+
+.cc-social {
+  position: relative;
+
+  padding:
+    110px
+    clamp(22px, 5vw, 82px)
+    125px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      130deg,
+      var(--orange),
+      #A66E48 32%,
+      var(--green) 68%,
+      var(--slate)
+    );
+
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+}
+
+.cc-social > *:not(.cc-social-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+.cc-social-heading span {
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .15em;
+}
+
+.cc-social-heading h2 {
+  margin: 20px 0 65px;
+
+  color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(72px, 11vw, 165px);
+
+  line-height: .7;
+
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+.cc-instagram-window {
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+
+  box-shadow:
+    15px 15px 0 var(--orange),
+    20px 20px 0 var(--black);
+}
+
+.cc-ig-header {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  gap: 12px;
+
+  align-items: center;
+
+  padding: 14px 18px;
+
+  border-bottom: 2px solid var(--black);
+}
+
+.cc-ig-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-radius: 50%;
+
+  font-family: "Arial Black", Arial, sans-serif;
+}
+
+.cc-ig-header strong,
+.cc-ig-header span {
+  display: block;
+}
+
+.cc-ig-header span {
+  margin-top: 2px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+
+/* ============================================================
+11 — INTERACTIVE SWIPE CAROUSEL
+============================================================ */
+
+.cc-carousel-shell {
+  position: relative;
+
+  width: 100%;
+
+  background: var(--black);
+
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+
+  overflow: hidden;
+}
+
+.cc-carousel-swipe {
+  display: flex;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+
+  overscroll-behavior-x: contain;
+}
+
+.cc-carousel-swipe::-webkit-scrollbar {
+  display: none;
+}
+
+.cc-carousel-swipe:active {
+  cursor: grabbing;
+}
+
+.cc-swipe-slide {
+  position: relative;
+
+  flex:
+    0
+    0
+    100%;
+
+  width: 100%;
+
+  margin: 0;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  background: var(--cream);
+}
+
+.cc-slide-photo {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--cream);
+}
+
+
+/* NEVER CROP CAMPAIGN PHOTOGRAPHY */
+
+.cc-slide-photo img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  aspect-ratio: auto !important;
+
+  transform: none !important;
+  clip-path: none !important;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cc-slide-count {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  padding: 7px 9px;
+
+  color: var(--white);
+
+  background: rgba(17,17,17,.82);
+
+  border-top: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .1em;
+
+  box-shadow: 4px 4px 0 rgba(17,17,17,.25);
+}
+
+.cc-swipe-instruction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  padding: 10px 15px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 1px solid rgba(255,255,255,.22);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .12em;
+}
+
+.cc-swipe-instruction span {
+  color: var(--orange);
+
+  font-size: 15px;
+}
+
+.cc-carousel-dots {
+  display: flex;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding:
+    11px
+    12px
+    14px;
+
+  background: var(--cream);
+}
+
+.cc-carousel-dots::before {
+  content: "FRAME";
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 6px;
+
+  color: var(--slate);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  letter-spacing: .1em;
+}
+
+.cc-carousel-dots a {
+  width: 34px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--black) !important;
+  background: transparent;
+
+  border: 2px solid var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color .18s ease,
+    background .18s ease,
+    transform .18s ease;
+}
+
+.cc-carousel-dots a:hover,
+.cc-carousel-dots a:focus {
+  color: var(--white) !important;
+  background: var(--orange);
+
+  transform: translateY(-2px);
+
+  outline: none;
+}
+
+.cc-ig-interface {
+  display: flex;
+
+  gap: 16px;
+
+  padding: 15px 18px;
+
+  border-top: 2px solid var(--black);
+
+  font-size: 24px;
+}
+
+.cc-save {
+  margin-left: auto;
+}
+
+.cc-ig-copy {
+  padding:
+    0
+    18px
+    20px;
+}
+
+.cc-ig-copy p {
+  display: inline;
+
+  margin-left: 5px;
+}
+
+.cc-ig-copy > span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--slate);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .11em;
+}
+
+.cc-social-note {
+  max-width: 800px;
+
+  margin:
+    70px
+    0
+    0
+    auto;
+
+  padding: 22px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.cc-social-note span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-social-note p {
+  margin: 18px 0 0;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+12 — EXISTING CONTENT EXAMPLE
+============================================================ */
+
+.cc-existing {
+  padding:
+    100px
+    clamp(22px, 8vw, 140px);
+
+  background: var(--slate);
+}
+
+.cc-example-window {
+  margin: 0 auto;
+
+  background: var(--white);
+
+  border: 4px solid var(--black);
+}
+
+.cc-example-orange {
+  max-width: 900px;
+
+  box-shadow:
+    14px 14px 0 var(--orange),
+    19px 19px 0 var(--black);
+}
+
+.cc-example-green {
+  box-shadow:
+    14px 14px 0 var(--green),
+    19px 19px 0 var(--black);
+}
+
+.cc-example-window > img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-height: none !important;
+
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+.cc-example-footer {
+  padding: 11px 13px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .11em;
+}
+
+
+/* ============================================================
+13 — MUSIC + MEDIA
+============================================================ */
+
+.cc-music {
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px);
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+  border-bottom: 5px solid var(--orange);
+
+  overflow: hidden;
+}
+
+.cc-music > *:not(.cc-music-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+.cc-music-meta {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .13em;
+}
+
+.cc-music-layout {
+  display: grid;
+
+  grid-template-columns:
+    .75fr
+    1.25fr;
+
+  gap: clamp(55px, 8vw, 130px);
+
+  align-items: center;
+}
+
+.cc-record {
+  width: min(38vw, 510px);
+
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto;
+
+  background:
+    repeating-radial-gradient(
+      circle,
+      #111111 0,
+      #111111 6px,
+      #242424 7px,
+      #111111 9px
+    );
+
+  border: 4px solid var(--cream);
+  border-radius: 50%;
+
+  box-shadow:
+    16px 16px 0 var(--orange),
+    21px 21px 0 var(--green);
+}
+
+.cc-record-ring {
+  width: 43%;
+
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--orange);
+
+  border: 4px solid var(--cream);
+  border-radius: 50%;
+}
+
+.cc-record-label {
+  text-align: center;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+}
+
+.cc-record-label span,
+.cc-record-label strong {
+  display: block;
+
+  text-align: center !important;
+}
+
+.cc-record-label strong {
+  margin: 8px 0;
+
+  color: var(--black);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(14px, 1.8vw, 24px);
+
+  line-height: .85;
+}
+
+.cc-music-copy h2 {
+  margin: 0 0 30px;
+
+  color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(65px, 9vw, 135px);
+
+  line-height: .72;
+
+  letter-spacing: -.065em;
+}
+
+.cc-music-lead {
+  color: var(--orange);
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: clamp(24px, 3vw, 42px);
+  font-style: italic;
+
+  line-height: 1.08;
+}
+
+.cc-music-copy > p:not(.cc-music-lead) {
+  max-width: 800px;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+.cc-listen-button {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  padding: 15px 18px;
+
+  color: var(--black) !important;
+  background: var(--orange);
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  text-decoration: none;
+}
+
+.cc-listen-button:hover {
+  transform: translateY(-3px);
+}
+
+.cc-montage-strip {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 90px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.3);
+
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(12px, 1.8vw, 23px);
+}
+
+
+/* ============================================================
+14 — WEBSITE APPLICATION
+============================================================ */
+
+.cc-web-layout {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    .9fr;
+
+  gap: clamp(55px, 7vw, 105px);
+
+  align-items: center;
+}
+
+.cc-web-copy {
+  position: relative;
+}
+
+.cc-web-index {
+  position: absolute;
+
+  top: -90px;
+  right: 0;
+
+  color: rgba(17,17,17,.08);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 180px;
+}
+
+.cc-web-copy h3 {
+  position: relative;
+
+  margin: 0 0 30px;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(40px, 5vw, 75px);
+
+  line-height: .8;
+
+  letter-spacing: -.045em;
+}
+
+.cc-web-copy p {
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+.cc-web-tag {
+  margin-top: 35px;
+
+  padding: 14px;
+
+  color: var(--white);
+  background: var(--green);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 7px 7px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+15 — CALLS TO ACTION
+============================================================ */
+
+.cc-cta {
+  position: relative;
+
+  padding:
+    110px
+    clamp(22px, 5vw, 82px)
+    125px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--slate),
+      #34443A 55%,
+      var(--green)
+    );
+
+  border-top: 5px solid var(--black);
+}
+
+.cc-cta > *:not(.cc-grid-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.cc-cta-head > span {
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .14em;
+}
+
+.cc-cta-head h2 {
+  margin: 20px 0 75px;
+
+  color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(80px, 12vw, 180px);
+
+  line-height: .68;
+
+  letter-spacing: -.075em;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+.cc-cta-layout {
+  display: grid;
+
+  grid-template-columns:
+    1.08fr
+    .92fr;
+
+  gap: clamp(55px, 8vw, 120px);
+
+  align-items: start;
+}
+
+.cc-uo-board {
+  background: #8B8175;
+
+  border: 5px solid var(--black);
+
+  box-shadow:
+    14px 14px 0 var(--orange),
+    19px 19px 0 var(--black);
+}
+
+.cc-uo-top {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 14px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF,
+      #C9CED0 45%,
+      #868C8F 51%,
+      #E8EAEA 100%
+    );
+
+  border-bottom: 4px solid var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.cc-polaroid-wall {
+  min-height: 620px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  align-items: start;
+
+  padding: 45px 30px;
+
+  background-image:
+    radial-gradient(
+      rgba(17,17,17,.23) 1px,
+      transparent 1px
+    );
+
+  background-size: 15px 15px;
+}
+
+.cc-polaroid {
+  margin: 0;
+
+  padding:
+    10px
+    10px
+    30px;
+
+  background: var(--cream);
+
+  border: 2px solid var(--black);
+
+  box-shadow: 8px 8px 0 rgba(17,17,17,.6);
+}
+
+.cc-polaroid img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-height: none !important;
+
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+.cc-polaroid figcaption {
+  margin-top: 9px;
+
+  color: var(--black);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.cc-polaroid-one {
+  grid-column:
+    1
+    / span 6;
+
+  transform: rotate(-3deg);
+}
+
+.cc-polaroid-two {
+  grid-column:
+    7
+    / span 5;
+
+  margin-top: 80px;
+
+  transform: rotate(3deg);
+}
+
+.cc-polaroid-three {
+  grid-column:
+    3
+    / span 6;
+
+  margin-top: -15px;
+
+  transform: rotate(1deg);
+}
+
+.cc-board-copy {
+  padding: 22px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border-top: 4px solid var(--black);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(27px, 4vw, 52px);
+
+  line-height: .82;
+}
+
+.cc-cta-copy h3 {
+  margin: 30px 0;
+
+  color: var(--orange);
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(52px, 7vw, 100px);
+
+  line-height: .75;
+
+  letter-spacing: -.055em;
+}
+
+.cc-cta-copy > p {
+  color: rgba(255,255,255,.8);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+.cc-submit-card {
+  margin-top: 45px;
+
+  padding: 25px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+
+  box-shadow: 10px 10px 0 var(--orange);
+}
+
+.cc-submit-card > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.cc-submit-card strong {
+  display: block;
+
+  margin: 30px 0 15px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: clamp(27px, 3vw, 42px);
+}
+
+.cc-submit-card p {
+  line-height: 1.5;
+}
+
+.cc-submit-card button {
+  margin-top: 15px;
+
+  padding: 13px 16px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .08em;
+
+  cursor: pointer;
+}
+
+.cc-cta-flow {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  gap: 15px;
+
+  align-items: center;
+
+  margin-top: 110px;
+}
+
+.cc-cta-flow article {
+  min-height: 210px;
+
+  padding: 20px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 7px 7px 0 var(--orange);
+}
+
+.cc-cta-flow article > span {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.cc-cta-flow strong {
+  display: block;
+
+  margin: 40px 0 12px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 25px;
+}
+
+.cc-cta-flow p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+.cc-flow-arrow {
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+
+  font-size: 35px;
+}
+
+
+/* ============================================================
+16 — CLOSING
+============================================================ */
+
+.cc-closing {
+  position: relative;
+
+  min-height: 680px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    85px
+    clamp(22px, 6vw, 95px);
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(255,255,255,.2),
+      transparent 25%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange),
+      var(--green) 60%,
+      var(--slate)
+    );
+
+  border-top: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+.cc-closing-meta {
+  position: absolute;
+  z-index: 3;
+
+  top: 25px;
+  left: clamp(22px, 6vw, 95px);
+  right: clamp(22px, 6vw, 95px);
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .14em;
+}
+
+.cc-closing > p {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 20px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: .15em;
+}
+
+.cc-closing h2 {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+
+  font-family:
+    "Arial Black",
+    Futura,
+    Arial,
+    sans-serif;
+
+  font-size: clamp(78px, 13vw, 195px);
+
+  line-height: .69;
+
+  letter-spacing: -.08em;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(17,17,17,.16);
+}
+
+.cc-closing-sticker {
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  margin-top: 50px;
+}
+
+
+/* ============================================================
+17 — FOOTER
+============================================================ */
+
+.cc-footer {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: .11em;
+}
+
+.cc-footer strong {
+  padding: 7px 12px;
+
+  background: var(--green);
+
+  border: 1px solid var(--white);
+}
+
+.cc-footer > span:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+18 — HOVER
+============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .cc-channel-card,
+  .cc-caption,
+  .cc-example-window,
+  .cc-polaroid,
+  .cc-cta-flow article,
+  .cc-listen-button {
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease;
+  }
+
+  .cc-channel-card:hover,
+  .cc-cta-flow article:hover {
+    transform: translateY(-6px);
+  }
+
+  .cc-caption:hover {
+    transform:
+      translateY(-6px)
+      rotate(0deg);
+  }
+
+  .cc-polaroid:hover {
+    transform:
+      translateY(-7px)
+      scale(1.025)
+      rotate(0deg);
+
+    z-index: 20;
+  }
+
+}
+
+
+/* ============================================================
+19 — TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+  .cc-section-head,
+  .cc-headlines-top {
+    flex-direction: column;
+  }
+
+  .cc-strategy-intro,
+  .cc-music-layout,
+  .cc-web-layout,
+  .cc-cta-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-channel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-channel-card {
+    min-height: 320px;
+  }
+
+  .cc-voice-cues {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cc-message-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-headline-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-headline-window-green {
+    margin-top: 20px;
+  }
+
+  .cc-record {
+    width: min(70vw, 500px);
+  }
+
+  .cc-cta-flow {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cc-flow-arrow {
+    display: none;
+  }
+
+}
+
+
+/* ============================================================
+20 — MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+  .cc-system-left > span:last-child {
+    display: none;
+  }
+
+  .cc-system-right {
+    font-size: 7px;
+  }
+
+
+  /* HERO */
+
+  .cc-hero {
+    min-height: 700px;
+
+    padding:
+      90px
+      18px
+      55px;
+  }
+
+  .cc-hero-meta {
+    left: 18px;
+    right: 18px;
+
+    font-size: 7px;
+  }
+
+  .cc-hero h1 {
+    font-size: clamp(73px, 22vw, 112px);
+  }
+
+  .cc-hero h2 {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+
+  .cc-hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  /* SECTIONS */
+
+  .cc-strategy,
+  .cc-voice,
+  .cc-captions,
+  .cc-headlines,
+  .cc-social,
+  .cc-music,
+  .cc-website,
+  .cc-cta {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cc-outline-green,
+  .cc-outline-orange {
+    font-size: clamp(47px, 14vw, 72px);
+  }
+
+
+  /* VOICE */
+
+  .cc-voice-head h2,
+  .cc-social-heading h2,
+  .cc-cta-head h2 {
+    font-size: clamp(65px, 19vw, 105px);
+  }
+
+  .cc-voice-cues {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CAPTIONS */
+
+  .cc-caption-board {
+    display: block;
+  }
+
+  .cc-caption {
+    margin: 0 0 30px !important;
+
+    transform: none !important;
+  }
+
+
+  /* HEADLINES */
+
+  .cc-headlines {
+    padding-top: 90px;
+    padding-bottom: 85px;
+  }
+
+  .cc-headlines-top h2 {
+    font-size: clamp(65px, 19vw, 100px);
+  }
+
+  .cc-headline-window-body {
+    min-height: auto;
+  }
+
+  .cc-community-equation {
+    grid-template-columns: 1fr;
+
+    text-align: left;
+  }
+
+  .cc-community-equation span {
+    text-align: left !important;
+  }
+
+  .cc-community-equation strong {
+    line-height: .7;
+  }
+
+  .cc-everybody-headline {
+    margin-top: 30px;
+  }
+
+  .cc-headline-ticker {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-headline-ticker > span {
+    padding-right: 0;
+    padding-bottom: 10px;
+
+    border-right: 0;
+    border-bottom: 2px solid var(--black);
+  }
+
+
+  /* CAROUSEL */
+
+  .cc-carousel-dots {
+    gap: 4px;
+  }
+
+  .cc-carousel-dots a {
+    width: 29px;
+    height: 25px;
+  }
+
+  .cc-swipe-instruction {
+    font-size: 7px;
+  }
+
+
+  /* MUSIC */
+
+  .cc-music-meta {
+    gap: 20px;
+
+    font-size: 7px;
+  }
+
+  .cc-music-copy h2 {
+    font-size: clamp(62px, 18vw, 100px);
+  }
+
+  .cc-montage-strip {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+
+  /* CTA */
+
+  .cc-polaroid-wall {
+    display: block;
+
+    min-height: 0;
+  }
+
+  .cc-polaroid {
+    width: 88%;
+
+    margin:
+      0
+      auto
+      35px !important;
+
+    transform: none !important;
+  }
+
+  .cc-cta-flow {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CLOSING */
+
+  .cc-closing {
+    min-height: 590px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cc-closing-meta {
+    left: 18px;
+    right: 18px;
+  }
+
+  .cc-closing h2 {
+    font-size: clamp(67px, 19vw, 105px);
+  }
+
+
+  /* FOOTER */
+
+  .cc-footer {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .cc-footer > span:last-child {
+    text-align: center;
+  }
+
+}
+
+
+/* ============================================================
+21 — REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cc-page * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+/* ============================================================
+22 — HOME NAVIGATION + INLINE CITATIONS
+Added only for requested navigation/citation treatment.
+============================================================ */
+
+.cc-system-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-home-nav {
+  display: inline-block;
+  padding: 6px 10px;
+  color: var(--white) !important;
+  background: var(--black);
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 0 var(--orange);
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.cc-home-nav:hover,
+.cc-home-nav:focus {
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 0 var(--orange);
+  outline: none;
+}
+
+.cc-inline-cite {
+  font-family: "Courier New", monospace;
+  font-size: .58em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .02em !important;
+  white-space: nowrap;
+}
+
+.cc-inline-cite-display {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--orange);
+  -webkit-text-fill-color: var(--orange);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.cc-inline-cite-light {
+  color: inherit;
+}
+
+@media (max-width: 650px) {
+  .cc-system-right {
+    gap: 7px;
+  }
+
+  .cc-system-right > span {
+    display: none;
+  }
+
+  .cc-home-nav {
+    padding: 6px 9px;
+    font-size: 7px;
+  }
+}
+
+
+/* ============================================================
+   CAROUSEL FIX — COMPACT VIEWPORT + REAL DESKTOP DRAG/SWIPE
+   Keeps each full image visible without cropping.
+   ============================================================ */
+
+.cc-carousel-swipe {
+  height: clamp(430px, 68vh, 720px);
+  touch-action: pan-y;
+  scroll-snap-type: x mandatory;
+}
+
+.cc-swipe-slide {
+  height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.cc-slide-photo {
+  height: 100%;
+  min-height: 0;
+  background: var(--black);
+}
+
+.cc-slide-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.cc-carousel-swipe.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.cc-carousel-dots a.is-active,
+.cc-carousel-dots a[aria-current="true"] {
+  color: var(--white) !important;
+  background: var(--orange);
+}
+
+@media (max-width: 760px) {
+  .cc-carousel-swipe {
+    height: clamp(360px, 62vh, 580px);
+  }
+}
+
+@media (max-width: 480px) {
+  .cc-carousel-swipe {
+    height: clamp(320px, 58vh, 500px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-carousel-swipe {
+    scroll-behavior: auto;
+  }
+}
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style><link href="css/channel-headline-fit.css" rel="stylesheet"/><style data-inlined-from="css/channel-headline-fit.css">/* Channel Integration: keep both headline windows inside the viewport. */
+.cc-headlines{box-sizing:border-box!important;width:100%!important;max-width:100%!important;}
+.cc-headline-layout{
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+  gap:clamp(18px,2.8vw,42px)!important;
+  padding-right:20px!important; /* room for the green window's offset shadow */
+  box-sizing:border-box!important;
+}
+.cc-headline-layout>.cc-headline-window{min-width:0!important;max-width:100%!important;box-sizing:border-box!important;}
+.cc-headline-window-green{width:100%!important;max-width:100%!important;min-width:0!important;}
+.cc-headline-window-body{padding:clamp(16px,2.2vw,36px)!important;box-sizing:border-box!important;min-width:0!important;}
+.cc-headline-window-green .cc-community-equation{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;gap:clamp(3px,.6vw,10px)!important;min-width:0;}
+.cc-headline-window-green .cc-community-equation span{font-size:clamp(16px,2.2vw,36px)!important;min-width:0;overflow-wrap:anywhere;}
+.cc-headline-window-green .cc-community-equation strong{font-size:clamp(40px,5vw,76px)!important;}
+.cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(30px,4.1vw,66px)!important;overflow-wrap:normal;}
+.cc-headline-window-green .cc-window-bar{min-width:0;gap:8px!important;}
+.cc-headline-window-green .cc-window-bar>span{min-width:0;overflow-wrap:anywhere;}
+@media(max-width:900px){
+ .cc-headline-layout{grid-template-columns:minmax(0,1fr)!important;padding-right:18px!important;}
+ .cc-headline-window-green{margin-top:20px!important;}
+ .cc-headline-window-green .cc-community-equation span{font-size:clamp(20px,5vw,40px)!important;}
+ .cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(35px,8vw,68px)!important;}
+}
+@media(max-width:480px){
+ .cc-headline-layout{padding-right:13px!important;}
+ .cc-headline-window-green .cc-community-equation{grid-template-columns:minmax(0,1fr)!important;}
+ .cc-headline-window-green .cc-everybody-headline span,.cc-headline-window-green .cc-everybody-headline strong{font-size:clamp(27px,8vw,42px)!important;}
+ .cc-headline-window-green .cc-window-bar{font-size:clamp(7px,1.9vw,10px)!important;}
+}
+</style><style data-priority-fixes="2026-10">
+/* Fix text fitting inside the existing cards; don't stretch words or clip labels. */
+.cc-headline-window,.cc-headline-window-body,.cc-headline-layout,.cc-headline-personal{min-width:0!important;box-sizing:border-box!important;}
+.cc-community-equation{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:clamp(5px,1vw,13px)!important;}
+.cc-community-equation span{font-size:clamp(17px,2.1vw,31px)!important;letter-spacing:-.065em!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;}
+.cc-community-equation strong{font-size:clamp(18px,2vw,32px)!important;flex:0 0 auto!important;}
+.cc-voice-cues{grid-template-columns:repeat(5,minmax(0,1fr))!important;}
+.cc-voice-cues article{min-width:0!important;}
+.cc-voice-cues h3{font-size:clamp(14px,1.55vw,23px)!important;letter-spacing:-.045em!important;line-height:1.1!important;overflow-wrap:normal!important;word-break:normal!important;white-space:normal!important;}
+@media(max-width:1000px){.cc-voice-cues{grid-template-columns:repeat(3,minmax(0,1fr))!important;}}
+@media(max-width:650px){
+ .cc-voice-cues{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+ .cc-community-equation span{font-size:clamp(18px,4vw,28px)!important;}
+}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a aria-current="page" href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a aria-current="page" href="channel-integration.html">CHANNEL INTEGRATION</a><a href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
 <!-- =========================================================
 NIKE — CONTENT + CHANNEL
 BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 CAMILLE BICKHAM / FSH 294
 ========================================================= -->
-<div class="cc-page portfolio-main" id="main-content">
+<div class="cc-page">
 <!-- SYSTEM BAR -->
-<div class="cc-system-bar">
-<div class="cc-system-left">
-<span class="cc-dot cc-dot-orange"></span>
-<span class="cc-dot cc-dot-green"></span>
-<span class="cc-dot cc-dot-slate"></span>
-<span>NIKE / CONTENT_CHANNEL.EXE</span>
-</div>
-<div class="cc-system-right">
-<span>CONTENT / CHANNEL / 2026</span>
-<a aria-label="Return to home page" class="cc-home-nav" href="index.html">HOME</a>
-</div>
-</div>
 <!-- =====================================================
   HERO
   ====================================================== -->
@@ -45,11 +3308,11 @@ CAMILLE BICKHAM / FSH 294
 <span></span>
       CONTENT IN MOTION
     </div>
-<p class="cc-kicker">SOCIAL / DIGITAL / PHYSICAL / COMMUNITY</p>
-<h1>CONTENT +<br/>CHANNEL</h1>
-<h2>MAKE THE<br/>COMMUNITY<br/>THE CAMPAIGN.</h2>
+<p class="cc-kicker nike-text-reveal">SOCIAL / DIGITAL / PHYSICAL / COMMUNITY</p>
+<h1 class="nike-text-reveal">CONTENT +<br/>CHANNEL</h1>
+<h2 class="nike-text-reveal">MAKE THE<br/>COMMUNITY<br/>THE CAMPAIGN.</h2>
 <div class="cc-hero-bottom">
-<p>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
+<p class="nike-text-reveal">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
 <div class="cc-hero-sticker">
         EVERY BODY.<br/>EVERYBODY.
       </div>
@@ -59,11 +3322,11 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   CHANNEL STRATEGY
   ====================================================== -->
-<section class="cc-strategy">
+<section class="cc-strategy seamless-section" style="--join-out:#EBE3DB">
 <div class="cc-section-head">
 <div>
 <span class="cc-label">CONTENT_FILE_01 / CHANNEL STRATEGY</span>
-<h2 class="cc-outline-green">SHOW THE<br/>REAL THING.</h2>
+<h2 class="cc-outline-green nike-text-reveal">SHOW THE<br/>REAL THING.</h2>
 </div>
 <div class="cc-file-stamp">
         OWNED +<br/>EARNED
@@ -71,20 +3334,20 @@ CAMILLE BICKHAM / FSH 294
 </div>
 <div class="cc-strategy-intro">
 <div class="cc-big-copy">
-<p>The idea is to connect the broad scope of Nike athletes with each other and with the brand.</p>
-<p class="cc-serif">Real images. Real videos. Real athletes.</p>
+<p class="nike-text-reveal">The idea is to connect the broad scope of Nike athletes with each other and with the brand.</p>
+<p class="cc-serif nike-text-reveal">Real images. Real videos. Real athletes.</p>
 </div>
 <div class="cc-strategy-note">
 <span>CHANNEL OBJECTIVE</span>
-<p>Displaying real content gets customers excited to be showcased on the Nike website and Instagram. Most importantly, it inspires consumers to go out, exercise, and create memories with their community.</p>
+<p class="nike-text-reveal">Displaying real content gets customers excited to be showcased on the Nike website and Instagram. Most importantly, it inspires consumers to go out, exercise, and create memories with their community.</p>
 </div>
 </div>
 <div class="cc-channel-grid">
 <article class="cc-channel-card cc-instagram">
 <span class="cc-channel-num">01</span>
-<p class="cc-card-label">PRIMARY CHANNEL</p>
-<h3>INSTAGRAM</h3>
-<p>Native Instagram Reels featuring raw, unedited vertical videos and highly unretouched carousel posts of real local fitness groups.</p>
+<p class="cc-card-label nike-text-reveal">PRIMARY CHANNEL</p>
+<h3 class="nike-text-reveal">INSTAGRAM</h3>
+<p class="nike-text-reveal">Native Instagram Reels featuring raw, unedited vertical videos and highly unretouched carousel posts of real local fitness groups.</p>
 <div class="cc-tags">
 <span>REELS</span>
 <span>CAROUSELS</span>
@@ -94,9 +3357,9 @@ CAMILLE BICKHAM / FSH 294
 </article>
 <article class="cc-channel-card cc-web">
 <span class="cc-channel-num">02</span>
-<p class="cc-card-label">SECONDARY CHANNEL</p>
-<h3>NIKE WEB + APP</h3>
-<p>Native user-generated content blocks on Nike.com collection pages and interactive digital community challenges integrated into Nike Run Club.</p>
+<p class="cc-card-label nike-text-reveal">SECONDARY CHANNEL</p>
+<h3 class="nike-text-reveal">NIKE WEB + APP</h3>
+<p class="nike-text-reveal">Native user-generated content blocks on Nike.com collection pages and interactive digital community challenges integrated into Nike Run Club.</p>
 <div class="cc-tags">
 <span>UGC</span>
 <span>NIKE.COM</span>
@@ -105,9 +3368,9 @@ CAMILLE BICKHAM / FSH 294
 </article>
 <article class="cc-channel-card cc-physical">
 <span class="cc-channel-num">03</span>
-<p class="cc-card-label">PHYSICAL TOUCHPOINT</p>
-<h3>URBAN OUTFITTERS</h3>
-<p>Discovery-first lounge spaces become physical extensions of the campaign, connecting digital submissions to real community participation.</p>
+<p class="cc-card-label nike-text-reveal">PHYSICAL TOUCHPOINT</p>
+<h3 class="nike-text-reveal">URBAN OUTFITTERS</h3>
+<p class="nike-text-reveal">Discovery-first lounge spaces become physical extensions of the campaign, connecting digital submissions to real community participation.</p>
 <div class="cc-tags">
 <span>POLAROIDS</span>
 <span>RUN CLUB</span>
@@ -119,65 +3382,65 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   BRAND VOICE
   ====================================================== -->
-<section class="cc-voice">
+<section class="cc-voice gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#344139">
 <div class="cc-grid-overlay"></div>
 <div class="cc-voice-head">
-<p class="cc-light-label">CONTENT_FILE_02 / BRAND VOICE</p>
-<h2>SOUND LIKE<br/>THE PEOPLE<br/>IN THE PHOTO.</h2>
+<p class="cc-light-label nike-text-reveal">CONTENT_FILE_02 / BRAND VOICE</p>
+<h2 class="nike-text-reveal">SOUND LIKE<br/>THE PEOPLE<br/>IN THE PHOTO.</h2>
 </div>
 <div class="cc-voice-cues">
 <article>
 <span>01</span>
-<h3>APPROACHABLE.</h3>
-<p>The campaign should feel accessible rather than elite or intimidating.</p>
+<h3 class="nike-text-reveal">APPROACHABLE.</h3>
+<p class="nike-text-reveal">The campaign should feel accessible rather than elite or intimidating.</p>
 </article>
 <article>
 <span>02</span>
-<h3>RAW.</h3>
-<p>Leave room for imperfection. The language should feel lived-in rather than overly polished.</p>
+<h3 class="nike-text-reveal">RAW.</h3>
+<p class="nike-text-reveal">Leave room for imperfection. The language should feel lived-in rather than overly polished.</p>
 </article>
 <article>
 <span>03</span>
-<h3>UNPOSED.</h3>
-<p>Copy supports candid moments instead of turning every image into a traditional advertisement.</p>
+<h3 class="nike-text-reveal">UNPOSED.</h3>
+<p class="nike-text-reveal">Copy supports candid moments instead of turning every image into a traditional advertisement.</p>
 </article>
 <article>
 <span>04</span>
-<h3>UNSCRIPTED.</h3>
-<p>Write like the campaign is documenting a real moment as it happens.</p>
+<h3 class="nike-text-reveal">UNSCRIPTED.</h3>
+<p class="nike-text-reveal">Write like the campaign is documenting a real moment as it happens.</p>
 </article>
 <article>
 <span>05</span>
-<h3>OPTIMISTIC.</h3>
-<p>Movement becomes a reason to connect, participate, recover, laugh, and come back tomorrow.</p>
+<h3 class="nike-text-reveal">OPTIMISTIC.</h3>
+<p class="nike-text-reveal">Movement becomes a reason to connect, participate, recover, laugh, and come back tomorrow.</p>
 </article>
 </div>
 <div class="cc-message-pillars">
 <div class="cc-pillar">
 <span>01</span>
-<h3>TOGETHERNESS</h3>
-<p>Shared community over solitary elite performance.</p>
+<h3 class="nike-text-reveal">TOGETHERNESS</h3>
+<p class="nike-text-reveal">Shared community over solitary elite performance.</p>
 </div>
 <div class="cc-pillar">
 <span>02</span>
-<h3>CANDID</h3>
-<p>Real-world, unretouched, lived-in movement.</p>
+<h3 class="nike-text-reveal">CANDID</h3>
+<p class="nike-text-reveal">Real-world, unretouched, lived-in movement.</p>
 </div>
 <div class="cc-pillar">
 <span>03</span>
-<h3>PRESENCE</h3>
-<p>The everyday athlete grounded in physical and mental wellness in the present moment.</p>
+<h3 class="nike-text-reveal">PRESENCE</h3>
+<p class="nike-text-reveal">The everyday athlete grounded in physical and mental wellness in the present moment.</p>
 </div>
 </div>
 </section>
 <!-- =====================================================
   CAPTION IDEAS
   ====================================================== -->
-<section class="cc-captions">
+<section class="cc-captions gradient-linked-section seamless-section" style="--join-in:#344139;--join-out:#EBE3DB">
 <div class="cc-section-head">
 <div>
 <span class="cc-label">CONTENT_FILE_03 / CAPTIONS + COPY</span>
-<h2 class="cc-outline-orange">COPY THAT<br/>FEELS LIVED-IN.</h2>
+<h2 class="cc-outline-orange nike-text-reveal">COPY THAT<br/>FEELS LIVED-IN.</h2>
 </div>
 <div class="cc-caption-counter">
 <span>CAPTION_BANK</span>
@@ -187,27 +3450,27 @@ CAMILLE BICKHAM / FSH 294
 <div class="cc-caption-board">
 <article class="cc-caption cc-caption-1">
 <span>CAPTION_01.TXT</span>
-<p>“new shoes, new pr, old friends.”</p>
+<p class="nike-text-reveal">“new shoes, new pr, old friends.”</p>
 </article>
 <article class="cc-caption cc-caption-2">
 <span>CAPTION_02.TXT</span>
-<p>“my power is from my people. sunrise to sunset.”</p>
+<p class="nike-text-reveal">“my power is from my people. sunrise to sunset.”</p>
 </article>
 <article class="cc-caption cc-caption-3">
 <span>CAPTION_03.TXT</span>
-<p>“i can’t help but feel motivated when they’re around.”</p>
+<p class="nike-text-reveal">“i can’t help but feel motivated when they’re around.”</p>
 </article>
 <article class="cc-caption cc-caption-4">
 <span>CAPTION_04.TXT</span>
-<p>“josh said he knew a spot, ended up on a 3 hour hike at 7 AM, wouldn’t change a thing.”</p>
+<p class="nike-text-reveal">“josh said he knew a spot, ended up on a 3 hour hike at 7 AM, wouldn’t change a thing.”</p>
 </article>
 <article class="cc-caption cc-caption-5">
 <span>CAPTION_05.TXT</span>
-<p>“sunday morning run club photo dump 📸. nobody kept pace, everyone stopped for iced coffee halfway through, 10/10. tag your morning crew.”</p>
+<p class="nike-text-reveal">“sunday morning run club photo dump 📸. nobody kept pace, everyone stopped for iced coffee halfway through, 10/10. tag your morning crew.”</p>
 </article>
 <article class="cc-caption cc-caption-6">
 <span>CAPTION_06.TXT</span>
-<p>“oversized hoodie + vintage sneakers for a 20-minute jog, then straight to the library. keeping it simple.”</p>
+<p class="nike-text-reveal">“oversized hoodie + vintage sneakers for a 20-minute jog, then straight to the library. keeping it simple.”</p>
 </article>
 </div>
 <div class="cc-headline-strip">
@@ -220,19 +3483,19 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   HOMEPAGE HEADLINES
   ====================================================== -->
-<section class="cc-headlines">
+<section class="cc-headlines gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#4A5D4E">
 <div class="cc-headlines-grid"></div>
 <div class="cc-headlines-top">
 <div>
 <span class="cc-light-label">CONTENT_FILE_04 / HOMEPAGE HEADLINES</span>
-<h2>WORDS BUILT<br/>TO MOVE.</h2>
+<h2 class="nike-text-reveal">WORDS BUILT<br/>TO MOVE.</h2>
 </div>
 <div class="cc-headline-stamp">
         HOME_PAGE<br/>COPY_BANK
       </div>
 </div>
 <div class="cc-headline-intro">
-<p>Short, direct campaign language keeps the message focused on participation rather than performance. The headlines position athleticism as something accessible, social, and already present in everyday life.</p>
+<p class="nike-text-reveal">Short, direct campaign language keeps the message focused on participation rather than performance. The headlines position athleticism as something accessible, social, and already present in everyday life.</p>
 </div>
 <div class="cc-headline-layout">
 <!-- PITCH / NOTEBOOK HEADLINES -->
@@ -250,12 +3513,12 @@ CAMILLE BICKHAM / FSH 294
 <span class="cc-headline-source">FROM NOTEBOOK / BASED ON CAMPAIGN PITCH</span>
 <div class="cc-display-headline">
 <span>01</span>
-<h3>IF YOU HAVE<br/>A BODY,<br/>YOU ARE AN<br/>ATHLETE.<br/><span class="cc-inline-cite cc-inline-cite-display">(Hill, 2026)</span></h3>
+<h3 class="nike-text-reveal">IF YOU HAVE<br/>A BODY,<br/>YOU ARE AN<br/>ATHLETE.<br/><span class="cc-inline-cite cc-inline-cite-display">(Hill, 2026)</span></h3>
 </div>
 <div class="cc-headline-rule"></div>
 <div class="cc-display-headline cc-display-headline-small">
 <span>02</span>
-<h3>BUILT FOR THE<br/>EVERYDAY ARENA.</h3>
+<h3 class="nike-text-reveal">BUILT FOR THE<br/>EVERYDAY ARENA.</h3>
 </div>
 </div>
 </article>
@@ -301,11 +3564,11 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   INTERACTIVE INSTAGRAM CAROUSEL
   ====================================================== -->
-<section class="cc-social">
+<section class="cc-social gradient-linked-section seamless-section" style="--join-in:#4A5D4E;--join-out:#59646A">
 <div class="cc-social-grid"></div>
 <div class="cc-social-heading">
 <span>SOCIAL_APPLICATION / 01</span>
-<h2>THE FEED<br/>IS THE<br/>ARCHIVE.</h2>
+<h2 class="nike-text-reveal">THE FEED<br/>IS THE<br/>ARCHIVE.</h2>
 </div>
 <div class="cc-instagram-window">
 <!-- INSTAGRAM WINDOW BAR -->
@@ -399,19 +3662,19 @@ CAMILLE BICKHAM / FSH 294
 <!-- CAPTION -->
 <div class="cc-ig-copy">
 <strong>nike</strong>
-<p>new shoes, new pr, old friends.</p>
+<p class="nike-text-reveal">new shoes, new pr, old friends.</p>
 <span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span>
 </div>
 </div>
 <div class="cc-social-note">
 <span>CHANNEL DIRECTION</span>
-<p>Keep the feed intentionally un-curated. Archive video story posts in Highlights, use Nike Orange as the visual anchor, and leave room for alternate aesthetic curation that stays in touch with current Pinterest and social trends. <span class="cc-inline-cite cc-inline-cite-light">(OpenAI, 2026)</span></p>
+<p class="nike-text-reveal">Keep the feed intentionally un-curated. Archive video story posts in Highlights, use Nike Orange as the visual anchor, and leave room for alternate aesthetic curation that stays in touch with current Pinterest and social trends. <span class="cc-inline-cite cc-inline-cite-light">(OpenAI, 2026)</span></p>
 </div>
 </section>
 <!-- =====================================================
   INSTAGRAM FEED EXAMPLE
   ====================================================== -->
-<section class="cc-existing">
+<section class="cc-existing gradient-linked-section seamless-section" style="--join-in:#59646A;--join-out:#59646A">
 <div class="cc-example-window cc-example-orange">
 <div class="cc-window-bar">
 <div class="cc-window-dots">
@@ -431,7 +3694,7 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   MUSIC + MEDIA TIE-IN
   ====================================================== -->
-<section class="cc-music">
+<section class="cc-music gradient-linked-section seamless-section" style="--join-in:#59646A;--join-out:#111111">
 <div class="cc-music-grid"></div>
 <div class="cc-music-meta">
 <span>MEDIA_TIE_IN / AUDIO</span>
@@ -451,10 +3714,10 @@ CAMILLE BICKHAM / FSH 294
 <!-- MUSIC COPY -->
 <div class="cc-music-copy">
 <span class="cc-light-label">MARKET + MEDIA TIE-IN</span>
-<h2>EVERYBODY,<br/>EVERY BODY.</h2>
-<p class="cc-music-lead">The campaign phrase “Everybody, Every Body” can extend beyond copy into a recognizable music and media cue through Black Box’s “Everybody Everybody” <span class="cc-inline-cite cc-inline-cite-light">(Black Box, 1990)</span>.</p>
-<p>The song creates a playful connection between the campaign’s language and a recognizable piece of early-1990s dance culture. Its upbeat energy fits montage-style edits of consumer submissions: running, hiking, dancing, pickup games, workouts, recovery, and everyday moments with friends.</p>
-<p>Rather than treating the song as background music for a polished commercial, it becomes a cultural thread connecting many different bodies and forms of movement in one community montage.</p>
+<h2 class="nike-text-reveal">EVERYBODY,<br/>EVERY BODY.</h2>
+<p class="cc-music-lead nike-text-reveal">The campaign phrase “Everybody, Every Body” can extend beyond copy into a recognizable music and media cue through Black Box’s “Everybody Everybody” <span class="cc-inline-cite cc-inline-cite-light">(Black Box, 1990)</span>.</p>
+<p class="nike-text-reveal">The song creates a playful connection between the campaign’s language and a recognizable piece of early-1990s dance culture. Its upbeat energy fits montage-style edits of consumer submissions: running, hiking, dancing, pickup games, workouts, recovery, and everyday moments with friends.</p>
+<p class="nike-text-reveal">Rather than treating the song as background music for a polished commercial, it becomes a cultural thread connecting many different bodies and forms of movement in one community montage.</p>
 <a class="cc-listen-button" href="https://open.spotify.com/track/6wBMTv8yTiNh50fqTkT0JC" rel="noopener noreferrer" target="_blank">
 
           ▶ LISTEN TO “EVERYBODY EVERYBODY”
@@ -474,11 +3737,11 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   WEBSITE APPLICATION
   ====================================================== -->
-<section class="cc-website">
+<section class="cc-website gradient-linked-section seamless-section" style="--join-in:#111111;--join-out:#EBE3DB">
 <div class="cc-section-head">
 <div>
 <span class="cc-label">DIGITAL_APPLICATION / 02</span>
-<h2 class="cc-outline-green">FROM FEED<br/>TO NIKE.COM.</h2>
+<h2 class="cc-outline-green nike-text-reveal">FROM FEED<br/>TO NIKE.COM.</h2>
 </div>
 <div class="cc-file-stamp">
         WEB<br/>APPLICATION
@@ -504,10 +3767,10 @@ CAMILLE BICKHAM / FSH 294
 <!-- WEBSITE COPY -->
 <div class="cc-web-copy">
 <div class="cc-web-index">02</div>
-<h3>THE WEBSITE BECOMES A LIVING COMMUNITY ARCHIVE.</h3>
-<p>Selected customer content can move from social media into native user-generated content blocks across Nike.com, extending the campaign beyond a temporary social post.</p>
-<p>The campaign can showcase hundreds of submissions from different athletes, ages, movement styles, and communities.</p>
-<p>Being featured creates a reason to participate while reinforcing the campaign idea that Nike’s athlete community is much broader than professional sport.</p>
+<h3 class="nike-text-reveal">THE WEBSITE BECOMES A LIVING COMMUNITY ARCHIVE.</h3>
+<p class="nike-text-reveal">Selected customer content can move from social media into native user-generated content blocks across Nike.com, extending the campaign beyond a temporary social post.</p>
+<p class="nike-text-reveal">The campaign can showcase hundreds of submissions from different athletes, ages, movement styles, and communities.</p>
+<p class="nike-text-reveal">Being featured creates a reason to participate while reinforcing the campaign idea that Nike’s athlete community is much broader than professional sport.</p>
 <div class="cc-web-tag">
           REAL PEOPLE → REAL MOVEMENT → REAL NIKE COMMUNITY
         </div>
@@ -517,11 +3780,11 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   CALLS TO ACTION / URBAN OUTFITTERS
   ====================================================== -->
-<section class="cc-cta">
+<section class="cc-cta gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#4A5D4E">
 <div class="cc-grid-overlay"></div>
 <div class="cc-cta-head">
 <span>PHYSICAL_APPLICATION / 03</span>
-<h2>CALLS TO<br/>ACTION.</h2>
+<h2 class="nike-text-reveal">CALLS TO<br/>ACTION.</h2>
 </div>
 <div class="cc-cta-layout">
 <!-- UO COMMUNITY BOARD -->
@@ -533,15 +3796,15 @@ CAMILLE BICKHAM / FSH 294
 <div class="cc-polaroid-wall">
 <figure class="cc-polaroid cc-polaroid-one">
 <img alt="Community athlete mirror selfie" loading="lazy" src="assets/images/mirror-selfie.jpg"/>
-<figcaption>RAW INPUT / 01</figcaption>
+<figcaption class="nike-text-reveal">RAW INPUT / 01</figcaption>
 </figure>
 <figure class="cc-polaroid cc-polaroid-two">
 <img alt="Community hiking photograph" loading="lazy" src="assets/images/hiking-buddies-candid.jpg"/>
-<figcaption>RAW INPUT / 02</figcaption>
+<figcaption class="nike-text-reveal">RAW INPUT / 02</figcaption>
 </figure>
 <figure class="cc-polaroid cc-polaroid-three">
 <img alt="Community track photograph" loading="lazy" src="assets/images/track-friends.jpg"/>
-<figcaption>RAW INPUT / 03</figcaption>
+<figcaption class="nike-text-reveal">RAW INPUT / 03</figcaption>
 </figure>
 </div>
 <div class="cc-board-copy">
@@ -552,14 +3815,14 @@ CAMILLE BICKHAM / FSH 294
 <!-- CTA COPY -->
 <div class="cc-cta-copy">
 <span class="cc-light-label">URBAN OUTFITTERS / PHYSICAL TOUCHPOINT</span>
-<h3>PIN IT.<br/>POST IT.<br/>MOVE TOGETHER.</h3>
-<p>The Urban Outfitters “On Rotation” community lounge becomes a physical extension of the digital campaign. Select locations can feature community boards where customers pin real Polaroids, digital-camera prints, and photographs of themselves moving with friends.</p>
-<p>The low-lit, discovery-first environment fits the campaign’s physical-media and Y2K aesthetic while bringing Nike into a space where the target audience already shops and spends time.</p>
-<p>The board can be updated monthly and documented through a dedicated Instagram Highlight, allowing the physical activation to continually feed content back into Nike’s digital channels.</p>
+<h3 class="nike-text-reveal">PIN IT.<br/>POST IT.<br/>MOVE TOGETHER.</h3>
+<p class="nike-text-reveal">The Urban Outfitters “On Rotation” community lounge becomes a physical extension of the digital campaign. Select locations can feature community boards where customers pin real Polaroids, digital-camera prints, and photographs of themselves moving with friends.</p>
+<p class="nike-text-reveal">The low-lit, discovery-first environment fits the campaign’s physical-media and Y2K aesthetic while bringing Nike into a space where the target audience already shops and spends time.</p>
+<p class="nike-text-reveal">The board can be updated monthly and documented through a dedicated Instagram Highlight, allowing the physical activation to continually feed content back into Nike’s digital channels.</p>
 <div class="cc-submit-card">
 <span>SUBMISSION_PROMPT.TXT</span>
 <strong>SHOW US HOW YOU MOVE.</strong>
-<p>Submit your personal fitness triumphs — or fails — to Nike Run Club or Nike.com to be featured as one of our many athletes.</p>
+<p class="nike-text-reveal">Submit your personal fitness triumphs — or fails — to Nike Run Club or Nike.com to be featured as one of our many athletes.</p>
 <button type="button">
             SUBMIT YOUR STORY →
           </button>
@@ -571,39 +3834,39 @@ CAMILLE BICKHAM / FSH 294
 <article>
 <span>01</span>
 <strong>CAPTURE</strong>
-<p>Take a candid photo or video of movement with your community.</p>
+<p class="nike-text-reveal">Take a candid photo or video of movement with your community.</p>
 </article>
 <div class="cc-flow-arrow">→</div>
 <article>
 <span>02</span>
 <strong>SUBMIT</strong>
-<p>Send it through Nike.com, Nike Run Club, or the link in the Instagram bio.</p>
+<p class="nike-text-reveal">Send it through Nike.com, Nike Run Club, or the link in the Instagram bio.</p>
 </article>
 <div class="cc-flow-arrow">→</div>
 <article>
 <span>03</span>
 <strong>FEATURE</strong>
-<p>With permission, selected submissions tag the athlete when published.</p>
+<p class="nike-text-reveal">With permission, selected submissions tag the athlete when published.</p>
 </article>
 <div class="cc-flow-arrow">→</div>
 <article>
 <span>04</span>
 <strong>CONNECT</strong>
-<p>Digital content becomes a reason to join local movement and community.</p>
+<p class="nike-text-reveal">Digital content becomes a reason to join local movement and community.</p>
 </article>
 </div>
 </section>
 <!-- =====================================================
   CLOSING
   ====================================================== -->
-<section class="cc-closing">
+<section class="cc-closing gradient-linked-section seamless-section" style="--join-in:#4A5D4E">
 <div class="cc-closing-grid"></div>
 <div class="cc-closing-meta">
 <span>CONTENT_CHANNEL.EXE</span>
 <span>COMMUNITY / ACTIVE</span>
 </div>
-<p>POST → SHARE → SHOW UP → MOVE → REPEAT</p>
-<h2>EVERYBODY.<br/>EVERY BODY.</h2>
+<p class="nike-text-reveal">POST → SHARE → SHOW UP → MOVE → REPEAT</p>
+<h2 class="nike-text-reveal">EVERYBODY.<br/>EVERY BODY.</h2>
 <div class="cc-closing-sticker">
       EVERY PACE<br/>HAS A PLACE.
     </div>
@@ -611,7 +3874,11 @@ CAMILLE BICKHAM / FSH 294
 <!-- =====================================================
   FOOTER
   ====================================================== -->
-
+<footer class="cc-footer">
+<span>CAMILLE BICKHAM / FSH 294</span>
+<strong>NIKE / CONTENT + CHANNEL</strong>
+<span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span>
+</footer><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 04 OF 08</p><a class="portfolio-next-link" href="audience-journey.html"><strong>AUDIENCE JOURNEY</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="community-gallery.html">← COMMUNITY GALLERY</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer>
 </div>
 <script>
 (() => {
@@ -684,10 +3951,5 @@ CAMILLE BICKHAM / FSH 294
   goTo(0);
 })();
 </script>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>04 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="audience-journey.html"><span>UP NEXT / AUDIENCE JOURNEY</span><strong>Follow the connection.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="community-gallery.html">← COMMUNITY GALLERY</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script></body>
 </html>

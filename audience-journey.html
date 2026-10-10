@@ -5,36 +5,2584 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Audience Journey | Nike Creative AI Portfolio</title>
-<link href="css/audience-journey.css" rel="stylesheet"/>
-<link href="css/portfolio-redesign.css" rel="stylesheet"/><meta content="#111111" name="theme-color"/></head>
-<body class="portfolio-body" data-chapter="05"><a class="skip-to-content" href="#main-content">Skip to content</a><header class="portfolio-header"><div class="portfolio-header-inner">
-<a aria-label="Nike campaign portfolio home" class="portfolio-brand" href="index.html">NIKE<span class="brand-separator"></span><span class="brand-sub">BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</span></a>
-<nav aria-label="Main pages" class="portfolio-nav"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a aria-current="page" href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav>
-<details class="portfolio-mobile"><summary>EXPLORE <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile pages"><a href="index.html"><span class="nav-index">01</span>HOME</a><a href="research.html"><span class="nav-index">02</span>RESEARCH</a><a href="community-gallery.html"><span class="nav-index">03</span>COMMUNITY GALLERY</a><a href="channel-integration.html"><span class="nav-index">04</span>CHANNEL INTEGRATION</a><a aria-current="page" href="audience-journey.html"><span class="nav-index">05</span>AUDIENCE JOURNEY</a><a href="ai-workflow.html"><span class="nav-index">06</span>AI WORKFLOW</a><a href="emerging-technology.html"><span class="nav-index">07</span>EMERGING TECHNOLOGY</a><a href="final-reflection.html"><span class="nav-index">08</span>FINAL REFLECTION</a></nav></details>
-</div></header>
+<link href="css/audience-journey.css" rel="stylesheet"/><style data-inlined-from="css/audience-journey.css">/* ============================================================
+NIKE — AUDIENCE JOURNEY
+COMPLETE REPLACEMENT CSS
+CARGO / Y2K MICROSITE
+============================================================ */
+
+
+/* ============================================================
+01. FULL-BLEED CARGO RESET
+============================================================ */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  background: #111111 !important;
+  overflow-x: hidden !important;
+}
+
+
+.journey-page {
+  --black: #111111;
+  --white: #FFFFFF;
+  --orange: #F26522;
+  --green: #4A5D4E;
+  --slate: #59646A;
+  --cream: #EBE3DB;
+  --silver: #C9CED0;
+
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-50%);
+
+  background: var(--cream);
+  color: var(--black);
+
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  overflow: hidden;
+}
+
+
+.journey-page *,
+.journey-page *::before,
+.journey-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+02. TEXT SPACING PROTECTION
+IMPORTANT FOR CARGO
+============================================================ */
+
+.journey-page h1,
+.journey-page h2,
+.journey-page h3,
+.journey-page h4,
+.journey-page p,
+.journey-page span,
+.journey-page strong,
+.journey-page small,
+.journey-page div {
+  word-spacing: 0 !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  text-align-last: auto !important;
+}
+
+
+.journey-page p {
+  margin-top: 0;
+  white-space: normal !important;
+  text-align: left !important;
+  word-spacing: 0 !important;
+  letter-spacing: normal;
+}
+
+
+.journey-page h1,
+.journey-page h2,
+.journey-page h3 {
+  text-align: left !important;
+  word-spacing: 0 !important;
+}
+
+
+/* ============================================================
+03. SYSTEM BAR
+============================================================ */
+
+.journey-systembar {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 9px 18px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #F0F1F1 13%,
+      #D2D5D6 39%,
+      #8B9194 48%,
+      #BEC2C4 55%,
+      #ECEDED 84%,
+      #C5C9CB 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+.journey-system-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+
+.journey-light {
+  width: 10px;
+  height: 10px;
+  display: block;
+  flex: 0 0 auto;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+
+.journey-light-orange {
+  background: var(--orange);
+}
+
+
+.journey-light-green {
+  background: var(--green);
+}
+
+
+.journey-light-slate {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+04. GRID TEXTURES
+============================================================ */
+
+.journey-hero-grid,
+.journey-logic-grid,
+.journey-cta-grid,
+.journey-loop-grid,
+.journey-closing-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.07) 1px,
+      transparent 1px
+    );
+
+  background-size: 34px 34px;
+}
+
+
+/* ============================================================
+05. CHROME WINDOW BAR
+============================================================ */
+
+.journey-windowbar {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 8px 12px;
+
+  color: var(--black);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #E3E5E5 31%,
+      #A5AAAC 47%,
+      #7D8386 50%,
+      #D4D7D8 55%,
+      #F1F2F2 100%
+    );
+
+  border-bottom: 3px solid var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+
+.journey-window-dots {
+  display: flex;
+  gap: 5px;
+}
+
+
+.journey-window-dots span {
+  width: 9px;
+  height: 9px;
+  display: block;
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+
+.journey-window-dots span:nth-child(1) {
+  background: var(--orange);
+}
+
+
+.journey-window-dots span:nth-child(2) {
+  background: var(--green);
+}
+
+
+.journey-window-dots span:nth-child(3) {
+  background: var(--slate);
+}
+
+
+/* ============================================================
+06. HERO
+============================================================ */
+
+.journey-hero {
+  position: relative;
+
+  min-height: 760px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    100px
+    clamp(22px, 5vw, 82px)
+    70px;
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 78% 15%,
+      rgba(255,255,255,.30),
+      transparent 24%
+    ),
+    linear-gradient(
+      132deg,
+      var(--orange) 0%,
+      #D16B36 20%,
+      #9A704D 35%,
+      #69705C 49%,
+      var(--green) 67%,
+      var(--slate) 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+
+.journey-flash {
+  position: absolute;
+
+  top: -210px;
+  right: 0;
+
+  width: 520px;
+  height: 520px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.46),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+.journey-hero-meta {
+  position: absolute;
+  z-index: 3;
+
+  top: 27px;
+  left: clamp(22px, 5vw, 82px);
+  right: clamp(22px, 5vw, 82px);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+
+.journey-rec {
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 28px;
+  padding: 8px 11px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 1px solid var(--white);
+
+  box-shadow: 6px 6px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+.journey-rec span {
+  width: 8px;
+  height: 8px;
+
+  background: var(--orange);
+
+  border-radius: 50%;
+}
+
+
+.journey-eyebrow {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 18px;
+
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em !important;
+}
+
+
+.journey-hero h1 {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(82px, 14vw, 205px);
+  font-weight: 900;
+  line-height: .69;
+  letter-spacing: -.075em;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(17,17,17,.18);
+}
+
+
+.journey-hero h2 {
+  position: relative;
+  z-index: 3;
+
+  margin: 37px 0 0;
+
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 1.5px #FFFFFF;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(41px, 6vw, 88px);
+  font-weight: 900;
+  line-height: .8;
+  letter-spacing: .025em;
+}
+
+
+.journey-hero-bottom {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 55px;
+}
+
+
+.journey-hero-bottom p {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .13em !important;
+}
+
+
+.journey-sticker {
+  padding: 14px 18px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(18px, 2.2vw, 30px);
+  font-weight: 900;
+  line-height: .9;
+
+  transform: rotate(-2deg);
+}
+
+
+.journey-hero-number {
+  position: absolute;
+
+  right: -2vw;
+  bottom: -7vw;
+
+  color: rgba(255,255,255,.07);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(260px, 38vw, 560px);
+  font-weight: 900;
+  line-height: .7;
+}
+
+
+/* ============================================================
+07. CAMPAIGN FLOW
+NOW DIRECTLY AFTER HERO
+============================================================ */
+
+.journey-flow {
+  position: relative;
+
+  padding:
+    95px
+    clamp(22px, 6vw, 105px)
+    120px;
+
+  color: var(--black);
+
+  background-color: var(--cream);
+
+  background-image:
+    linear-gradient(
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(17,17,17,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+
+  border-bottom: 5px solid var(--black);
+}
+
+
+.journey-flow-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 45px;
+}
+
+
+.journey-file-label {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+
+.journey-flow-heading h2 {
+  margin: 0;
+
+  color: var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(70px, 10vw, 148px);
+  font-weight: 900;
+  line-height: .7;
+  letter-spacing: -.065em;
+}
+
+
+.journey-file-stamp {
+  flex: 0 0 auto;
+
+  padding: 13px 16px;
+
+  color: var(--orange);
+
+  border: 3px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: .1em;
+
+  text-align: center;
+
+  transform: rotate(3deg);
+}
+
+
+.journey-flow-copy {
+  width: min(680px, 100%);
+
+  margin:
+    45px
+    0
+    55px
+    auto;
+}
+
+
+.journey-flow-copy p {
+  margin: 0;
+
+  color: var(--slate);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(23px, 2.7vw, 39px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+
+/* CAMPAIGN FLOW IMAGE WINDOW */
+
+.journey-flow-window {
+  position: relative;
+
+  width: min(1280px, 100%);
+
+  margin: 0 auto;
+
+  background: var(--white);
+
+  border: 5px solid var(--black);
+
+  box-shadow:
+    15px 15px 0 var(--orange),
+    22px 22px 0 var(--green);
+}
+
+
+.journey-flow-image {
+  width: 100%;
+
+  padding: clamp(10px, 1.5vw, 22px);
+
+  background: var(--white);
+}
+
+
+/* ONLY IMAGE ON PAGE — NO CROP */
+
+.journey-flow-image img {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  transform: none !important;
+  clip-path: none !important;
+}
+
+
+.journey-image-footer {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 15px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+
+.journey-flow-bottom {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    minmax(250px, 600px);
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 55px;
+
+  margin-top: 75px;
+}
+
+
+.journey-flow-sticker {
+  width: max-content;
+  max-width: 100%;
+
+  padding: 15px 19px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 9px 9px 0 var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+  font-size: clamp(19px, 2.7vw, 39px);
+  font-weight: 900;
+  line-height: .9;
+
+  transform: rotate(-1.5deg);
+}
+
+
+.journey-flow-bottom p {
+  margin: 0;
+
+  color: var(--black);
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+
+/* ============================================================
+08. JOURNEY LOGIC
+============================================================ */
+
+.journey-logic {
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 4vw, 68px)
+    125px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-bottom: 5px solid var(--orange);
+
+  overflow: hidden;
+}
+
+
+.journey-logic > *:not(.journey-logic-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+
+.journey-dark-label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+
+.journey-logic-heading h2 {
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(70px, 10.5vw, 155px);
+  font-weight: 900;
+  line-height: .7;
+  letter-spacing: -.065em;
+
+  text-shadow: 4px 4px 0 var(--orange);
+}
+
+
+.journey-logic-intro {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: clamp(35px, 7vw, 100px);
+
+  margin: 75px 0 95px;
+}
+
+
+.journey-logic-intro p {
+  margin: 0;
+
+  color: rgba(255,255,255,.86);
+
+  font-size: clamp(19px, 2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+
+.journey-logic-intro p:last-child {
+  color: var(--cream);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(22px, 2.5vw, 35px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+
+/* ============================================================
+09. FIVE-STEP JOURNEY
+============================================================ */
+
+.journey-path {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    35px
+    minmax(0, 1fr)
+    35px
+    minmax(0, 1fr)
+    35px
+    minmax(0, 1fr)
+    35px
+    minmax(0, 1fr);
+
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+.journey-step {
+  min-height: 560px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+
+.journey-step-orange {
+  color: var(--black);
+  background: var(--orange);
+}
+
+
+.journey-step-green {
+  color: var(--white);
+  background: var(--green);
+
+  box-shadow: 8px 8px 0 var(--cream);
+}
+
+
+.journey-step-black {
+  color: var(--white);
+  background: var(--black);
+
+  border-color: var(--orange);
+
+  box-shadow: 9px 9px 0 var(--green);
+}
+
+
+.journey-step-slate {
+  color: var(--white);
+  background: var(--slate);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+
+.journey-step-cream {
+  color: var(--black);
+  background: var(--cream);
+
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+
+.journey-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+.journey-step-top > span {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+.journey-step-top small {
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+
+.journey-step-symbol {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 42px 0 20px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid currentColor;
+
+  box-shadow: 5px 5px 0 var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+
+.journey-step-black .journey-step-symbol {
+  color: var(--black);
+  background: var(--white);
+
+  box-shadow: 5px 5px 0 var(--orange);
+}
+
+
+.journey-step-name {
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+.journey-step-orange .journey-step-name {
+  color: var(--black);
+}
+
+
+.journey-step h3 {
+  margin: 17px 0 24px;
+
+  color: inherit;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(29px, 2.8vw, 43px);
+  font-weight: 900;
+  line-height: .79;
+  letter-spacing: -.03em;
+}
+
+
+.journey-step p {
+  margin: 0 0 24px;
+
+  color: inherit;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: auto;
+}
+
+
+.journey-tags span {
+  padding: 6px 7px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+
+
+.journey-quote {
+  margin-top: auto;
+
+  padding: 14px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 2px solid var(--black);
+}
+
+
+.journey-quote small {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+
+.journey-quote strong {
+  display: block;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+.journey-action {
+  margin-top: auto;
+
+  padding: 13px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 2px solid var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+
+  text-align: center;
+}
+
+
+.journey-feature-list {
+  display: grid;
+
+  gap: 7px;
+
+  margin-top: auto;
+}
+
+
+.journey-feature-list span {
+  padding: 9px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border-left: 4px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+
+
+.journey-loop-chip {
+  margin-top: auto;
+
+  padding: 12px;
+
+  color: var(--white);
+  background: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+
+.journey-arrow {
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+
+/* STATUS */
+
+.journey-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 90px;
+
+  padding: 16px 20px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+
+.journey-status b {
+  color: var(--white);
+
+  font-size: 18px;
+}
+
+
+/* ============================================================
+10. CALLS TO ACTION
+============================================================ */
+
+.journey-cta {
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    130px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--slate) 0%,
+      #3D4A42 48%,
+      var(--green) 100%
+    );
+
+  border-bottom: 5px solid var(--black);
+
+  overflow: hidden;
+}
+
+
+.journey-cta > *:not(.journey-cta-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+
+.journey-cta-heading > span {
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+
+.journey-cta-heading h2 {
+  margin: 18px 0 35px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(76px, 11vw, 165px);
+  font-weight: 900;
+  line-height: .69;
+  letter-spacing: -.07em;
+
+  text-shadow: 4px 4px 0 var(--black);
+}
+
+
+.journey-cta-heading p {
+  width: min(650px, 100%);
+
+  margin: 0 0 80px auto;
+
+  color: var(--white);
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(22px, 2.7vw, 38px);
+  font-style: italic;
+  line-height: 1.08;
+}
+
+
+.journey-cta-layout {
+  display: grid;
+
+  grid-template-columns:
+    .9fr
+    1.1fr
+    .9fr;
+
+  gap: clamp(25px, 4vw, 55px);
+
+  align-items: start;
+}
+
+
+/* CTA WINDOWS */
+
+.journey-window {
+  color: var(--black);
+  background: var(--cream);
+
+  border: 4px solid var(--black);
+}
+
+
+.journey-window-orange {
+  box-shadow: 12px 12px 0 var(--orange);
+}
+
+
+.journey-window-green {
+  margin-top: 55px;
+
+  box-shadow: 12px 12px 0 var(--green);
+}
+
+
+.journey-window-slate {
+  margin-top: 15px;
+
+  box-shadow: 12px 12px 0 var(--black);
+}
+
+
+.journey-window-body {
+  position: relative;
+
+  min-height: 630px;
+
+  padding: 30px;
+}
+
+
+.journey-window-index {
+  position: absolute;
+
+  top: 8px;
+  right: 15px;
+
+  color: rgba(17,17,17,.08);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 105px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+.journey-window-body > small {
+  position: relative;
+
+  display: block;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+
+.journey-window-body h3 {
+  position: relative;
+
+  margin: 80px 0 28px;
+
+  color: var(--black);
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(39px, 4.5vw, 67px);
+  font-weight: 900;
+  line-height: .77;
+  letter-spacing: -.04em;
+}
+
+
+.journey-window-body p {
+  position: relative;
+
+  margin-bottom: 18px;
+
+  color: var(--black);
+
+  font-size: 15px;
+  line-height: 1.52;
+}
+
+
+.journey-button {
+  position: relative;
+
+  margin-top: 42px;
+
+  padding: 14px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 3px solid var(--orange);
+
+  box-shadow: 7px 7px 0 var(--green);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .07em;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+11. URBAN OUTFITTERS BOARD
+CSS ONLY — NO EXTRA IMAGE
+============================================================ */
+
+.journey-board {
+  position: relative;
+
+  min-height: 270px;
+
+  margin-top: 38px;
+  padding: 18px;
+
+  background: #82796E;
+
+  border: 4px solid var(--black);
+
+  overflow: hidden;
+}
+
+
+.journey-board-title {
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+
+.journey-paper {
+  position: absolute;
+
+  width: 100px;
+  min-height: 112px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 10px;
+
+  color: var(--black);
+  background: var(--cream);
+
+  border: 2px solid var(--black);
+
+  box-shadow: 5px 5px 0 rgba(17,17,17,.55);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: .86;
+
+  text-align: center !important;
+}
+
+
+.journey-paper-one {
+  left: 7%;
+  bottom: 25px;
+
+  transform: rotate(-5deg);
+}
+
+
+.journey-paper-two {
+  left: 38%;
+  top: 68px;
+
+  background: var(--orange);
+
+  transform: rotate(3deg);
+}
+
+
+.journey-paper-three {
+  right: 6%;
+  bottom: 18px;
+
+  transform: rotate(-2deg);
+}
+
+
+/* FEATURE TAG */
+
+.journey-tag-box {
+  margin-top: 55px;
+
+  padding: 20px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 4px solid var(--orange);
+}
+
+
+.journey-tag-box small,
+.journey-tag-box strong,
+.journey-tag-box span {
+  display: block;
+}
+
+
+.journey-tag-box small,
+.journey-tag-box span {
+  font-family: "Courier New", monospace;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+
+.journey-tag-box strong {
+  margin: 24px 0;
+
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(27px, 3vw, 42px);
+  font-weight: 900;
+}
+
+
+/* ============================================================
+12. PARTICIPATION LOOP
+============================================================ */
+
+.journey-loop {
+  position: relative;
+
+  padding:
+    115px
+    clamp(22px, 5vw, 82px)
+    125px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+  border-bottom: 5px solid var(--orange);
+
+  overflow: hidden;
+}
+
+
+.journey-loop > *:not(.journey-loop-grid) {
+  position: relative;
+  z-index: 2;
+}
+
+
+.journey-loop-meta {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+.journey-loop-heading {
+  margin-top: 60px;
+}
+
+
+.journey-loop-heading > span {
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+
+.journey-loop-heading h2 {
+  margin: 17px 0 85px;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(72px, 10.5vw, 155px);
+  font-weight: 900;
+  line-height: .69;
+  letter-spacing: -.065em;
+
+  text-shadow: 4px 4px 0 var(--orange);
+}
+
+
+.journey-loop-track {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr
+    auto
+    1fr
+    auto
+    1fr;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+
+.journey-loop-node {
+  min-height: 285px;
+
+  padding: 22px;
+
+  border: 3px solid var(--white);
+
+  box-shadow: 8px 8px 0 var(--white);
+}
+
+
+.journey-loop-node > span {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+
+.journey-loop-node strong {
+  display: block;
+
+  margin: 90px 0 17px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(27px, 3vw, 42px);
+  font-weight: 900;
+}
+
+
+.journey-loop-node p {
+  margin: 0;
+
+  color: inherit;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+.journey-node-orange {
+  color: var(--black);
+  background: var(--orange);
+}
+
+
+.journey-node-cream {
+  color: var(--black);
+  background: var(--cream);
+}
+
+
+.journey-node-green {
+  color: var(--white);
+  background: var(--green);
+}
+
+
+.journey-node-slate {
+  color: var(--white);
+  background: var(--slate);
+}
+
+
+.journey-loop-arrow {
+  color: var(--orange);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+
+.journey-return-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 75px;
+
+  padding: 15px 20px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+
+.journey-return-bar span {
+  font-size: 20px;
+}
+
+
+/* ============================================================
+13. CLOSING
+============================================================ */
+
+.journey-closing {
+  position: relative;
+
+  min-height: 730px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding:
+    95px
+    clamp(22px, 6vw, 95px);
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,255,255,.23),
+      transparent 25%
+    ),
+    linear-gradient(
+      130deg,
+      var(--orange) 0%,
+      #A66E49 30%,
+      var(--green) 64%,
+      var(--slate) 100%
+    );
+
+  overflow: hidden;
+}
+
+
+.journey-closing-meta {
+  position: absolute;
+  z-index: 3;
+
+  top: 25px;
+  left: clamp(22px, 6vw, 95px);
+  right: clamp(22px, 6vw, 95px);
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+
+.journey-closing > p {
+  position: relative;
+  z-index: 3;
+
+  margin: 0 0 22px;
+
+  color: var(--white);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .13em !important;
+}
+
+
+.journey-closing h2 {
+  position: relative;
+  z-index: 3;
+
+  margin: 0;
+
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(67px, 10.5vw, 155px);
+  font-weight: 900;
+  line-height: .7;
+  letter-spacing: -.07em;
+
+  text-shadow:
+    4px 4px 0 var(--black),
+    9px 9px 0 rgba(17,17,17,.17);
+}
+
+
+.journey-closing h3 {
+  position: relative;
+  z-index: 3;
+
+  margin: 34px 0 0;
+
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 1.5px #FFFFFF;
+
+  font-family: "Arial Black", Futura, Arial, sans-serif;
+
+  font-size: clamp(53px, 8.5vw, 125px);
+  font-weight: 900;
+  line-height: .78;
+  letter-spacing: .025em;
+}
+
+
+.journey-closing-sticker {
+  position: relative;
+  z-index: 3;
+
+  width: max-content;
+
+  margin-top: 50px;
+  padding: 15px 19px;
+
+  color: var(--black);
+  background: var(--orange);
+
+  border: 3px solid var(--black);
+
+  box-shadow: 8px 8px 0 var(--black);
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(20px, 2.7vw, 37px);
+  font-weight: 900;
+  line-height: .88;
+
+  transform: rotate(-2deg);
+}
+
+
+/* ============================================================
+14. FOOTER
+============================================================ */
+
+.journey-footer {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 24px 30px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border-top: 5px solid var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+
+.journey-footer strong {
+  padding: 7px 12px;
+
+  background: var(--green);
+
+  border: 1px solid var(--white);
+}
+
+
+.journey-footer > span:last-child {
+  text-align: right;
+}
+
+
+/* ============================================================
+15. HOVER
+============================================================ */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .journey-step,
+  .journey-window,
+  .journey-loop-node,
+  .journey-flow-window {
+    transition:
+      transform .22s ease,
+      box-shadow .22s ease;
+  }
+
+
+  .journey-step:hover,
+  .journey-window:hover,
+  .journey-loop-node:hover {
+    transform: translateY(-7px);
+  }
+
+
+  .journey-flow-window:hover {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* ============================================================
+16. SMALL DESKTOP
+============================================================ */
+
+@media (max-width: 1250px) {
+
+  .journey-path {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 38px;
+  }
+
+
+  .journey-arrow {
+    display: none;
+  }
+
+
+  .journey-step {
+    min-height: 500px;
+  }
+
+
+  .journey-step-black {
+    grid-column: 1 / -1;
+
+    width: min(620px, 100%);
+
+    justify-self: center;
+  }
+
+
+  .journey-cta-layout {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .journey-window-slate {
+    grid-column: 1 / -1;
+
+    width: min(590px, 100%);
+
+    justify-self: center;
+  }
+
+}
+
+
+/* ============================================================
+17. TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+  .journey-flow-heading {
+    flex-direction: column;
+  }
+
+
+  .journey-flow-bottom {
+    grid-template-columns: 1fr;
+  }
+
+
+  .journey-logic-intro {
+    grid-template-columns: 1fr;
+  }
+
+
+  .journey-cta-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .journey-window-green,
+  .journey-window-slate {
+    width: 100%;
+
+    margin-top: 20px;
+
+    grid-column: auto;
+  }
+
+
+  .journey-loop-track {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 25px;
+  }
+
+
+  .journey-loop-arrow {
+    display: none;
+  }
+
+}
+
+
+/* ============================================================
+18. MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+  .journey-system-left > span:last-child {
+    display: none;
+  }
+
+
+  .journey-systembar {
+    font-size: 7px;
+  }
+
+
+  .journey-hero {
+    min-height: 680px;
+
+    padding:
+      90px
+      18px
+      55px;
+  }
+
+
+  .journey-hero-meta {
+    left: 18px;
+    right: 18px;
+
+    font-size: 7px;
+  }
+
+
+  .journey-hero h1 {
+    font-size: clamp(66px, 21vw, 105px);
+  }
+
+
+  .journey-hero h2 {
+    font-size: clamp(35px, 11vw, 55px);
+  }
+
+
+  .journey-hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .journey-flow,
+  .journey-logic,
+  .journey-cta,
+  .journey-loop,
+  .journey-closing {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .journey-flow {
+    padding-top: 70px;
+  }
+
+
+  .journey-flow-heading h2 {
+    font-size: clamp(61px, 18vw, 96px);
+  }
+
+
+  .journey-flow-copy {
+    margin-left: 0;
+  }
+
+
+  .journey-windowbar {
+    font-size: 6px;
+  }
+
+
+  .journey-image-footer {
+    flex-direction: column;
+
+    font-size: 7px;
+  }
+
+
+  .journey-logic-heading h2,
+  .journey-cta-heading h2,
+  .journey-loop-heading h2 {
+    font-size: clamp(61px, 18vw, 98px);
+  }
+
+
+  .journey-path {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+
+  .journey-step,
+  .journey-step-black {
+    width: 100%;
+
+    min-height: auto;
+
+    grid-column: auto;
+  }
+
+
+  .journey-status {
+    justify-content: flex-start;
+  }
+
+
+  .journey-cta-heading p {
+    margin-left: 0;
+  }
+
+
+  .journey-window-body {
+    min-height: auto;
+  }
+
+
+  .journey-window-body h3 {
+    margin-top: 70px;
+  }
+
+
+  .journey-loop-track {
+    grid-template-columns: 1fr;
+  }
+
+
+  .journey-loop-node {
+    min-height: 230px;
+  }
+
+
+  .journey-loop-node strong {
+    margin-top: 60px;
+  }
+
+
+  .journey-return-bar {
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+
+  .journey-closing {
+    min-height: 650px;
+  }
+
+
+  .journey-closing-meta {
+    left: 18px;
+    right: 18px;
+
+    font-size: 7px;
+  }
+
+
+  .journey-closing h2 {
+    font-size: clamp(57px, 17vw, 95px);
+  }
+
+
+  .journey-closing h3 {
+    font-size: clamp(47px, 14vw, 78px);
+  }
+
+
+  .journey-footer {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+
+  .journey-footer > span:last-child {
+    text-align: center;
+  }
+
+}
+
+
+/* ============================================================
+19. REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .journey-page * {
+    transition: none !important;
+  }
+
+}
+
+
+/* ============================================================
+20. HOME NAVIGATION + RESEARCH CITATION
+Only additions to the locked Audience Journey master.
+============================================================ */
+
+.journey-system-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.journey-home-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 26px;
+  padding: 5px 11px;
+
+  color: var(--white);
+  background: var(--black);
+
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 0 var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+.journey-home-nav:visited {
+  color: var(--white);
+}
+
+.journey-home-nav:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.journey-citation {
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: .82em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0 !important;
+}
+
+.journey-source-note {
+  width: min(1280px, 100%);
+  margin: 72px auto 0;
+  padding: 16px 18px;
+
+  color: var(--black);
+  background: rgba(255,255,255,.58);
+
+  border: 2px solid var(--black);
+  border-left: 7px solid var(--orange);
+}
+
+.journey-source-note > span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--orange);
+
+  font-family: "Courier New", monospace;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .11em !important;
+}
+
+.journey-source-note p {
+  margin: 0;
+
+  color: var(--black);
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .journey-home-nav:hover {
+    color: var(--white);
+    background: var(--green);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--orange);
+  }
+}
+
+@media (max-width: 650px) {
+  .journey-system-right {
+    gap: 7px;
+  }
+
+  .journey-home-nav {
+    min-height: 23px;
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .journey-system-right > span {
+    font-size: 7px;
+  }
+
+  .journey-source-note {
+    margin-top: 55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-home-nav {
+    transition: none !important;
+  }
+
+  .journey-home-nav:hover {
+    transform: none !important;
+  }
+}
+</style>
+<link href="css/text-replay.css" rel="stylesheet"/><style data-inlined-from="css/text-replay.css">/* Original Nike site: text-only reveal. No changes to background, section layout or typography. */
+html.nike-motion-active .nike-text-reveal {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition-property: opacity, transform;
+  transition-duration: 1150ms, 1250ms;
+  transition-timing-function: cubic-bezier(.2,.7,.2,1), cubic-bezier(.16,1,.3,1);
+  transition-delay: 0ms;
+  will-change: opacity, transform;
+}
+html.nike-motion-active .nike-text-reveal.nike-text-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* When motion is disabled, everything remains immediately visible. */
+@media (prefers-reduced-motion: reduce) {
+  html.nike-motion-active .nike-text-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+</style><link href="css/seamless-sections.css" rel="stylesheet"/><style data-inlined-from="css/seamless-sections.css">/* Seamless joins: both neighboring sections blend into the exact same color
+   at their shared edge. Original section backgrounds, typography, images,
+   layouts and replayable text animation remain in place. */
+section.seamless-section {position:relative;isolation:isolate; border-top:0!important;border-bottom:0!important;outline:0!important;}
+section.seamless-section::before,section.seamless-section::after {
+ content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:0;
+ height:clamp(145px,22vw,310px);
+}
+section.seamless-section::before {
+ top:0;
+ background:linear-gradient(to bottom,var(--join-in,transparent) 0%,color-mix(in srgb,var(--join-in,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section::after {
+ bottom:0;
+ background:linear-gradient(to top,var(--join-out,transparent) 0%,color-mix(in srgb,var(--join-out,transparent) 82%,transparent) 19%,transparent 100%);
+}
+section.seamless-section > :not(.section-gradient-bridge) {position:relative;z-index:1;}
+/* Hide original section separators only; retain borders on cards, images, and controls. */
+section.seamless-section + section.seamless-section {border-top:0!important;box-shadow:none!important;}
+@media(max-width:650px){section.seamless-section::before,section.seamless-section::after{height:145px;}}
+</style><link href="css/portfolio-navigation.css" rel="stylesheet"/><style data-inlined-from="css/portfolio-navigation.css">/* Isolated navigation styles: original page layout remains intact. */
+.portfolio-sticky-header,.portfolio-sticky-header *,.portfolio-next-footer,.portfolio-next-footer *{box-sizing:border-box}
+.portfolio-sticky-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147480000!important;background:#111!important;color:#f5f0e9!important;border:0!important;border-bottom:1px solid rgba(235,227,219,.22)!important;box-shadow:0 5px 24px rgba(0,0,0,.22)!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-sticky-header .header-inner{max-width:1600px;margin:auto;min-height:68px;padding:10px clamp(16px,3vw,44px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.portfolio-sticky-header .site-brand{display:flex;align-items:center;gap:14px;flex-shrink:0;font-size:26px;line-height:1;font-weight:900;letter-spacing:-.055em;color:#f26522!important;text-decoration:none!important}
+.portfolio-sticky-header .site-brand small{font-size:8px;line-height:1.25;letter-spacing:.09em;font-weight:700;color:#eee!important}
+.portfolio-sticky-header .site-nav{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 14px}
+.portfolio-sticky-header .site-nav a,.portfolio-sticky-header .mobile-links a{color:#f4f0eb!important;text-decoration:none!important;font-size:10px!important;letter-spacing:.075em!important;font-weight:800!important;line-height:1.4!important}
+.portfolio-sticky-header a[aria-current="page"]{color:#f26522!important}
+.portfolio-sticky-header .site-nav a:hover,.portfolio-sticky-header .mobile-links a:hover{color:#f26522!important}
+.portfolio-sticky-header .mobile-menu{display:none;position:relative}
+.portfolio-sticky-header .mobile-menu summary{cursor:pointer;color:#fff;list-style:none;font-weight:800;font-size:13px;white-space:nowrap}
+.portfolio-sticky-header .mobile-links{position:absolute;top:calc(100% + 20px);right:-12px;min-width:235px;display:flex;flex-direction:column;gap:0;background:#111;border:1px solid #59646a;box-shadow:0 15px 25px #0007}
+.portfolio-sticky-header .mobile-links a{padding:12px 16px;border-bottom:1px solid #ffffff20}
+body{padding-top:68px!important}
+.portfolio-next-footer{background:#111!important;color:#ebe3db!important;padding:clamp(50px,8vw,110px) 5vw 35px!important;position:relative!important;z-index:2!important;border:0!important;font-family:Arial,Helvetica,sans-serif!important}
+.portfolio-next-inner{max-width:1280px;margin:auto}
+.portfolio-next-eyebrow{font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;color:#f26522!important;margin:0 0 24px!important}
+.portfolio-next-link{display:flex;justify-content:space-between;align-items:end;gap:24px;color:#ebe3db!important;text-decoration:none!important;border-bottom:1px solid #ffffff60;padding:0 0 36px;margin-bottom:28px}
+.portfolio-next-link strong{font-size:clamp(36px,6vw,88px)!important;letter-spacing:-.06em!important;line-height:1!important;font-weight:900!important;color:#ebe3db!important}
+.portfolio-next-link span{font-size:12px!important;letter-spacing:.13em!important;font-weight:800!important;white-space:nowrap;color:#f26522!important}
+.portfolio-next-link:hover strong{color:#f26522!important}
+.portfolio-next-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:10px!important;font-weight:700!important;letter-spacing:.08em!important}
+.portfolio-next-meta a{color:#ebe3db!important;text-decoration:none!important}
+.portfolio-next-meta a:hover{color:#f26522!important}
+@media(max-width:1200px){.portfolio-sticky-header .site-nav{display:none!important}.portfolio-sticky-header .mobile-menu{display:block!important}}
+@media(max-width:600px){.portfolio-next-link{flex-direction:column;align-items:start}.portfolio-next-meta{flex-direction:column;align-items:start}.portfolio-sticky-header .header-inner{min-height:64px}body{padding-top:64px!important}}
+</style><link href="css/compact-grid-heroes.css" rel="stylesheet"/><style data-inlined-from="css/compact-grid-heroes.css">/* Focused hero corrections for Audience Journey, AI Workflow, Final Reflection.
+   Loaded after original page CSS, sticky navigation, and seamless joins. */
+.journey-hero,.aiw-hero,.fr-hero {
+  min-height: clamp(560px, 77vh, 780px) !important;
+  justify-content: flex-start !important;
+  padding-top: clamp(115px, 12vh, 160px) !important;
+  padding-bottom: clamp(65px, 8vh, 110px) !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+/* Match the visible editorial graph-paper texture of Home and Research. */
+.journey-hero > .journey-hero-grid,
+.aiw-hero > .aiw-grid,
+.fr-hero > .fr-grid {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  display: block !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.105) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.105) 1px, transparent 1px) !important;
+  background-size: 38px 38px !important;
+  pointer-events: none !important;
+}
+/* Maintain foreground stacking without disturbing the existing typography. */
+.journey-hero > :not(.journey-hero-grid):not(.journey-flash),
+.aiw-hero > :not(.aiw-grid):not(.aiw-glow),
+.fr-hero > :not(.fr-grid):not(.fr-hero-glow) {
+  z-index: 2;
+}
+/* Prevent the large, centered hero copy from creating a blank first viewport. */
+.aiw-hero .aiw-hero-copy,
+.fr-hero .fr-hero-copy {
+  margin-top: clamp(28px, 5vh, 52px) !important;
+}
+.journey-hero > .journey-eyebrow {
+  margin-top: clamp(30px, 5vh, 56px) !important;
+}
+/* Gradients remain continuous into the next section: no added hard seam. */
+.journey-hero::after,.aiw-hero::after,.fr-hero::after {
+  pointer-events:none;
+}
+@media (max-width: 700px) {
+  .journey-hero,.aiw-hero,.fr-hero {
+    min-height: 580px !important;
+    padding-top: 108px !important;
+    padding-bottom: 75px !important;
+  }
+  .aiw-hero .aiw-hero-copy,.fr-hero .fr-hero-copy {margin-top:28px!important}
+  .journey-hero > .journey-eyebrow {margin-top:32px!important}
+}
+</style><link href="css/hero-position-fix.css" rel="stylesheet"/><style data-inlined-from="css/hero-position-fix.css">
+/* Hero positioning corrections, loaded last on three pages. */
+.journey-hero,.aiw-hero,.fr-hero {
+  justify-content: flex-start !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: clamp(105px, 11vw, 148px) !important;
+  padding-bottom: clamp(95px, 12vw, 150px) !important;
+  overflow: hidden;
+}
+.journey-hero > .journey-eyebrow {
+  margin-top: 12px !important;
+}
+.aiw-hero .aiw-hero-copy,.fr-hero .fr-hero-copy {
+  margin-top: 12px !important;
+}
+.journey-hero h1,.aiw-hero h1,.fr-hero h1 {
+  margin-top: 12px !important;
+}
+.journey-hero-number,.fr-ghost-number {
+  right: clamp(12px, 3vw, 48px) !important;
+  bottom: 24px !important;
+  top: auto !important;
+  font-size: clamp(150px, 24vw, 340px) !important;
+  line-height: 1 !important;
+  max-width: 95% !important;
+  transform: none !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+}
+.journey-hero-bottom,.fr-hero-bottom {
+  position: relative;
+  z-index: 4;
+}
+@media(max-width:700px) {
+  .journey-hero,.aiw-hero,.fr-hero {
+    padding-top: 104px !important;
+    padding-bottom: 85px !important;
+  }
+  .journey-hero-number,.fr-ghost-number {
+    font-size: clamp(105px, 29vw, 190px) !important;
+    bottom: 15px !important;
+    right: 12px !important;
+  }
+}
+</style><style data-priority-fixes="2026-10">
+/* Real fix: original heroes were min-height 760-920px with flex justify-content:center.
+   They are now top-flowing and content-sized, not vertically centered. */
+.journey-hero,.aiw-hero,.fr-hero{
+  box-sizing:border-box!important;display:flex!important;flex-direction:column!important;
+  justify-content:flex-start!important;align-items:stretch!important;
+  height:auto!important;min-height:0!important;
+  padding-top:clamp(108px,10vw,138px)!important;
+  padding-bottom:clamp(65px,8vw,105px)!important;
+}
+.journey-hero .journey-rec,.aiw-hero .aiw-rec,.fr-hero .fr-rec{margin-top:0!important;margin-bottom:20px!important;}
+.journey-hero .journey-eyebrow,.aiw-hero .aiw-hero-copy,.fr-hero .fr-hero-copy{margin-top:0!important;}
+.journey-hero h1,.aiw-hero h1,.fr-hero h1{margin-top:12px!important;}
+.journey-hero h2,.aiw-hero h2,.fr-hero h2{margin-top:30px!important;}
+.journey-hero .journey-hero-bottom,.aiw-hero .aiw-hero-footer,.fr-hero .fr-hero-bottom{margin-top:45px!important;}
+/* No motion, delay or invisibility for opening hero headings only. */
+html.nike-motion-active .journey-hero h1.nike-text-reveal,
+html.nike-motion-active .journey-hero h2.nike-text-reveal,
+html.nike-motion-active .aiw-hero h1.nike-text-reveal,
+html.nike-motion-active .aiw-hero h2.nike-text-reveal,
+html.nike-motion-active .fr-hero h1.nike-text-reveal,
+html.nike-motion-active .fr-hero h2.nike-text-reveal,
+.journey-hero h1.nike-text-reveal,.journey-hero h2.nike-text-reveal,
+.aiw-hero h1.nike-text-reveal,.aiw-hero h2.nike-text-reveal,
+.fr-hero h1.nike-text-reveal,.fr-hero h2.nike-text-reveal{
+  opacity:1!important;transform:none!important;translate:none!important;
+  animation:none!important;transition:none!important;visibility:visible!important;
+}
+@media(max-width:720px){
+ .journey-hero,.aiw-hero,.fr-hero{padding-top:110px!important;padding-bottom:85px!important;}
+ .journey-hero h1,.aiw-hero h1,.fr-hero h1{font-size:clamp(49px,11.5vw,90px)!important;line-height:.91!important;}
+ .journey-hero h2,.aiw-hero h2,.fr-hero h2{font-size:clamp(28px,6vw,52px)!important;line-height:1!important;}
+}
+</style><link href="css/hero-root-cause-fix.css" rel="stylesheet"/><style data-inlined-from="css/hero-root-cause-fix.css">/* ROOT CAUSE: seamless-sections.css changes every direct section child to
+   position:relative. That accidentally puts decorative full-screen grid/glow
+   layers into document flow, pushing all hero headings below the viewport.
+   Restore the original absolute positioning for those layers. */
+.journey-hero > .journey-hero-grid,
+.journey-hero > .journey-flash,
+.aiw-hero > .aiw-grid,
+.aiw-hero > .aiw-glow,
+.fr-hero > .fr-grid,
+.fr-hero > .fr-hero-glow {
+  position:absolute!important;
+  pointer-events:none!important;
+  z-index:0!important;
+}
+.journey-hero > .journey-hero-grid,
+.aiw-hero > .aiw-grid,
+.fr-hero > .fr-grid {inset:0!important;width:auto!important;height:auto!important;}
+/* Restore original positioning of decorative metadata, numbers, and labels. */
+.journey-hero > .journey-hero-meta,
+.aiw-hero > .aiw-hero-meta,
+.fr-hero > .fr-hero-meta,
+.journey-hero > .journey-hero-number,
+.aiw-hero > .aiw-ghost-number,
+.fr-hero > .fr-ghost-number {position:absolute!important;}
+/* Keep the actual hero copy in flow, directly beneath the sticky navigation. */
+.journey-hero > .journey-eyebrow,
+.journey-hero > h1,
+.journey-hero > h2,
+.aiw-hero > .aiw-hero-copy,
+.fr-hero > .fr-hero-copy {position:relative!important;z-index:3!important;}
+/* No intro animations on these three hero headings; rest of site replays. */
+html.nike-motion-active .journey-hero > .nike-text-reveal,
+html.nike-motion-active .aiw-hero .aiw-hero-copy .nike-text-reveal,
+html.nike-motion-active .fr-hero .fr-hero-copy .nike-text-reveal {
+  opacity:1!important;transform:none!important;transition:none!important;
+}
+</style></head>
+<body><header class="portfolio-sticky-header"><div class="header-inner"><a class="site-brand" href="index.html">NIKE <small>BUILT BY MOVEMENT.<br/>BOUND BY COMMUNITY.</small></a><nav aria-label="Primary navigation" class="site-nav"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a aria-current="page" href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav><details class="mobile-menu"><summary>MENU ☰</summary><nav aria-label="Mobile navigation" class="mobile-links"><a href="index.html">HOME</a><a href="research.html">RESEARCH</a><a href="community-gallery.html">COMMUNITY GALLERY</a><a href="channel-integration.html">CHANNEL INTEGRATION</a><a aria-current="page" href="audience-journey.html">AUDIENCE JOURNEY</a><a href="ai-workflow.html">AI WORKFLOW</a><a href="emerging-technology.html">EMERGING TECHNOLOGY</a><a href="final-reflection.html">FINAL REFLECTION</a></nav></details></div></header>
 <!-- =========================================================
 NIKE — AUDIENCE JOURNEY
 BUILT BY MOVEMENT. BOUND BY COMMUNITY.
 COMPLETE REPLACEMENT HTML
 ========================================================= -->
-<div class="journey-page portfolio-main" id="main-content">
+<div class="journey-page">
 <!-- SYSTEM BAR -->
-<div class="journey-systembar">
-<div class="journey-system-left">
-<span class="journey-light journey-light-orange"></span>
-<span class="journey-light journey-light-green"></span>
-<span class="journey-light journey-light-slate"></span>
-<span>AUDIENCE_JOURNEY.EXE</span>
-</div>
-<div class="journey-system-right">
-<a aria-label="Return to Home page" class="journey-home-nav" href="index.html">HOME</a>
-<span>NIKE / FSH 294 / 2026</span>
-</div>
-</div>
 <!-- =====================================================
   HERO
   ====================================================== -->
-<section class="journey-hero">
+<section class="journey-hero seamless-section" style="--join-out:#4A5D4E">
 <div class="journey-hero-grid"></div>
 <div class="journey-flash"></div>
 <div class="journey-hero-meta">
@@ -45,11 +2593,11 @@ COMPLETE REPLACEMENT HTML
 <span></span>
       REC / JOURNEY
     </div>
-<p class="journey-eyebrow">DISCOVER / CONNECT / PARTICIPATE / SHARE</p>
-<h1>AUDIENCE<br/>JOURNEY</h1>
-<h2>FROM SEEING<br/>THE MOVEMENT<br/>TO JOINING IT.</h2>
+<p class="journey-eyebrow nike-text-reveal">DISCOVER / CONNECT / PARTICIPATE / SHARE</p>
+<h1 class="nike-text-reveal">AUDIENCE<br/>JOURNEY</h1>
+<h2 class="nike-text-reveal">FROM SEEING<br/>THE MOVEMENT<br/>TO JOINING IT.</h2>
 <div class="journey-hero-bottom">
-<p>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
+<p class="nike-text-reveal">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
 <div class="journey-sticker">
         EVERY PACE<br/>HAS A PLACE.
       </div>
@@ -61,18 +2609,18 @@ COMPLETE REPLACEMENT HTML
   MOVED DIRECTLY BELOW HERO
   ONLY IMAGE ON PAGE
   ====================================================== -->
-<section class="journey-flow">
+<section class="journey-flow gradient-linked-section seamless-section" style="--join-in:#4A5D4E;--join-out:#EBE3DB">
 <div class="journey-flow-heading">
 <div>
 <span class="journey-file-label">JOURNEY_FILE_01 / CAMPAIGN FLOW</span>
-<h2>FOLLOW THE<br/>MOVEMENT.</h2>
+<h2 class="nike-text-reveal">FOLLOW THE<br/>MOVEMENT.</h2>
 </div>
 <div class="journey-file-stamp">
         VISUAL<br/>01 / 01
       </div>
 </div>
 <div class="journey-flow-copy">
-<p>The campaign flow connects Nike's digital channels, community participation, physical touchpoints, and continued audience engagement into one connected system. <span class="journey-citation">(Gemini Notebook, 2026)</span></p>
+<p class="nike-text-reveal">The campaign flow connects Nike's digital channels, community participation, physical touchpoints, and continued audience engagement into one connected system. <span class="journey-citation">(Gemini Notebook, 2026)</span></p>
 </div>
 <div class="journey-flow-window">
 <div class="journey-windowbar">
@@ -96,25 +2644,25 @@ COMPLETE REPLACEMENT HTML
 <div class="journey-flow-sticker">
         VIEW → JOIN → SHARE → REPEAT
       </div>
-<p>The audience does not simply watch the campaign. Each touchpoint creates another opportunity to participate in it. <span class="journey-citation">(Gemini Notebook, 2026)</span></p>
+<p class="nike-text-reveal">The audience does not simply watch the campaign. Each touchpoint creates another opportunity to participate in it. <span class="journey-citation">(Gemini Notebook, 2026)</span></p>
 </div>
 <div class="journey-source-note">
 <span>SOURCE / CAMPAIGN FLOW ARTIFACT</span>
-<p>Gemini Notebook. (2026). <em>FSH 294 Campaign Visual-to-Content Mapping Matrix (Version 1.0)</em> [Collaborative course artifact]. ASU FSH 294 Creative AI Portfolio.</p>
+<p class="nike-text-reveal">Gemini Notebook. (2026). <em>FSH 294 Campaign Visual-to-Content Mapping Matrix (Version 1.0)</em> [Collaborative course artifact]. ASU FSH 294 Creative AI Portfolio.</p>
 </div>
 </section>
 <!-- =====================================================
   JOURNEY LOGIC
   ====================================================== -->
-<section class="journey-logic">
+<section class="journey-logic gradient-linked-section seamless-section" style="--join-in:#EBE3DB;--join-out:#111111">
 <div class="journey-logic-grid"></div>
 <div class="journey-logic-heading">
 <span class="journey-dark-label">JOURNEY_FILE_02 / USER PATH</span>
-<h2>DON'T JUST<br/>SEE NIKE.<br/>JOIN NIKE.</h2>
+<h2 class="nike-text-reveal">DON'T JUST<br/>SEE NIKE.<br/>JOIN NIKE.</h2>
 </div>
 <div class="journey-logic-intro">
-<p>The audience journey moves Nike from something the consumer simply watches into something they can actively participate in.</p>
-<p>Community content begins on Nike's owned channels, invites everyday athletes to share their own moments, and turns selected participants into part of the campaign itself.</p>
+<p class="nike-text-reveal">The audience journey moves Nike from something the consumer simply watches into something they can actively participate in.</p>
+<p class="nike-text-reveal">Community content begins on Nike's owned channels, invites everyday athletes to share their own moments, and turns selected participants into part of the campaign itself.</p>
 </div>
 <!-- JOURNEY PATH -->
 <div class="journey-path">
@@ -126,8 +2674,8 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-step-symbol">+</div>
 <span class="journey-step-name">DISCOVER</span>
-<h3>SEE THE<br/>COMMUNITY.</h3>
-<p>The journey begins through Nike's website, Instagram, and social content. The audience encounters candid photos and videos centered on everyday people and everyday movement.</p>
+<h3 class="nike-text-reveal">SEE THE<br/>COMMUNITY.</h3>
+<p class="nike-text-reveal">The journey begins through Nike's website, Instagram, and social content. The audience encounters candid photos and videos centered on everyday people and everyday movement.</p>
 <div class="journey-tags">
 <span>INSTAGRAM</span>
 <span>NIKE.COM</span>
@@ -143,8 +2691,8 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-step-symbol">○</div>
 <span class="journey-step-name">CONNECT</span>
-<h3>SEE YOURSELF<br/>IN NIKE.</h3>
-<p>Real athletes, imperfect moments, and familiar forms of movement make the campaign feel accessible. Running, hiking, dancing, pickup sports, recovery, and everyday activity all belong.</p>
+<h3 class="nike-text-reveal">SEE YOURSELF<br/>IN NIKE.</h3>
+<p class="nike-text-reveal">Real athletes, imperfect moments, and familiar forms of movement make the campaign feel accessible. Running, hiking, dancing, pickup sports, recovery, and everyday activity all belong.</p>
 <div class="journey-quote">
 <small>AUDIENCE RESPONSE</small>
 <strong>“THAT COULD BE ME.”</strong>
@@ -159,8 +2707,8 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-step-symbol">↑</div>
 <span class="journey-step-name">PARTICIPATE</span>
-<h3>SHOW US<br/>HOW YOU<br/>MOVE.</h3>
-<p>A form on Nike.com and in the Instagram bio invites consumers to submit personal pictures and videos for campaign consideration.</p>
+<h3 class="nike-text-reveal">SHOW US<br/>HOW YOU<br/>MOVE.</h3>
+<p class="nike-text-reveal">A form on Nike.com and in the Instagram bio invites consumers to submit personal pictures and videos for campaign consideration.</p>
 <div class="journey-action">
     SUBMIT YOUR STORY →
         </div>
@@ -174,8 +2722,8 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-step-symbol">★</div>
 <span class="journey-step-name">FEATURE</span>
-<h3>BECOME PART<br/>OF THE<br/>CAMPAIGN.</h3>
-<p>With permission, selected submissions become campaign content. Posted submissions tag the featured athlete or athletes, making participation visible within the Nike community.</p>
+<h3 class="nike-text-reveal">BECOME PART<br/>OF THE<br/>CAMPAIGN.</h3>
+<p class="nike-text-reveal">With permission, selected submissions become campaign content. Posted submissions tag the featured athlete or athletes, making participation visible within the Nike community.</p>
 <div class="journey-feature-list">
 <span>NIKE INSTAGRAM</span>
 <span>NIKE.COM</span>
@@ -191,8 +2739,8 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-step-symbol">↻</div>
 <span class="journey-step-name">RETURN</span>
-<h3 style="--font-scale: 0.01;">KEEP THE<br/>MOVEMENT<br/>MOVING.</h3>
-<p>Featured community content becomes inspiration for the next person. New athletes see the campaign, participate in movement, create their own memories, and continue the cycle.</p>
+<h3 class="nike-text-reveal" style="--font-scale: 0.01;">KEEP THE<br/>MOVEMENT<br/>MOVING.</h3>
+<p class="nike-text-reveal">Featured community content becomes inspiration for the next person. New athletes see the campaign, participate in movement, create their own memories, and continue the cycle.</p>
 <div class="journey-loop-chip">
   COMMUNITY → CONTENT → COMMUNITY
         </div>
@@ -212,12 +2760,12 @@ COMPLETE REPLACEMENT HTML
 <!-- =====================================================
   CALLS TO ACTION
   ====================================================== -->
-<section class="journey-cta">
+<section class="journey-cta gradient-linked-section seamless-section" style="--join-in:#111111;--join-out:#4A5D4E">
 <div class="journey-cta-grid"></div>
 <div class="journey-cta-heading">
 <span>JOURNEY_FILE_03 / PARTICIPATION</span>
-<h2>CALLS TO<br/>ACTION.</h2>
-<p>Participation moves between digital and physical spaces, giving the audience more than one way to enter the campaign.</p>
+<h2 class="nike-text-reveal">CALLS TO<br/>ACTION.</h2>
+<p class="nike-text-reveal">Participation moves between digital and physical spaces, giving the audience more than one way to enter the campaign.</p>
 </div>
 <div class="journey-cta-layout">
 <!-- DIGITAL -->
@@ -234,8 +2782,8 @@ COMPLETE REPLACEMENT HTML
 <div class="journey-window-body">
 <span class="journey-window-index">01</span>
 <small>DIGITAL CALL TO ACTION</small>
-<h3>SUBMIT<br/>YOUR<br/>STORY.</h3>
-<p>A form on the Nike website and in the Instagram bio allows consumers to submit personal pictures and videos for consideration.</p>
+<h3 class="nike-text-reveal">SUBMIT<br/>YOUR<br/>STORY.</h3>
+<p class="nike-text-reveal">A form on the Nike website and in the Instagram bio allows consumers to submit personal pictures and videos for consideration.</p>
 <div class="journey-button">
             UPLOAD YOUR MOVEMENT →
           </div>
@@ -255,9 +2803,9 @@ COMPLETE REPLACEMENT HTML
 <div class="journey-window-body">
 <span class="journey-window-index">02</span>
 <small>URBAN OUTFITTERS / ON ROTATION</small>
-<h3>PIN YOUR<br/>PLACE IN THE<br/>COMMUNITY.</h3>
-<p>The Urban Outfitters “On Rotation” community lounge board showcases physical Polaroids and photographs of consumers.</p>
-<p>The board can be promoted through an Instagram Highlight with monthly updates, connecting the physical activation back to the campaign's digital channels.</p>
+<h3 class="nike-text-reveal">PIN YOUR<br/>PLACE IN THE<br/>COMMUNITY.</h3>
+<p class="nike-text-reveal">The Urban Outfitters “On Rotation” community lounge board showcases physical Polaroids and photographs of consumers.</p>
+<p class="nike-text-reveal">The board can be promoted through an Instagram Highlight with monthly updates, connecting the physical activation back to the campaign's digital channels.</p>
 <div class="journey-board">
 <span class="journey-board-title">ON ROTATION / COMMUNITY BOARD</span>
 <div class="journey-paper journey-paper-one">
@@ -286,8 +2834,8 @@ COMPLETE REPLACEMENT HTML
 <div class="journey-window-body">
 <span class="journey-window-index">03</span>
 <small>COMMUNITY RECOGNITION</small>
-<h3>GET<br/>FEATURED.</h3>
-<p>With permission, posted submissions tag the athlete or athletes shown in the content.</p>
+<h3 class="nike-text-reveal">GET<br/>FEATURED.</h3>
+<p class="nike-text-reveal">With permission, posted submissions tag the athlete or athletes shown in the content.</p>
 <div class="journey-tag-box">
 <small>FEATURED ATHLETE</small>
 <strong>@YOURNAME</strong>
@@ -300,7 +2848,7 @@ COMPLETE REPLACEMENT HTML
 <!-- =====================================================
   PARTICIPATION LOOP
   ====================================================== -->
-<section class="journey-loop">
+<section class="journey-loop gradient-linked-section seamless-section" style="--join-in:#4A5D4E;--join-out:#111111">
 <div class="journey-loop-grid"></div>
 <div class="journey-loop-meta">
 <span>JOURNEY_FILE_04</span>
@@ -308,31 +2856,31 @@ COMPLETE REPLACEMENT HTML
 </div>
 <div class="journey-loop-heading">
 <span>THE END OF THE JOURNEY IS</span>
-<h2>ANOTHER<br/>BEGINNING.</h2>
+<h2 class="nike-text-reveal">ANOTHER<br/>BEGINNING.</h2>
 </div>
 <div class="journey-loop-track">
 <article class="journey-loop-node journey-node-orange">
 <span>01</span>
 <strong>SEE IT.</strong>
-<p>Discover everyday athletes through Nike's channels.</p>
+<p class="nike-text-reveal">Discover everyday athletes through Nike's channels.</p>
 </article>
 <div class="journey-loop-arrow">→</div>
 <article class="journey-loop-node journey-node-cream">
 <span>02</span>
 <strong>FEEL IT.</strong>
-<p>Recognize yourself and your community in the campaign.</p>
+<p class="nike-text-reveal">Recognize yourself and your community in the campaign.</p>
 </article>
 <div class="journey-loop-arrow">→</div>
 <article class="journey-loop-node journey-node-green">
 <span>03</span>
 <strong>JOIN IT.</strong>
-<p>Move, capture the moment, and submit your story.</p>
+<p class="nike-text-reveal">Move, capture the moment, and submit your story.</p>
 </article>
 <div class="journey-loop-arrow">→</div>
 <article class="journey-loop-node journey-node-slate">
 <span>04</span>
 <strong>SHARE IT.</strong>
-<p>Become part of the community and inspire someone else.</p>
+<p class="nike-text-reveal">Become part of the community and inspire someone else.</p>
 </article>
 </div>
 <div class="journey-return-bar">
@@ -344,26 +2892,25 @@ COMPLETE REPLACEMENT HTML
 <!-- =====================================================
   CLOSING
   ====================================================== -->
-<section class="journey-closing">
+<section class="journey-closing gradient-linked-section seamless-section" style="--join-in:#111111">
 <div class="journey-closing-grid"></div>
 <div class="journey-closing-meta">
 <span>AUDIENCE_JOURNEY.EXE</span>
 <span>MOVEMENT / CONTINUOUS</span>
 </div>
-<p>DISCOVER / CONNECT / PARTICIPATE / FEATURE / RETURN</p>
-<h2>YOU'RE NOT<br/>WATCHING<br/>THE CAMPAIGN.</h2>
-<h3>YOU'RE IN IT.</h3>
+<p class="nike-text-reveal">DISCOVER / CONNECT / PARTICIPATE / FEATURE / RETURN</p>
+<h2 class="nike-text-reveal">YOU'RE NOT<br/>WATCHING<br/>THE CAMPAIGN.</h2>
+<h3 class="nike-text-reveal">YOU'RE IN IT.</h3>
 <div class="journey-closing-sticker">
       EVERY BODY.<br/>EVERYBODY.
     </div>
 </section>
 <!-- FOOTER -->
-
+<footer class="journey-footer">
+<span>CAMILLE BICKHAM / FSH 294</span>
+<strong>NIKE / AUDIENCE JOURNEY</strong>
+<span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span>
+</footer><footer class="portfolio-next-footer"><div class="portfolio-next-inner"><p class="portfolio-next-eyebrow">KEEP MOVING / 05 OF 08</p><a class="portfolio-next-link" href="ai-workflow.html"><strong>AI WORKFLOW</strong><span>EXPLORE NEXT ↗</span></a><div class="portfolio-next-meta"><a href="channel-integration.html">← CHANNEL INTEGRATION</a><span>BUILT BY MOVEMENT. BOUND BY COMMUNITY.</span><a href="index.html">BACK TO HOME ↑</a></div></div></footer>
 </div>
-<footer class="portfolio-outro">
-<div class="outro-inner"><div class="outro-label">NIKE / CREATIVE AI PORTFOLIO <span>05 / 08</span></div>
-<p class="outro-overline">BUILT BY MOVEMENT. BOUND BY COMMUNITY.</p>
-<a class="outro-next" href="ai-workflow.html"><span>UP NEXT / AI WORKFLOW</span><strong>Behind the creative process.</strong><span aria-hidden="true" class="outro-arrow">↗</span></a>
-<div class="outro-bottom"><a href="channel-integration.html">← CHANNEL INTEGRATION</a><a href="index.html">BACK TO HOME ↑</a><span>CAMILLE BICKHAM / FSH 294</span></div></div>
-</footer></body>
+<script defer="True" src="js/text-replay.js"></script></body>
 </html>
